@@ -64,9 +64,11 @@ class NuGraphOptical(torch.nn.Module):
                 """
 
                 # message-passing from ophit to pmt
-                data["pmt"].x = self.checkpoint(
-                        self.ophit_to_pmt, (data["ophit"].x, data["pmt"].x),
-                        data["ophit", "in", "pmt"].edge_index)
+                #data["pmt"].x = self.checkpoint(
+                #        self.ophit_to_pmt, (data["ophit"].x, data["pmt"].x),
+                #        data["ophit", "in", "pmt"].edge_index)
+
+                #print('pmt',data["pmt"].x.shape,data["pmt"].x)
 
                 # message-passing from space points to PMTs
                 data["pmt"].x = self.checkpoint(
@@ -99,6 +101,6 @@ class NuGraphOptical(torch.nn.Module):
                         data["sp", "knn", "pmt"].edge_index[(1,0), :])
 
                 # message-passing from pmt to ophit
-                data["ophit"].x = self.checkpoint(
-                        self.pmt_to_ophit, (data["pmt"].x, data["ophit"].x),
-                        data["ophit", "in", "pmt"].edge_index[(1,0), :])
+                #data["ophit"].x = self.checkpoint(
+                #        self.pmt_to_ophit, (data["pmt"].x, data["ophit"].x),
+                #        data["ophit", "in", "pmt"].edge_index[(1,0), :])

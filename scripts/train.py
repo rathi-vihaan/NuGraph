@@ -1,10 +1,18 @@
 #!/usr/bin/env python
+
+import torch
+torch.multiprocessing.set_sharing_strategy('file_system')
+
 import os
 import argparse
 import pathlib
 import signal
 import warnings
+<<<<<<< HEAD
 import torch
+=======
+
+>>>>>>> 1c31f447cde7c81339dec81a3ba2f1d03fefab85
 import pytorch_lightning as pl
 from pytorch_lightning.plugins.environments import SLURMEnvironment
 from pytorch_lightning.callbacks import LearningRateMonitor, ModelCheckpoint

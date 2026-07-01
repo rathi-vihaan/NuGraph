@@ -39,8 +39,8 @@ class NuGraphDataModule(LightningDataModule):
         self.filename = os.path.expandvars(data_path)
         self.batch_size = batch_size
         self.num_workers = num_workers
-        if shuffle not in ("random", "balance"):
-            print('shuffle argument must be "random" or "balance".')
+        if shuffle not in ("random", "balance", "none"):
+            print('shuffle argument must be "random" or "balance" or "none".')
             sys.exit()
         self.shuffle = shuffle
         self.balance_frac = balance_frac
@@ -134,7 +134,7 @@ class NuGraphDataModule(LightningDataModule):
         with h5py.File(data_path, "r+") as f:
             if 'datasize/train' in f:
                 del f['datasize/train']
-        transform = PositionFeatures(planes)
+        transform = None #PositionFeatures(planes)
         dataset = NuGraphDataset(data_path, train, transform)
         def datasize(data):
             ret = 0
@@ -154,8 +154,11 @@ class NuGraphDataModule(LightningDataModule):
                         datasize=self.train_datasize,
                         batch_size=self.batch_size,
                         balance_frac=self.balance_frac)
-        else:
+        elif self.shuffle == 'random':
             shuffle = True
+            sampler = None
+        else:
+            shuffle = False
             sampler = None
 
         return DataLoader(self.train_dataset,
