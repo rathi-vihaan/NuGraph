@@ -1,0 +1,77 @@
+/net/projects2/fermi2526/conda/nugraph-25-10/bin/python
+fd limit set to: 65536
+Traceback (most recent call last):
+Traceback (most recent call last):
+Traceback (most recent call last):
+Traceback (most recent call last):
+  File "/home/vihaan/NuGraph/scripts/train.py", line 14, in <module>
+    import nugraph as ng
+  File "/home/vihaan/NuGraph/nugraph/nugraph/__init__.py", line 5, in <module>
+    from . import models
+  File "/home/vihaan/NuGraph/nugraph/nugraph/models/__init__.py", line 3, in <module>
+    from .nugraph3 import NuGraph3
+  File "/home/vihaan/NuGraph/nugraph/nugraph/models/nugraph3/__init__.py", line 2, in <module>
+    from .nugraph3 import NuGraph3
+  File "/home/vihaan/NuGraph/nugraph/nugraph/models/nugraph3/nugraph3.py", line 16, in <module>
+    from .decoders import (SemanticDecoder, FilterDecoder, EventDecoder, VertexDecoder, InstanceDecoder,
+                           SpacepointDecoder)
+  File "/home/vihaan/NuGraph/nugraph/nugraph/models/nugraph3/decoders/__init__.py", line 6, in <module>
+    from .instance import InstanceDecoder
+  File "/home/vihaan/NuGraph/nugraph/nugraph/models/nugraph3/decoders/instance.py", line 85
+    >>>>>>> 1c31f447cde7c81339dec81a3ba2f1d03fefab85
+            ^
+SyntaxError: invalid decimal literal
+  File "/home/vihaan/NuGraph/scripts/train.py", line 14, in <module>
+    import nugraph as ng
+  File "/home/vihaan/NuGraph/nugraph/nugraph/__init__.py", line 5, in <module>
+    from . import models
+  File "/home/vihaan/NuGraph/nugraph/nugraph/models/__init__.py", line 3, in <module>
+    from .nugraph3 import NuGraph3
+  File "/home/vihaan/NuGraph/nugraph/nugraph/models/nugraph3/__init__.py", line 2, in <module>
+    from .nugraph3 import NuGraph3
+  File "/home/vihaan/NuGraph/nugraph/nugraph/models/nugraph3/nugraph3.py", line 16, in <module>
+    from .decoders import (SemanticDecoder, FilterDecoder, EventDecoder, VertexDecoder, InstanceDecoder,
+                           SpacepointDecoder)
+  File "/home/vihaan/NuGraph/nugraph/nugraph/models/nugraph3/decoders/__init__.py", line 6, in <module>
+    from .instance import InstanceDecoder
+  File "/home/vihaan/NuGraph/nugraph/nugraph/models/nugraph3/decoders/instance.py", line 85
+    >>>>>>> 1c31f447cde7c81339dec81a3ba2f1d03fefab85
+            ^
+SyntaxError: invalid decimal literal
+  File "/home/vihaan/NuGraph/scripts/train.py", line 14, in <module>
+    import nugraph as ng
+  File "/home/vihaan/NuGraph/nugraph/nugraph/__init__.py", line 5, in <module>
+    from . import models
+  File "/home/vihaan/NuGraph/nugraph/nugraph/models/__init__.py", line 3, in <module>
+    from .nugraph3 import NuGraph3
+  File "/home/vihaan/NuGraph/nugraph/nugraph/models/nugraph3/__init__.py", line 2, in <module>
+    from .nugraph3 import NuGraph3
+  File "/home/vihaan/NuGraph/nugraph/nugraph/models/nugraph3/nugraph3.py", line 16, in <module>
+    from .decoders import (SemanticDecoder, FilterDecoder, EventDecoder, VertexDecoder, InstanceDecoder,
+                           SpacepointDecoder)
+  File "/home/vihaan/NuGraph/nugraph/nugraph/models/nugraph3/decoders/__init__.py", line 6, in <module>
+    from .instance import InstanceDecoder
+  File "/home/vihaan/NuGraph/nugraph/nugraph/models/nugraph3/decoders/instance.py", line 85
+    >>>>>>> 1c31f447cde7c81339dec81a3ba2f1d03fefab85
+            ^
+SyntaxError: invalid decimal literal
+  File "/home/vihaan/NuGraph/scripts/train.py", line 14, in <module>
+    import nugraph as ng
+  File "/home/vihaan/NuGraph/nugraph/nugraph/__init__.py", line 5, in <module>
+    from . import models
+  File "/home/vihaan/NuGraph/nugraph/nugraph/models/__init__.py", line 3, in <module>
+    from .nugraph3 import NuGraph3
+  File "/home/vihaan/NuGraph/nugraph/nugraph/models/nugraph3/__init__.py", line 2, in <module>
+    from .nugraph3 import NuGraph3
+  File "/home/vihaan/NuGraph/nugraph/nugraph/models/nugraph3/nugraph3.py", line 16, in <module>
+    from .decoders import (SemanticDecoder, FilterDecoder, EventDecoder, VertexDecoder, InstanceDecoder,
+                           SpacepointDecoder)
+  File "/home/vihaan/NuGraph/nugraph/nugraph/models/nugraph3/decoders/__init__.py", line 6, in <module>
+    from .instance import InstanceDecoder
+  File "/home/vihaan/NuGraph/nugraph/nugraph/models/nugraph3/decoders/instance.py", line 85
+    >>>>>>> 1c31f447cde7c81339dec81a3ba2f1d03fefab85
+            ^
+SyntaxError: invalid decimal literal
+srun: error: g003: tasks 0,3: Exited with exit code 1
+srun: error: g003: task 2: Exited with exit code 1
+srun: error: g003: task 1: Exited with exit code 1

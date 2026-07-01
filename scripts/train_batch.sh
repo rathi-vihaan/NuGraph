@@ -18,15 +18,10 @@
 #SBATCH -q normal
 #SBATCH --cpus-per-task=8
 #SBATCH --mem-per-cpu=64G
->>>>>>> 1c31f447cde7c81339dec81a3ba2f1d03fefab85
 
 source /etc/profile.d/conda.sh
 conda activate /net/projects2/fermi2526/conda/nugraph-25-10
 which python
-<<<<<<< HEAD
-srun python scripts/train.py $@
-=======
 ulimit -n 65536
 echo "fd limit set to: $(ulimit -n)"
 srun python scripts/train.py $@
->>>>>>> 1c31f447cde7c81339dec81a3ba2f1d03fefab85

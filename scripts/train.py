@@ -8,11 +8,6 @@ import argparse
 import pathlib
 import signal
 import warnings
-<<<<<<< HEAD
-import torch
-=======
-
->>>>>>> 1c31f447cde7c81339dec81a3ba2f1d03fefab85
 import pytorch_lightning as pl
 from pytorch_lightning.plugins.environments import SLURMEnvironment
 from pytorch_lightning.callbacks import LearningRateMonitor, ModelCheckpoint
@@ -102,7 +97,7 @@ def train(args):
     #accelerator, devices = ng.util.configure_device(args.device)
     trainer = pl.Trainer(
         accelerator="gpu",
-        devices=8,
+        devices=4,
         num_nodes=1,
         strategy="ddp",
         max_epochs=args.epochs,
