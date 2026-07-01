@@ -1,0 +1,755 @@
+/net/projects2/fermi2526/conda/nugraph-25-10/bin/python
+/home/vihaan/NuGraph/pynuml/pynuml/data/nugraph_data.py:108: UserWarning:
+
+Unable to accurately infer 'num_nodes' from the attribute set '{'y', 'y_vtx'}'. Please explicitly set 'num_nodes' as an attribute of 'data[evt]' to suppress this warning
+
+/home/vihaan/NuGraph/pynuml/pynuml/data/nugraph_data.py:108: UserWarning:
+
+Unable to accurately infer 'num_nodes' from the attribute set '{'y', 'y_vtx'}'. Please explicitly set 'num_nodes' as an attribute of 'data[evt]' to suppress this warning
+
+/home/vihaan/NuGraph/pynuml/pynuml/data/nugraph_data.py:108: UserWarning:
+
+Unable to accurately infer 'num_nodes' from the attribute set '{'y', 'y_vtx'}'. Please explicitly set 'num_nodes' as an attribute of 'data[evt]' to suppress this warning
+
+Traceback (most recent call last):
+  File "/home/vihaan/NuGraph/scripts/train.py", line 115, in <module>
+    train(args)
+    ~~~~~^^^^^^
+  File "/home/vihaan/NuGraph/scripts/train.py", line 97, in train
+    trainer = pl.Trainer(
+        accelerator="gpu",
+    ...<9 lines>...
+        plugins=plugins,
+    )
+  File "/net/projects2/fermi2526/conda/nugraph-25-10/lib/python3.13/site-packages/pytorch_lightning/utilities/argparse.py", line 70, in insert_env_defaults
+    return fn(self, **kwargs)
+  File "/net/projects2/fermi2526/conda/nugraph-25-10/lib/python3.13/site-packages/pytorch_lightning/trainer/trainer.py", line 404, in __init__
+    self._accelerator_connector = _AcceleratorConnector(
+                                  ~~~~~~~~~~~~~~~~~~~~~^
+        devices=devices,
+        ^^^^^^^^^^^^^^^^
+    ...<8 lines>...
+        plugins=plugins,
+        ^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/net/projects2/fermi2526/conda/nugraph-25-10/lib/python3.13/site-packages/pytorch_lightning/trainer/connectors/accelerator_connector.py", line 147, in __init__
+    self._set_parallel_devices_and_init_accelerator()
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "/net/projects2/fermi2526/conda/nugraph-25-10/lib/python3.13/site-packages/pytorch_lightning/trainer/connectors/accelerator_connector.py", line 371, in _set_parallel_devices_and_init_accelerator
+    self._devices_flag = accelerator_cls.parse_devices(self._devices_flag)
+                         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^
+  File "/net/projects2/fermi2526/conda/nugraph-25-10/lib/python3.13/site-packages/pytorch_lightning/accelerators/cuda.py", line 88, in parse_devices
+    return _parse_gpu_ids(devices, include_cuda=True)
+  File "/net/projects2/fermi2526/conda/nugraph-25-10/lib/python3.13/site-packages/lightning_fabric/utilities/device_parser.py", line 103, in _parse_gpu_ids
+    return _sanitize_gpu_ids(gpus, include_cuda=include_cuda, include_mps=include_mps)
+  File "/net/projects2/fermi2526/conda/nugraph-25-10/lib/python3.13/site-packages/lightning_fabric/utilities/device_parser.py", line 136, in _sanitize_gpu_ids
+    raise MisconfigurationException(
+        f"You requested gpu: {gpus}\n But your machine only has: {all_available_gpus}"
+    )
+lightning_fabric.utilities.exceptions.MisconfigurationException: You requested gpu: [0, 1, 2, 3]
+ But your machine only has: [0, 1]
+Traceback (most recent call last):
+  File "/home/vihaan/NuGraph/scripts/train.py", line 115, in <module>
+    train(args)
+    ~~~~~^^^^^^
+  File "/home/vihaan/NuGraph/scripts/train.py", line 97, in train
+    trainer = pl.Trainer(
+        accelerator="gpu",
+    ...<9 lines>...
+        plugins=plugins,
+    )
+  File "/net/projects2/fermi2526/conda/nugraph-25-10/lib/python3.13/site-packages/pytorch_lightning/utilities/argparse.py", line 70, in insert_env_defaults
+    return fn(self, **kwargs)
+  File "/net/projects2/fermi2526/conda/nugraph-25-10/lib/python3.13/site-packages/pytorch_lightning/trainer/trainer.py", line 404, in __init__
+    self._accelerator_connector = _AcceleratorConnector(
+                                  ~~~~~~~~~~~~~~~~~~~~~^
+        devices=devices,
+        ^^^^^^^^^^^^^^^^
+    ...<8 lines>...
+        plugins=plugins,
+        ^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/net/projects2/fermi2526/conda/nugraph-25-10/lib/python3.13/site-packages/pytorch_lightning/trainer/connectors/accelerator_connector.py", line 147, in __init__
+    self._set_parallel_devices_and_init_accelerator()
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "/net/projects2/fermi2526/conda/nugraph-25-10/lib/python3.13/site-packages/pytorch_lightning/trainer/connectors/accelerator_connector.py", line 371, in _set_parallel_devices_and_init_accelerator
+    self._devices_flag = accelerator_cls.parse_devices(self._devices_flag)
+                         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^
+  File "/net/projects2/fermi2526/conda/nugraph-25-10/lib/python3.13/site-packages/pytorch_lightning/accelerators/cuda.py", line 88, in parse_devices
+    return _parse_gpu_ids(devices, include_cuda=True)
+  File "/net/projects2/fermi2526/conda/nugraph-25-10/lib/python3.13/site-packages/lightning_fabric/utilities/device_parser.py", line 103, in _parse_gpu_ids
+    return _sanitize_gpu_ids(gpus, include_cuda=include_cuda, include_mps=include_mps)
+  File "/net/projects2/fermi2526/conda/nugraph-25-10/lib/python3.13/site-packages/lightning_fabric/utilities/device_parser.py", line 136, in _sanitize_gpu_ids
+    raise MisconfigurationException(
+        f"You requested gpu: {gpus}\n But your machine only has: {all_available_gpus}"
+    )
+lightning_fabric.utilities.exceptions.MisconfigurationException: You requested gpu: [0, 1, 2, 3]
+ But your machine only has: [0, 1]
+Traceback (most recent call last):
+  File "/home/vihaan/NuGraph/scripts/train.py", line 115, in <module>
+    train(args)
+    ~~~~~^^^^^^
+  File "/home/vihaan/NuGraph/scripts/train.py", line 97, in train
+    trainer = pl.Trainer(
+        accelerator="gpu",
+    ...<9 lines>...
+        plugins=plugins,
+    )
+  File "/net/projects2/fermi2526/conda/nugraph-25-10/lib/python3.13/site-packages/pytorch_lightning/utilities/argparse.py", line 70, in insert_env_defaults
+    return fn(self, **kwargs)
+  File "/net/projects2/fermi2526/conda/nugraph-25-10/lib/python3.13/site-packages/pytorch_lightning/trainer/trainer.py", line 404, in __init__
+    self._accelerator_connector = _AcceleratorConnector(
+                                  ~~~~~~~~~~~~~~~~~~~~~^
+        devices=devices,
+        ^^^^^^^^^^^^^^^^
+    ...<8 lines>...
+        plugins=plugins,
+        ^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/net/projects2/fermi2526/conda/nugraph-25-10/lib/python3.13/site-packages/pytorch_lightning/trainer/connectors/accelerator_connector.py", line 147, in __init__
+    self._set_parallel_devices_and_init_accelerator()
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "/net/projects2/fermi2526/conda/nugraph-25-10/lib/python3.13/site-packages/pytorch_lightning/trainer/connectors/accelerator_connector.py", line 371, in _set_parallel_devices_and_init_accelerator
+    self._devices_flag = accelerator_cls.parse_devices(self._devices_flag)
+                         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^
+  File "/net/projects2/fermi2526/conda/nugraph-25-10/lib/python3.13/site-packages/pytorch_lightning/accelerators/cuda.py", line 88, in parse_devices
+    return _parse_gpu_ids(devices, include_cuda=True)
+  File "/net/projects2/fermi2526/conda/nugraph-25-10/lib/python3.13/site-packages/lightning_fabric/utilities/device_parser.py", line 103, in _parse_gpu_ids
+    return _sanitize_gpu_ids(gpus, include_cuda=include_cuda, include_mps=include_mps)
+  File "/net/projects2/fermi2526/conda/nugraph-25-10/lib/python3.13/site-packages/lightning_fabric/utilities/device_parser.py", line 136, in _sanitize_gpu_ids
+    raise MisconfigurationException(
+        f"You requested gpu: {gpus}\n But your machine only has: {all_available_gpus}"
+    )
+lightning_fabric.utilities.exceptions.MisconfigurationException: You requested gpu: [0, 1, 2, 3]
+ But your machine only has: [0, 1]
+srun: error: j001-ds: tasks 0-2: Exited with exit code 1
+/home/vihaan/NuGraph/pynuml/pynuml/data/nugraph_data.py:108: UserWarning:
+
+Unable to accurately infer 'num_nodes' from the attribute set '{'y', 'y_vtx'}'. Please explicitly set 'num_nodes' as an attribute of 'data[evt]' to suppress this warning
+
+/home/vihaan/NuGraph/pynuml/pynuml/data/nugraph_data.py:108: UserWarning:
+
+Unable to accurately infer 'num_nodes' from the attribute set '{'y_vtx', 'y'}'. Please explicitly set 'num_nodes' as an attribute of 'data[evt]' to suppress this warning
+
+/home/vihaan/NuGraph/pynuml/pynuml/data/nugraph_data.py:108: UserWarning:
+
+Unable to accurately infer 'num_nodes' from the attribute set '{'y', 'y_vtx'}'. Please explicitly set 'num_nodes' as an attribute of 'data[evt]' to suppress this warning
+
+Initializing distributed: GLOBAL_RANK: 6, MEMBER: 7/8
+Initializing distributed: GLOBAL_RANK: 4, MEMBER: 5/8
+Initializing distributed: GLOBAL_RANK: 5, MEMBER: 6/8
+/home/vihaan/NuGraph/pynuml/pynuml/data/nugraph_data.py:108: UserWarning:
+
+Unable to accurately infer 'num_nodes' from the attribute set '{'y', 'y_vtx'}'. Please explicitly set 'num_nodes' as an attribute of 'data[evt]' to suppress this warning
+
+Traceback (most recent call last):
+  File "/home/vihaan/NuGraph/scripts/train.py", line 115, in <module>
+    train(args)
+    ~~~~~^^^^^^
+  File "/home/vihaan/NuGraph/scripts/train.py", line 97, in train
+    trainer = pl.Trainer(
+        accelerator="gpu",
+    ...<9 lines>...
+        plugins=plugins,
+    )
+  File "/net/projects2/fermi2526/conda/nugraph-25-10/lib/python3.13/site-packages/pytorch_lightning/utilities/argparse.py", line 70, in insert_env_defaults
+    return fn(self, **kwargs)
+  File "/net/projects2/fermi2526/conda/nugraph-25-10/lib/python3.13/site-packages/pytorch_lightning/trainer/trainer.py", line 404, in __init__
+    self._accelerator_connector = _AcceleratorConnector(
+                                  ~~~~~~~~~~~~~~~~~~~~~^
+        devices=devices,
+        ^^^^^^^^^^^^^^^^
+    ...<8 lines>...
+        plugins=plugins,
+        ^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/net/projects2/fermi2526/conda/nugraph-25-10/lib/python3.13/site-packages/pytorch_lightning/trainer/connectors/accelerator_connector.py", line 147, in __init__
+    self._set_parallel_devices_and_init_accelerator()
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "/net/projects2/fermi2526/conda/nugraph-25-10/lib/python3.13/site-packages/pytorch_lightning/trainer/connectors/accelerator_connector.py", line 371, in _set_parallel_devices_and_init_accelerator
+    self._devices_flag = accelerator_cls.parse_devices(self._devices_flag)
+                         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^
+  File "/net/projects2/fermi2526/conda/nugraph-25-10/lib/python3.13/site-packages/pytorch_lightning/accelerators/cuda.py", line 88, in parse_devices
+    return _parse_gpu_ids(devices, include_cuda=True)
+  File "/net/projects2/fermi2526/conda/nugraph-25-10/lib/python3.13/site-packages/lightning_fabric/utilities/device_parser.py", line 103, in _parse_gpu_ids
+    return _sanitize_gpu_ids(gpus, include_cuda=include_cuda, include_mps=include_mps)
+  File "/net/projects2/fermi2526/conda/nugraph-25-10/lib/python3.13/site-packages/lightning_fabric/utilities/device_parser.py", line 136, in _sanitize_gpu_ids
+    raise MisconfigurationException(
+        f"You requested gpu: {gpus}\n But your machine only has: {all_available_gpus}"
+    )
+lightning_fabric.utilities.exceptions.MisconfigurationException: You requested gpu: [0, 1, 2, 3]
+ But your machine only has: [0, 1]
+/home/vihaan/NuGraph/pynuml/pynuml/data/nugraph_data.py:108: UserWarning:
+
+Unable to accurately infer 'num_nodes' from the attribute set '{'y_vtx', 'y'}'. Please explicitly set 'num_nodes' as an attribute of 'data[evt]' to suppress this warning
+
+srun: error: j001-ds: task 3: Exited with exit code 1
+Initializing distributed: GLOBAL_RANK: 7, MEMBER: 8/8
+[E626 19:21:41.724252330 socket.cpp:1019] [c10d] The client socket has timed out after 1800000ms while trying to connect to (j001-ds, 18316).
+[W626 19:21:42.045809632 TCPStore.cpp:340] [c10d] TCP client failed to connect/validate to host j001-ds:18316 - retrying (try=0, timeout=1800000ms, delay=32962ms): The client socket has timed out after 1800000ms while trying to connect to (j001-ds, 18316).
+Exception raised from throwTimeoutError at /home/conda/feedstock_root/build_artifacts/libtorch_1760296002163/work/torch/csrc/distributed/c10d/socket.cpp:1021 (most recent call first):
+frame #0: c10::Error::Error(c10::SourceLocation, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >) + 0x8f (0x7aeab1d6703f in /net/projects2/fermi2526/conda/nugraph-25-10/lib/python3.13/site-packages/torch/../../.././libc10.so)
+frame #1: <unknown function> + 0x691e32c (0x7aeb22c2832c in /net/projects2/fermi2526/conda/nugraph-25-10/lib/python3.13/site-packages/torch/../../.././libtorch_cpu.so)
+frame #2: <unknown function> + 0x13eb175 (0x7aeb1d6f5175 in /net/projects2/fermi2526/conda/nugraph-25-10/lib/python3.13/site-packages/torch/../../.././libtorch_cpu.so)
+frame #3: <unknown function> + 0x69932bd (0x7aeb22c9d2bd in /net/projects2/fermi2526/conda/nugraph-25-10/lib/python3.13/site-packages/torch/../../.././libtorch_cpu.so)
+frame #4: <unknown function> + 0x69934d3 (0x7aeb22c9d4d3 in /net/projects2/fermi2526/conda/nugraph-25-10/lib/python3.13/site-packages/torch/../../.././libtorch_cpu.so)
+frame #5: <unknown function> + 0x69938ea (0x7aeb22c9d8ea in /net/projects2/fermi2526/conda/nugraph-25-10/lib/python3.13/site-packages/torch/../../.././libtorch_cpu.so)
+frame #6: <unknown function> + 0x691e4c2 (0x7aeb22c284c2 in /net/projects2/fermi2526/conda/nugraph-25-10/lib/python3.13/site-packages/torch/../../.././libtorch_cpu.so)
+frame #7: c10d::TCPStore::TCPStore(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, c10d::TCPStoreOptions const&) + 0x454 (0x7aeb22c30464 in /net/projects2/fermi2526/conda/nugraph-25-10/lib/python3.13/site-packages/torch/../../.././libtorch_cpu.so)
+frame #8: <unknown function> + 0xcfb425 (0x7aeb2b5c0425 in /net/projects2/fermi2526/conda/nugraph-25-10/lib/python3.13/site-packages/torch/../../../libtorch_python.so)
+frame #9: <unknown function> + 0xd8b296 (0x7aeb2b650296 in /net/projects2/fermi2526/conda/nugraph-25-10/lib/python3.13/site-packages/torch/../../../libtorch_python.so)
+frame #10: <unknown function> + 0x40760f (0x7aeb2accc60f in /net/projects2/fermi2526/conda/nugraph-25-10/lib/python3.13/site-packages/torch/../../../libtorch_python.so)
+frame #11: <unknown function> + 0x1dbbfc (0x56499f98ebfc in /net/projects2/fermi2526/conda/nugraph-25-10/bin/python)
+frame #12: _PyObject_MakeTpCall + 0x27c (0x56499f95cdbc in /net/projects2/fermi2526/conda/nugraph-25-10/bin/python)
+frame #13: <unknown function> + 0x210ec3 (0x56499f9c3ec3 in /net/projects2/fermi2526/conda/nugraph-25-10/bin/python)
+frame #14: <unknown function> + 0x290ddb (0x56499fa43ddb in /net/projects2/fermi2526/conda/nugraph-25-10/bin/python)
+frame #15: <unknown function> + 0x1ef2d0 (0x56499f9a22d0 in /net/projects2/fermi2526/conda/nugraph-25-10/bin/python)
+frame #16: <unknown function> + 0x1aa0c6 (0x56499f95d0c6 in /net/projects2/fermi2526/conda/nugraph-25-10/bin/python)
+frame #17: <unknown function> + 0x401a59 (0x7aeb2acc6a59 in /net/projects2/fermi2526/conda/nugraph-25-10/lib/python3.13/site-packages/torch/../../../libtorch_python.so)
+frame #18: _PyObject_MakeTpCall + 0x27c (0x56499f95cdbc in /net/projects2/fermi2526/conda/nugraph-25-10/bin/python)
+frame #19: _PyEval_EvalFrameDefault + 0x9621 (0x56499f9768d1 in /net/projects2/fermi2526/conda/nugraph-25-10/bin/python)
+frame #20: <unknown function> + 0x23233e (0x56499f9e533e in /net/projects2/fermi2526/conda/nugraph-25-10/bin/python)
+frame #21: <unknown function> + 0x1ddc43 (0x56499f990c43 in /net/projects2/fermi2526/conda/nugraph-25-10/bin/python)
+frame #22: PyObject_Vectorcall + 0x2e (0x56499f95f05e in /net/projects2/fermi2526/conda/nugraph-25-10/bin/python)
+frame #23: _PyEval_EvalFrameDefault + 0x3a47 (0x56499f970cf7 in /net/projects2/fermi2526/conda/nugraph-25-10/bin/python)
+frame #24: <unknown function> + 0x210b2c (0x56499f9c3b2c in /net/projects2/fermi2526/conda/nugraph-25-10/bin/python)
+frame #25: _PyEval_EvalFrameDefault + 0x5092 (0x56499f972342 in /net/projects2/fermi2526/conda/nugraph-25-10/bin/python)
+frame #26: <unknown function> + 0x210c69 (0x56499f9c3c69 in /net/projects2/fermi2526/conda/nugraph-25-10/bin/python)
+frame #27: <unknown function> + 0x290ddb (0x56499fa43ddb in /net/projects2/fermi2526/conda/nugraph-25-10/bin/python)
+frame #28: _PyEval_EvalFrameDefault + 0x5092 (0x56499f972342 in /net/projects2/fermi2526/conda/nugraph-25-10/bin/python)
+frame #29: PyEval_EvalCode + 0x9f (0x56499fa371df in /net/projects2/fermi2526/conda/nugraph-25-10/bin/python)
+frame #30: <unknown function> + 0x2c1ff3 (0x56499fa74ff3 in /net/projects2/fermi2526/conda/nugraph-25-10/bin/python)
+frame #31: <unknown function> + 0x2bf75c (0x56499fa7275c in /net/projects2/fermi2526/conda/nugraph-25-10/bin/python)
+frame #32: <unknown function> + 0x2bc566 (0x56499fa6f566 in /net/projects2/fermi2526/conda/nugraph-25-10/bin/python)
+frame #33: <unknown function> + 0x2bc1c3 (0x56499fa6f1c3 in /net/projects2/fermi2526/conda/nugraph-25-10/bin/python)
+frame #34: <unknown function> + 0x2bbfdc (0x56499fa6efdc in /net/projects2/fermi2526/conda/nugraph-25-10/bin/python)
+frame #35: Py_RunMain + 0x3b4 (0x56499fa6d624 in /net/projects2/fermi2526/conda/nugraph-25-10/bin/python)
+frame #36: Py_BytesMain + 0x37 (0x56499fa22ac7 in /net/projects2/fermi2526/conda/nugraph-25-10/bin/python)
+frame #37: <unknown function> + 0x29d90 (0x7aeb33229d90 in /lib/x86_64-linux-gnu/libc.so.6)
+frame #38: __libc_start_main + 0x80 (0x7aeb33229e40 in /lib/x86_64-linux-gnu/libc.so.6)
+frame #39: <unknown function> + 0x26ee8d (0x56499fa21e8d in /net/projects2/fermi2526/conda/nugraph-25-10/bin/python)
+
+[E626 19:21:48.011437667 socket.cpp:1019] [c10d] The client socket has timed out after 1800000ms while trying to connect to (j001-ds, 18316).
+[W626 19:21:48.013165046 TCPStore.cpp:340] [c10d] TCP client failed to connect/validate to host j001-ds:18316 - retrying (try=0, timeout=1800000ms, delay=48141ms): The client socket has timed out after 1800000ms while trying to connect to (j001-ds, 18316).
+Exception raised from throwTimeoutError at /home/conda/feedstock_root/build_artifacts/libtorch_1760296002163/work/torch/csrc/distributed/c10d/socket.cpp:1021 (most recent call first):
+frame #0: c10::Error::Error(c10::SourceLocation, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >) + 0x8f (0x7a552462003f in /net/projects2/fermi2526/conda/nugraph-25-10/lib/python3.13/site-packages/torch/../../.././libc10.so)
+frame #1: <unknown function> + 0x691e32c (0x7a559543732c in /net/projects2/fermi2526/conda/nugraph-25-10/lib/python3.13/site-packages/torch/../../.././libtorch_cpu.so)
+frame #2: <unknown function> + 0x13eb175 (0x7a558ff04175 in /net/projects2/fermi2526/conda/nugraph-25-10/lib/python3.13/site-packages/torch/../../.././libtorch_cpu.so)
+frame #3: <unknown function> + 0x69932bd (0x7a55954ac2bd in /net/projects2/fermi2526/conda/nugraph-25-10/lib/python3.13/site-packages/torch/../../.././libtorch_cpu.so)
+frame #4: <unknown function> + 0x69934d3 (0x7a55954ac4d3 in /net/projects2/fermi2526/conda/nugraph-25-10/lib/python3.13/site-packages/torch/../../.././libtorch_cpu.so)
+frame #5: <unknown function> + 0x69938ea (0x7a55954ac8ea in /net/projects2/fermi2526/conda/nugraph-25-10/lib/python3.13/site-packages/torch/../../.././libtorch_cpu.so)
+frame #6: <unknown function> + 0x691e4c2 (0x7a55954374c2 in /net/projects2/fermi2526/conda/nugraph-25-10/lib/python3.13/site-packages/torch/../../.././libtorch_cpu.so)
+frame #7: c10d::TCPStore::TCPStore(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, c10d::TCPStoreOptions const&) + 0x454 (0x7a559543f464 in /net/projects2/fermi2526/conda/nugraph-25-10/lib/python3.13/site-packages/torch/../../.././libtorch_cpu.so)
+frame #8: <unknown function> + 0xcfb425 (0x7a559ddc0425 in /net/projects2/fermi2526/conda/nugraph-25-10/lib/python3.13/site-packages/torch/../../../libtorch_python.so)
+frame #9: <unknown function> + 0xd8b296 (0x7a559de50296 in /net/projects2/fermi2526/conda/nugraph-25-10/lib/python3.13/site-packages/torch/../../../libtorch_python.so)
+frame #10: <unknown function> + 0x40760f (0x7a559d4cc60f in /net/projects2/fermi2526/conda/nugraph-25-10/lib/python3.13/site-packages/torch/../../../libtorch_python.so)
+frame #11: <unknown function> + 0x1dbbfc (0x5ac84d5cabfc in /net/projects2/fermi2526/conda/nugraph-25-10/bin/python)
+frame #12: _PyObject_MakeTpCall + 0x27c (0x5ac84d598dbc in /net/projects2/fermi2526/conda/nugraph-25-10/bin/python)
+frame #13: <unknown function> + 0x210ec3 (0x5ac84d5ffec3 in /net/projects2/fermi2526/conda/nugraph-25-10/bin/python)
+frame #14: <unknown function> + 0x290ddb (0x5ac84d67fddb in /net/projects2/fermi2526/conda/nugraph-25-10/bin/python)
+frame #15: <unknown function> + 0x1ef2d0 (0x5ac84d5de2d0 in /net/projects2/fermi2526/conda/nugraph-25-10/bin/python)
+frame #16: <unknown function> + 0x1aa0c6 (0x5ac84d5990c6 in /net/projects2/fermi2526/conda/nugraph-25-10/bin/python)
+frame #17: <unknown function> + 0x401a59 (0x7a559d4c6a59 in /net/projects2/fermi2526/conda/nugraph-25-10/lib/python3.13/site-packages/torch/../../../libtorch_python.so)
+frame #18: _PyObject_MakeTpCall + 0x27c (0x5ac84d598dbc in /net/projects2/fermi2526/conda/nugraph-25-10/bin/python)
+frame #19: _PyEval_EvalFrameDefault + 0x9621 (0x5ac84d5b28d1 in /net/projects2/fermi2526/conda/nugraph-25-10/bin/python)
+frame #20: <unknown function> + 0x23233e (0x5ac84d62133e in /net/projects2/fermi2526/conda/nugraph-25-10/bin/python)
+frame #21: <unknown function> + 0x1ddc43 (0x5ac84d5ccc43 in /net/projects2/fermi2526/conda/nugraph-25-10/bin/python)
+frame #22: PyObject_Vectorcall + 0x2e (0x5ac84d59b05e in /net/projects2/fermi2526/conda/nugraph-25-10/bin/python)
+frame #23: _PyEval_EvalFrameDefault + 0x3a47 (0x5ac84d5accf7 in /net/projects2/fermi2526/conda/nugraph-25-10/bin/python)
+frame #24: <unknown function> + 0x210b2c (0x5ac84d5ffb2c in /net/projects2/fermi2526/conda/nugraph-25-10/bin/python)
+frame #25: _PyEval_EvalFrameDefault + 0x5092 (0x5ac84d5ae342 in /net/projects2/fermi2526/conda/nugraph-25-10/bin/python)
+frame #26: <unknown function> + 0x210c69 (0x5ac84d5ffc69 in /net/projects2/fermi2526/conda/nugraph-25-10/bin/python)
+frame #27: <unknown function> + 0x290ddb (0x5ac84d67fddb in /net/projects2/fermi2526/conda/nugraph-25-10/bin/python)
+frame #28: _PyEval_EvalFrameDefault + 0x5092 (0x5ac84d5ae342 in /net/projects2/fermi2526/conda/nugraph-25-10/bin/python)
+frame #29: PyEval_EvalCode + 0x9f (0x5ac84d6731df in /net/projects2/fermi2526/conda/nugraph-25-10/bin/python)
+frame #30: <unknown function> + 0x2c1ff3 (0x5ac84d6b0ff3 in /net/projects2/fermi2526/conda/nugraph-25-10/bin/python)
+frame #31: <unknown function> + 0x2bf75c (0x5ac84d6ae75c in /net/projects2/fermi2526/conda/nugraph-25-10/bin/python)
+frame #32: <unknown function> + 0x2bc566 (0x5ac84d6ab566 in /net/projects2/fermi2526/conda/nugraph-25-10/bin/python)
+frame #33: <unknown function> + 0x2bc1c3 (0x5ac84d6ab1c3 in /net/projects2/fermi2526/conda/nugraph-25-10/bin/python)
+frame #34: <unknown function> + 0x2bbfdc (0x5ac84d6aafdc in /net/projects2/fermi2526/conda/nugraph-25-10/bin/python)
+frame #35: Py_RunMain + 0x3b4 (0x5ac84d6a9624 in /net/projects2/fermi2526/conda/nugraph-25-10/bin/python)
+frame #36: Py_BytesMain + 0x37 (0x5ac84d65eac7 in /net/projects2/fermi2526/conda/nugraph-25-10/bin/python)
+frame #37: <unknown function> + 0x29d90 (0x7a55a5c29d90 in /lib/x86_64-linux-gnu/libc.so.6)
+frame #38: __libc_start_main + 0x80 (0x7a55a5c29e40 in /lib/x86_64-linux-gnu/libc.so.6)
+frame #39: <unknown function> + 0x26ee8d (0x5ac84d65de8d in /net/projects2/fermi2526/conda/nugraph-25-10/bin/python)
+
+[E626 19:22:34.272565186 socket.cpp:1019] [c10d] The client socket has timed out after 1800000ms while trying to connect to (j001-ds, 18316).
+[W626 19:22:34.274322535 TCPStore.cpp:340] [c10d] TCP client failed to connect/validate to host j001-ds:18316 - retrying (try=0, timeout=1800000ms, delay=54831ms): The client socket has timed out after 1800000ms while trying to connect to (j001-ds, 18316).
+Exception raised from throwTimeoutError at /home/conda/feedstock_root/build_artifacts/libtorch_1760296002163/work/torch/csrc/distributed/c10d/socket.cpp:1021 (most recent call first):
+frame #0: c10::Error::Error(c10::SourceLocation, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >) + 0x8f (0x72f24ce8003f in /net/projects2/fermi2526/conda/nugraph-25-10/lib/python3.13/site-packages/torch/../../.././libc10.so)
+frame #1: <unknown function> + 0x691e32c (0x72f2bdd4132c in /net/projects2/fermi2526/conda/nugraph-25-10/lib/python3.13/site-packages/torch/../../.././libtorch_cpu.so)
+frame #2: <unknown function> + 0x13eb175 (0x72f2b880e175 in /net/projects2/fermi2526/conda/nugraph-25-10/lib/python3.13/site-packages/torch/../../.././libtorch_cpu.so)
+frame #3: <unknown function> + 0x69932bd (0x72f2bddb62bd in /net/projects2/fermi2526/conda/nugraph-25-10/lib/python3.13/site-packages/torch/../../.././libtorch_cpu.so)
+frame #4: <unknown function> + 0x69934d3 (0x72f2bddb64d3 in /net/projects2/fermi2526/conda/nugraph-25-10/lib/python3.13/site-packages/torch/../../.././libtorch_cpu.so)
+frame #5: <unknown function> + 0x69938ea (0x72f2bddb68ea in /net/projects2/fermi2526/conda/nugraph-25-10/lib/python3.13/site-packages/torch/../../.././libtorch_cpu.so)
+frame #6: <unknown function> + 0x691e4c2 (0x72f2bdd414c2 in /net/projects2/fermi2526/conda/nugraph-25-10/lib/python3.13/site-packages/torch/../../.././libtorch_cpu.so)
+frame #7: c10d::TCPStore::TCPStore(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, c10d::TCPStoreOptions const&) + 0x454 (0x72f2bdd49464 in /net/projects2/fermi2526/conda/nugraph-25-10/lib/python3.13/site-packages/torch/../../.././libtorch_cpu.so)
+frame #8: <unknown function> + 0xcfb425 (0x72f2c66ca425 in /net/projects2/fermi2526/conda/nugraph-25-10/lib/python3.13/site-packages/torch/../../../libtorch_python.so)
+frame #9: <unknown function> + 0xd8b296 (0x72f2c675a296 in /net/projects2/fermi2526/conda/nugraph-25-10/lib/python3.13/site-packages/torch/../../../libtorch_python.so)
+frame #10: <unknown function> + 0x40760f (0x72f2c5dd660f in /net/projects2/fermi2526/conda/nugraph-25-10/lib/python3.13/site-packages/torch/../../../libtorch_python.so)
+frame #11: <unknown function> + 0x1dbbfc (0x6529e8e8bbfc in /net/projects2/fermi2526/conda/nugraph-25-10/bin/python)
+frame #12: _PyObject_MakeTpCall + 0x27c (0x6529e8e59dbc in /net/projects2/fermi2526/conda/nugraph-25-10/bin/python)
+frame #13: <unknown function> + 0x210ec3 (0x6529e8ec0ec3 in /net/projects2/fermi2526/conda/nugraph-25-10/bin/python)
+frame #14: <unknown function> + 0x290ddb (0x6529e8f40ddb in /net/projects2/fermi2526/conda/nugraph-25-10/bin/python)
+frame #15: <unknown function> + 0x1ef2d0 (0x6529e8e9f2d0 in /net/projects2/fermi2526/conda/nugraph-25-10/bin/python)
+frame #16: <unknown function> + 0x1aa0c6 (0x6529e8e5a0c6 in /net/projects2/fermi2526/conda/nugraph-25-10/bin/python)
+frame #17: <unknown function> + 0x401a59 (0x72f2c5dd0a59 in /net/projects2/fermi2526/conda/nugraph-25-10/lib/python3.13/site-packages/torch/../../../libtorch_python.so)
+frame #18: _PyObject_MakeTpCall + 0x27c (0x6529e8e59dbc in /net/projects2/fermi2526/conda/nugraph-25-10/bin/python)
+frame #19: _PyEval_EvalFrameDefault + 0x9621 (0x6529e8e738d1 in /net/projects2/fermi2526/conda/nugraph-25-10/bin/python)
+frame #20: <unknown function> + 0x23233e (0x6529e8ee233e in /net/projects2/fermi2526/conda/nugraph-25-10/bin/python)
+frame #21: <unknown function> + 0x1ddc43 (0x6529e8e8dc43 in /net/projects2/fermi2526/conda/nugraph-25-10/bin/python)
+frame #22: PyObject_Vectorcall + 0x2e (0x6529e8e5c05e in /net/projects2/fermi2526/conda/nugraph-25-10/bin/python)
+frame #23: _PyEval_EvalFrameDefault + 0x3a47 (0x6529e8e6dcf7 in /net/projects2/fermi2526/conda/nugraph-25-10/bin/python)
+frame #24: <unknown function> + 0x210b2c (0x6529e8ec0b2c in /net/projects2/fermi2526/conda/nugraph-25-10/bin/python)
+frame #25: _PyEval_EvalFrameDefault + 0x5092 (0x6529e8e6f342 in /net/projects2/fermi2526/conda/nugraph-25-10/bin/python)
+frame #26: <unknown function> + 0x210c69 (0x6529e8ec0c69 in /net/projects2/fermi2526/conda/nugraph-25-10/bin/python)
+frame #27: <unknown function> + 0x290ddb (0x6529e8f40ddb in /net/projects2/fermi2526/conda/nugraph-25-10/bin/python)
+frame #28: _PyEval_EvalFrameDefault + 0x5092 (0x6529e8e6f342 in /net/projects2/fermi2526/conda/nugraph-25-10/bin/python)
+frame #29: PyEval_EvalCode + 0x9f (0x6529e8f341df in /net/projects2/fermi2526/conda/nugraph-25-10/bin/python)
+frame #30: <unknown function> + 0x2c1ff3 (0x6529e8f71ff3 in /net/projects2/fermi2526/conda/nugraph-25-10/bin/python)
+frame #31: <unknown function> + 0x2bf75c (0x6529e8f6f75c in /net/projects2/fermi2526/conda/nugraph-25-10/bin/python)
+frame #32: <unknown function> + 0x2bc566 (0x6529e8f6c566 in /net/projects2/fermi2526/conda/nugraph-25-10/bin/python)
+frame #33: <unknown function> + 0x2bc1c3 (0x6529e8f6c1c3 in /net/projects2/fermi2526/conda/nugraph-25-10/bin/python)
+frame #34: <unknown function> + 0x2bbfdc (0x6529e8f6bfdc in /net/projects2/fermi2526/conda/nugraph-25-10/bin/python)
+frame #35: Py_RunMain + 0x3b4 (0x6529e8f6a624 in /net/projects2/fermi2526/conda/nugraph-25-10/bin/python)
+frame #36: Py_BytesMain + 0x37 (0x6529e8f1fac7 in /net/projects2/fermi2526/conda/nugraph-25-10/bin/python)
+frame #37: <unknown function> + 0x29d90 (0x72f2ce429d90 in /lib/x86_64-linux-gnu/libc.so.6)
+frame #38: __libc_start_main + 0x80 (0x72f2ce429e40 in /lib/x86_64-linux-gnu/libc.so.6)
+frame #39: <unknown function> + 0x26ee8d (0x6529e8f1ee8d in /net/projects2/fermi2526/conda/nugraph-25-10/bin/python)
+
+[E626 19:22:43.904913932 socket.cpp:1019] [c10d] The client socket has timed out after 1800000ms while trying to connect to (j001-ds, 18316).
+[W626 19:22:43.905628418 TCPStore.cpp:340] [c10d] TCP client failed to connect/validate to host j001-ds:18316 - retrying (try=0, timeout=1800000ms, delay=83118ms): The client socket has timed out after 1800000ms while trying to connect to (j001-ds, 18316).
+Exception raised from throwTimeoutError at /home/conda/feedstock_root/build_artifacts/libtorch_1760296002163/work/torch/csrc/distributed/c10d/socket.cpp:1021 (most recent call first):
+frame #0: c10::Error::Error(c10::SourceLocation, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >) + 0x8f (0x7927a357603f in /net/projects2/fermi2526/conda/nugraph-25-10/lib/python3.13/site-packages/torch/../../.././libc10.so)
+frame #1: <unknown function> + 0x691e32c (0x79281443732c in /net/projects2/fermi2526/conda/nugraph-25-10/lib/python3.13/site-packages/torch/../../.././libtorch_cpu.so)
+frame #2: <unknown function> + 0x13eb175 (0x79280ef04175 in /net/projects2/fermi2526/conda/nugraph-25-10/lib/python3.13/site-packages/torch/../../.././libtorch_cpu.so)
+frame #3: <unknown function> + 0x69932bd (0x7928144ac2bd in /net/projects2/fermi2526/conda/nugraph-25-10/lib/python3.13/site-packages/torch/../../.././libtorch_cpu.so)
+frame #4: <unknown function> + 0x69934d3 (0x7928144ac4d3 in /net/projects2/fermi2526/conda/nugraph-25-10/lib/python3.13/site-packages/torch/../../.././libtorch_cpu.so)
+frame #5: <unknown function> + 0x69938ea (0x7928144ac8ea in /net/projects2/fermi2526/conda/nugraph-25-10/lib/python3.13/site-packages/torch/../../.././libtorch_cpu.so)
+frame #6: <unknown function> + 0x691e4c2 (0x7928144374c2 in /net/projects2/fermi2526/conda/nugraph-25-10/lib/python3.13/site-packages/torch/../../.././libtorch_cpu.so)
+frame #7: c10d::TCPStore::TCPStore(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, c10d::TCPStoreOptions const&) + 0x454 (0x79281443f464 in /net/projects2/fermi2526/conda/nugraph-25-10/lib/python3.13/site-packages/torch/../../.././libtorch_cpu.so)
+frame #8: <unknown function> + 0xcfb425 (0x79281cdc0425 in /net/projects2/fermi2526/conda/nugraph-25-10/lib/python3.13/site-packages/torch/../../../libtorch_python.so)
+frame #9: <unknown function> + 0xd8b296 (0x79281ce50296 in /net/projects2/fermi2526/conda/nugraph-25-10/lib/python3.13/site-packages/torch/../../../libtorch_python.so)
+frame #10: <unknown function> + 0x40760f (0x79281c4cc60f in /net/projects2/fermi2526/conda/nugraph-25-10/lib/python3.13/site-packages/torch/../../../libtorch_python.so)
+frame #11: <unknown function> + 0x1dbbfc (0x6347b7e56bfc in /net/projects2/fermi2526/conda/nugraph-25-10/bin/python)
+frame #12: _PyObject_MakeTpCall + 0x27c (0x6347b7e24dbc in /net/projects2/fermi2526/conda/nugraph-25-10/bin/python)
+frame #13: <unknown function> + 0x210ec3 (0x6347b7e8bec3 in /net/projects2/fermi2526/conda/nugraph-25-10/bin/python)
+frame #14: <unknown function> + 0x290ddb (0x6347b7f0bddb in /net/projects2/fermi2526/conda/nugraph-25-10/bin/python)
+frame #15: <unknown function> + 0x1ef2d0 (0x6347b7e6a2d0 in /net/projects2/fermi2526/conda/nugraph-25-10/bin/python)
+frame #16: <unknown function> + 0x1aa0c6 (0x6347b7e250c6 in /net/projects2/fermi2526/conda/nugraph-25-10/bin/python)
+frame #17: <unknown function> + 0x401a59 (0x79281c4c6a59 in /net/projects2/fermi2526/conda/nugraph-25-10/lib/python3.13/site-packages/torch/../../../libtorch_python.so)
+frame #18: _PyObject_MakeTpCall + 0x27c (0x6347b7e24dbc in /net/projects2/fermi2526/conda/nugraph-25-10/bin/python)
+frame #19: _PyEval_EvalFrameDefault + 0x9621 (0x6347b7e3e8d1 in /net/projects2/fermi2526/conda/nugraph-25-10/bin/python)
+frame #20: <unknown function> + 0x23233e (0x6347b7ead33e in /net/projects2/fermi2526/conda/nugraph-25-10/bin/python)
+frame #21: <unknown function> + 0x1ddc43 (0x6347b7e58c43 in /net/projects2/fermi2526/conda/nugraph-25-10/bin/python)
+frame #22: PyObject_Vectorcall + 0x2e (0x6347b7e2705e in /net/projects2/fermi2526/conda/nugraph-25-10/bin/python)
+frame #23: _PyEval_EvalFrameDefault + 0x3a47 (0x6347b7e38cf7 in /net/projects2/fermi2526/conda/nugraph-25-10/bin/python)
+frame #24: <unknown function> + 0x210b2c (0x6347b7e8bb2c in /net/projects2/fermi2526/conda/nugraph-25-10/bin/python)
+frame #25: _PyEval_EvalFrameDefault + 0x5092 (0x6347b7e3a342 in /net/projects2/fermi2526/conda/nugraph-25-10/bin/python)
+frame #26: <unknown function> + 0x210c69 (0x6347b7e8bc69 in /net/projects2/fermi2526/conda/nugraph-25-10/bin/python)
+frame #27: <unknown function> + 0x290ddb (0x6347b7f0bddb in /net/projects2/fermi2526/conda/nugraph-25-10/bin/python)
+frame #28: _PyEval_EvalFrameDefault + 0x5092 (0x6347b7e3a342 in /net/projects2/fermi2526/conda/nugraph-25-10/bin/python)
+frame #29: PyEval_EvalCode + 0x9f (0x6347b7eff1df in /net/projects2/fermi2526/conda/nugraph-25-10/bin/python)
+frame #30: <unknown function> + 0x2c1ff3 (0x6347b7f3cff3 in /net/projects2/fermi2526/conda/nugraph-25-10/bin/python)
+frame #31: <unknown function> + 0x2bf75c (0x6347b7f3a75c in /net/projects2/fermi2526/conda/nugraph-25-10/bin/python)
+frame #32: <unknown function> + 0x2bc566 (0x6347b7f37566 in /net/projects2/fermi2526/conda/nugraph-25-10/bin/python)
+frame #33: <unknown function> + 0x2bc1c3 (0x6347b7f371c3 in /net/projects2/fermi2526/conda/nugraph-25-10/bin/python)
+frame #34: <unknown function> + 0x2bbfdc (0x6347b7f36fdc in /net/projects2/fermi2526/conda/nugraph-25-10/bin/python)
+frame #35: Py_RunMain + 0x3b4 (0x6347b7f35624 in /net/projects2/fermi2526/conda/nugraph-25-10/bin/python)
+frame #36: Py_BytesMain + 0x37 (0x6347b7eeaac7 in /net/projects2/fermi2526/conda/nugraph-25-10/bin/python)
+frame #37: <unknown function> + 0x29d90 (0x792824c29d90 in /lib/x86_64-linux-gnu/libc.so.6)
+frame #38: __libc_start_main + 0x80 (0x792824c29e40 in /lib/x86_64-linux-gnu/libc.so.6)
+frame #39: <unknown function> + 0x26ee8d (0x6347b7ee9e8d in /net/projects2/fermi2526/conda/nugraph-25-10/bin/python)
+
+[E626 19:51:12.703355316 socket.cpp:1019] [c10d] The client socket has timed out after 1800000ms while trying to connect to (j001-ds, 18316).
+[E626 19:51:12.703554164 TCPStore.cpp:328] [c10d] TCP client failed to connect/validate to host j001-ds:18316 - timed out (try=1, timeout=1800000ms): The client socket has timed out after 1800000ms while trying to connect to (j001-ds, 18316).
+Exception raised from throwTimeoutError at /home/conda/feedstock_root/build_artifacts/libtorch_1760296002163/work/torch/csrc/distributed/c10d/socket.cpp:1021 (most recent call first):
+frame #0: c10::Error::Error(c10::SourceLocation, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >) + 0x8f (0x7aeab1d6703f in /net/projects2/fermi2526/conda/nugraph-25-10/lib/python3.13/site-packages/torch/../../.././libc10.so)
+frame #1: <unknown function> + 0x691e32c (0x7aeb22c2832c in /net/projects2/fermi2526/conda/nugraph-25-10/lib/python3.13/site-packages/torch/../../.././libtorch_cpu.so)
+frame #2: <unknown function> + 0x13eb175 (0x7aeb1d6f5175 in /net/projects2/fermi2526/conda/nugraph-25-10/lib/python3.13/site-packages/torch/../../.././libtorch_cpu.so)
+frame #3: <unknown function> + 0x69932bd (0x7aeb22c9d2bd in /net/projects2/fermi2526/conda/nugraph-25-10/lib/python3.13/site-packages/torch/../../.././libtorch_cpu.so)
+frame #4: <unknown function> + 0x69934d3 (0x7aeb22c9d4d3 in /net/projects2/fermi2526/conda/nugraph-25-10/lib/python3.13/site-packages/torch/../../.././libtorch_cpu.so)
+frame #5: <unknown function> + 0x69938ea (0x7aeb22c9d8ea in /net/projects2/fermi2526/conda/nugraph-25-10/lib/python3.13/site-packages/torch/../../.././libtorch_cpu.so)
+frame #6: <unknown function> + 0x691e4c2 (0x7aeb22c284c2 in /net/projects2/fermi2526/conda/nugraph-25-10/lib/python3.13/site-packages/torch/../../.././libtorch_cpu.so)
+frame #7: c10d::TCPStore::TCPStore(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, c10d::TCPStoreOptions const&) + 0x454 (0x7aeb22c30464 in /net/projects2/fermi2526/conda/nugraph-25-10/lib/python3.13/site-packages/torch/../../.././libtorch_cpu.so)
+frame #8: <unknown function> + 0xcfb425 (0x7aeb2b5c0425 in /net/projects2/fermi2526/conda/nugraph-25-10/lib/python3.13/site-packages/torch/../../../libtorch_python.so)
+frame #9: <unknown function> + 0xd8b296 (0x7aeb2b650296 in /net/projects2/fermi2526/conda/nugraph-25-10/lib/python3.13/site-packages/torch/../../../libtorch_python.so)
+frame #10: <unknown function> + 0x40760f (0x7aeb2accc60f in /net/projects2/fermi2526/conda/nugraph-25-10/lib/python3.13/site-packages/torch/../../../libtorch_python.so)
+frame #11: <unknown function> + 0x1dbbfc (0x56499f98ebfc in /net/projects2/fermi2526/conda/nugraph-25-10/bin/python)
+frame #12: _PyObject_MakeTpCall + 0x27c (0x56499f95cdbc in /net/projects2/fermi2526/conda/nugraph-25-10/bin/python)
+frame #13: <unknown function> + 0x210ec3 (0x56499f9c3ec3 in /net/projects2/fermi2526/conda/nugraph-25-10/bin/python)
+frame #14: <unknown function> + 0x290ddb (0x56499fa43ddb in /net/projects2/fermi2526/conda/nugraph-25-10/bin/python)
+frame #15: <unknown function> + 0x1ef2d0 (0x56499f9a22d0 in /net/projects2/fermi2526/conda/nugraph-25-10/bin/python)
+frame #16: <unknown function> + 0x1aa0c6 (0x56499f95d0c6 in /net/projects2/fermi2526/conda/nugraph-25-10/bin/python)
+frame #17: <unknown function> + 0x401a59 (0x7aeb2acc6a59 in /net/projects2/fermi2526/conda/nugraph-25-10/lib/python3.13/site-packages/torch/../../../libtorch_python.so)
+frame #18: _PyObject_MakeTpCall + 0x27c (0x56499f95cdbc in /net/projects2/fermi2526/conda/nugraph-25-10/bin/python)
+frame #19: _PyEval_EvalFrameDefault + 0x9621 (0x56499f9768d1 in /net/projects2/fermi2526/conda/nugraph-25-10/bin/python)
+frame #20: <unknown function> + 0x23233e (0x56499f9e533e in /net/projects2/fermi2526/conda/nugraph-25-10/bin/python)
+frame #21: <unknown function> + 0x1ddc43 (0x56499f990c43 in /net/projects2/fermi2526/conda/nugraph-25-10/bin/python)
+frame #22: PyObject_Vectorcall + 0x2e (0x56499f95f05e in /net/projects2/fermi2526/conda/nugraph-25-10/bin/python)
+frame #23: _PyEval_EvalFrameDefault + 0x3a47 (0x56499f970cf7 in /net/projects2/fermi2526/conda/nugraph-25-10/bin/python)
+frame #24: <unknown function> + 0x210b2c (0x56499f9c3b2c in /net/projects2/fermi2526/conda/nugraph-25-10/bin/python)
+frame #25: _PyEval_EvalFrameDefault + 0x5092 (0x56499f972342 in /net/projects2/fermi2526/conda/nugraph-25-10/bin/python)
+frame #26: <unknown function> + 0x210c69 (0x56499f9c3c69 in /net/projects2/fermi2526/conda/nugraph-25-10/bin/python)
+frame #27: <unknown function> + 0x290ddb (0x56499fa43ddb in /net/projects2/fermi2526/conda/nugraph-25-10/bin/python)
+frame #28: _PyEval_EvalFrameDefault + 0x5092 (0x56499f972342 in /net/projects2/fermi2526/conda/nugraph-25-10/bin/python)
+frame #29: PyEval_EvalCode + 0x9f (0x56499fa371df in /net/projects2/fermi2526/conda/nugraph-25-10/bin/python)
+frame #30: <unknown function> + 0x2c1ff3 (0x56499fa74ff3 in /net/projects2/fermi2526/conda/nugraph-25-10/bin/python)
+frame #31: <unknown function> + 0x2bf75c (0x56499fa7275c in /net/projects2/fermi2526/conda/nugraph-25-10/bin/python)
+frame #32: <unknown function> + 0x2bc566 (0x56499fa6f566 in /net/projects2/fermi2526/conda/nugraph-25-10/bin/python)
+frame #33: <unknown function> + 0x2bc1c3 (0x56499fa6f1c3 in /net/projects2/fermi2526/conda/nugraph-25-10/bin/python)
+frame #34: <unknown function> + 0x2bbfdc (0x56499fa6efdc in /net/projects2/fermi2526/conda/nugraph-25-10/bin/python)
+frame #35: Py_RunMain + 0x3b4 (0x56499fa6d624 in /net/projects2/fermi2526/conda/nugraph-25-10/bin/python)
+frame #36: Py_BytesMain + 0x37 (0x56499fa22ac7 in /net/projects2/fermi2526/conda/nugraph-25-10/bin/python)
+frame #37: <unknown function> + 0x29d90 (0x7aeb33229d90 in /lib/x86_64-linux-gnu/libc.so.6)
+frame #38: __libc_start_main + 0x80 (0x7aeb33229e40 in /lib/x86_64-linux-gnu/libc.so.6)
+frame #39: <unknown function> + 0x26ee8d (0x56499fa21e8d in /net/projects2/fermi2526/conda/nugraph-25-10/bin/python)
+
+Traceback (most recent call last):
+  File "/home/vihaan/NuGraph/scripts/train.py", line 115, in <module>
+    train(args)
+    ~~~~~^^^^^^
+  File "/home/vihaan/NuGraph/scripts/train.py", line 111, in train
+    trainer.fit(model, datamodule=nudata, ckpt_path=args.resume)
+    ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/net/projects2/fermi2526/conda/nugraph-25-10/lib/python3.13/site-packages/pytorch_lightning/trainer/trainer.py", line 560, in fit
+    call._call_and_handle_interrupt(
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^
+        self, self._fit_impl, model, train_dataloaders, val_dataloaders, datamodule, ckpt_path
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/net/projects2/fermi2526/conda/nugraph-25-10/lib/python3.13/site-packages/pytorch_lightning/trainer/call.py", line 48, in _call_and_handle_interrupt
+    return trainer.strategy.launcher.launch(trainer_fn, *args, trainer=trainer, **kwargs)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/net/projects2/fermi2526/conda/nugraph-25-10/lib/python3.13/site-packages/pytorch_lightning/strategies/launchers/subprocess_script.py", line 105, in launch
+    return function(*args, **kwargs)
+  File "/net/projects2/fermi2526/conda/nugraph-25-10/lib/python3.13/site-packages/pytorch_lightning/trainer/trainer.py", line 598, in _fit_impl
+    self._run(model, ckpt_path=ckpt_path)
+    ~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/net/projects2/fermi2526/conda/nugraph-25-10/lib/python3.13/site-packages/pytorch_lightning/trainer/trainer.py", line 967, in _run
+    self.strategy.setup_environment()
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "/net/projects2/fermi2526/conda/nugraph-25-10/lib/python3.13/site-packages/pytorch_lightning/strategies/ddp.py", line 154, in setup_environment
+    self.setup_distributed()
+    ~~~~~~~~~~~~~~~~~~~~~~^^
+  File "/net/projects2/fermi2526/conda/nugraph-25-10/lib/python3.13/site-packages/pytorch_lightning/strategies/ddp.py", line 206, in setup_distributed
+    _init_dist_connection(self.cluster_environment, self._process_group_backend, **kwargs)
+    ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/net/projects2/fermi2526/conda/nugraph-25-10/lib/python3.13/site-packages/lightning_fabric/utilities/distributed.py", line 298, in _init_dist_connection
+    torch.distributed.init_process_group(torch_distributed_backend, rank=global_rank, world_size=world_size, **kwargs)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/net/projects2/fermi2526/conda/nugraph-25-10/lib/python3.13/site-packages/torch/distributed/c10d_logger.py", line 81, in wrapper
+    return func(*args, **kwargs)
+  File "/net/projects2/fermi2526/conda/nugraph-25-10/lib/python3.13/site-packages/torch/distributed/c10d_logger.py", line 95, in wrapper
+    func_return = func(*args, **kwargs)
+  File "/net/projects2/fermi2526/conda/nugraph-25-10/lib/python3.13/site-packages/torch/distributed/distributed_c10d.py", line 1757, in init_process_group
+    store, rank, world_size = next(rendezvous_iterator)
+                              ~~~~^^^^^^^^^^^^^^^^^^^^^
+  File "/net/projects2/fermi2526/conda/nugraph-25-10/lib/python3.13/site-packages/torch/distributed/rendezvous.py", line 278, in _env_rendezvous_handler
+    store = _create_c10d_store(
+        master_addr, master_port, rank, world_size, timeout, use_libuv
+    )
+  File "/net/projects2/fermi2526/conda/nugraph-25-10/lib/python3.13/site-packages/torch/distributed/rendezvous.py", line 198, in _create_c10d_store
+    return TCPStore(
+        host_name=hostname,
+    ...<5 lines>...
+        use_libuv=use_libuv,
+    )
+torch.distributed.DistNetworkError: The client socket has timed out after 1800000ms while trying to connect to (j001-ds, 18316).
+srun: error: j002-ds: task 6: Exited with exit code 1
+[E626 19:52:19.359042111 socket.cpp:1019] [c10d] The client socket has timed out after 1800000ms while trying to connect to (j001-ds, 18316).
+[E626 19:52:19.359256180 TCPStore.cpp:328] [c10d] TCP client failed to connect/validate to host j001-ds:18316 - timed out (try=1, timeout=1800000ms): The client socket has timed out after 1800000ms while trying to connect to (j001-ds, 18316).
+Exception raised from throwTimeoutError at /home/conda/feedstock_root/build_artifacts/libtorch_1760296002163/work/torch/csrc/distributed/c10d/socket.cpp:1021 (most recent call first):
+frame #0: c10::Error::Error(c10::SourceLocation, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >) + 0x8f (0x7a552462003f in /net/projects2/fermi2526/conda/nugraph-25-10/lib/python3.13/site-packages/torch/../../.././libc10.so)
+frame #1: <unknown function> + 0x691e32c (0x7a559543732c in /net/projects2/fermi2526/conda/nugraph-25-10/lib/python3.13/site-packages/torch/../../.././libtorch_cpu.so)
+frame #2: <unknown function> + 0x13eb175 (0x7a558ff04175 in /net/projects2/fermi2526/conda/nugraph-25-10/lib/python3.13/site-packages/torch/../../.././libtorch_cpu.so)
+frame #3: <unknown function> + 0x69932bd (0x7a55954ac2bd in /net/projects2/fermi2526/conda/nugraph-25-10/lib/python3.13/site-packages/torch/../../.././libtorch_cpu.so)
+frame #4: <unknown function> + 0x69934d3 (0x7a55954ac4d3 in /net/projects2/fermi2526/conda/nugraph-25-10/lib/python3.13/site-packages/torch/../../.././libtorch_cpu.so)
+frame #5: <unknown function> + 0x69938ea (0x7a55954ac8ea in /net/projects2/fermi2526/conda/nugraph-25-10/lib/python3.13/site-packages/torch/../../.././libtorch_cpu.so)
+frame #6: <unknown function> + 0x691e4c2 (0x7a55954374c2 in /net/projects2/fermi2526/conda/nugraph-25-10/lib/python3.13/site-packages/torch/../../.././libtorch_cpu.so)
+frame #7: c10d::TCPStore::TCPStore(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, c10d::TCPStoreOptions const&) + 0x454 (0x7a559543f464 in /net/projects2/fermi2526/conda/nugraph-25-10/lib/python3.13/site-packages/torch/../../.././libtorch_cpu.so)
+frame #8: <unknown function> + 0xcfb425 (0x7a559ddc0425 in /net/projects2/fermi2526/conda/nugraph-25-10/lib/python3.13/site-packages/torch/../../../libtorch_python.so)
+frame #9: <unknown function> + 0xd8b296 (0x7a559de50296 in /net/projects2/fermi2526/conda/nugraph-25-10/lib/python3.13/site-packages/torch/../../../libtorch_python.so)
+frame #10: <unknown function> + 0x40760f (0x7a559d4cc60f in /net/projects2/fermi2526/conda/nugraph-25-10/lib/python3.13/site-packages/torch/../../../libtorch_python.so)
+frame #11: <unknown function> + 0x1dbbfc (0x5ac84d5cabfc in /net/projects2/fermi2526/conda/nugraph-25-10/bin/python)
+frame #12: _PyObject_MakeTpCall + 0x27c (0x5ac84d598dbc in /net/projects2/fermi2526/conda/nugraph-25-10/bin/python)
+frame #13: <unknown function> + 0x210ec3 (0x5ac84d5ffec3 in /net/projects2/fermi2526/conda/nugraph-25-10/bin/python)
+frame #14: <unknown function> + 0x290ddb (0x5ac84d67fddb in /net/projects2/fermi2526/conda/nugraph-25-10/bin/python)
+frame #15: <unknown function> + 0x1ef2d0 (0x5ac84d5de2d0 in /net/projects2/fermi2526/conda/nugraph-25-10/bin/python)
+frame #16: <unknown function> + 0x1aa0c6 (0x5ac84d5990c6 in /net/projects2/fermi2526/conda/nugraph-25-10/bin/python)
+frame #17: <unknown function> + 0x401a59 (0x7a559d4c6a59 in /net/projects2/fermi2526/conda/nugraph-25-10/lib/python3.13/site-packages/torch/../../../libtorch_python.so)
+frame #18: _PyObject_MakeTpCall + 0x27c (0x5ac84d598dbc in /net/projects2/fermi2526/conda/nugraph-25-10/bin/python)
+frame #19: _PyEval_EvalFrameDefault + 0x9621 (0x5ac84d5b28d1 in /net/projects2/fermi2526/conda/nugraph-25-10/bin/python)
+frame #20: <unknown function> + 0x23233e (0x5ac84d62133e in /net/projects2/fermi2526/conda/nugraph-25-10/bin/python)
+frame #21: <unknown function> + 0x1ddc43 (0x5ac84d5ccc43 in /net/projects2/fermi2526/conda/nugraph-25-10/bin/python)
+frame #22: PyObject_Vectorcall + 0x2e (0x5ac84d59b05e in /net/projects2/fermi2526/conda/nugraph-25-10/bin/python)
+frame #23: _PyEval_EvalFrameDefault + 0x3a47 (0x5ac84d5accf7 in /net/projects2/fermi2526/conda/nugraph-25-10/bin/python)
+frame #24: <unknown function> + 0x210b2c (0x5ac84d5ffb2c in /net/projects2/fermi2526/conda/nugraph-25-10/bin/python)
+frame #25: _PyEval_EvalFrameDefault + 0x5092 (0x5ac84d5ae342 in /net/projects2/fermi2526/conda/nugraph-25-10/bin/python)
+frame #26: <unknown function> + 0x210c69 (0x5ac84d5ffc69 in /net/projects2/fermi2526/conda/nugraph-25-10/bin/python)
+frame #27: <unknown function> + 0x290ddb (0x5ac84d67fddb in /net/projects2/fermi2526/conda/nugraph-25-10/bin/python)
+frame #28: _PyEval_EvalFrameDefault + 0x5092 (0x5ac84d5ae342 in /net/projects2/fermi2526/conda/nugraph-25-10/bin/python)
+frame #29: PyEval_EvalCode + 0x9f (0x5ac84d6731df in /net/projects2/fermi2526/conda/nugraph-25-10/bin/python)
+frame #30: <unknown function> + 0x2c1ff3 (0x5ac84d6b0ff3 in /net/projects2/fermi2526/conda/nugraph-25-10/bin/python)
+frame #31: <unknown function> + 0x2bf75c (0x5ac84d6ae75c in /net/projects2/fermi2526/conda/nugraph-25-10/bin/python)
+frame #32: <unknown function> + 0x2bc566 (0x5ac84d6ab566 in /net/projects2/fermi2526/conda/nugraph-25-10/bin/python)
+frame #33: <unknown function> + 0x2bc1c3 (0x5ac84d6ab1c3 in /net/projects2/fermi2526/conda/nugraph-25-10/bin/python)
+frame #34: <unknown function> + 0x2bbfdc (0x5ac84d6aafdc in /net/projects2/fermi2526/conda/nugraph-25-10/bin/python)
+frame #35: Py_RunMain + 0x3b4 (0x5ac84d6a9624 in /net/projects2/fermi2526/conda/nugraph-25-10/bin/python)
+frame #36: Py_BytesMain + 0x37 (0x5ac84d65eac7 in /net/projects2/fermi2526/conda/nugraph-25-10/bin/python)
+frame #37: <unknown function> + 0x29d90 (0x7a55a5c29d90 in /lib/x86_64-linux-gnu/libc.so.6)
+frame #38: __libc_start_main + 0x80 (0x7a55a5c29e40 in /lib/x86_64-linux-gnu/libc.so.6)
+frame #39: <unknown function> + 0x26ee8d (0x5ac84d65de8d in /net/projects2/fermi2526/conda/nugraph-25-10/bin/python)
+
+Traceback (most recent call last):
+  File "/home/vihaan/NuGraph/scripts/train.py", line 115, in <module>
+    train(args)
+    ~~~~~^^^^^^
+  File "/home/vihaan/NuGraph/scripts/train.py", line 111, in train
+    trainer.fit(model, datamodule=nudata, ckpt_path=args.resume)
+    ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/net/projects2/fermi2526/conda/nugraph-25-10/lib/python3.13/site-packages/pytorch_lightning/trainer/trainer.py", line 560, in fit
+    call._call_and_handle_interrupt(
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^
+        self, self._fit_impl, model, train_dataloaders, val_dataloaders, datamodule, ckpt_path
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/net/projects2/fermi2526/conda/nugraph-25-10/lib/python3.13/site-packages/pytorch_lightning/trainer/call.py", line 48, in _call_and_handle_interrupt
+    return trainer.strategy.launcher.launch(trainer_fn, *args, trainer=trainer, **kwargs)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/net/projects2/fermi2526/conda/nugraph-25-10/lib/python3.13/site-packages/pytorch_lightning/strategies/launchers/subprocess_script.py", line 105, in launch
+    return function(*args, **kwargs)
+  File "/net/projects2/fermi2526/conda/nugraph-25-10/lib/python3.13/site-packages/pytorch_lightning/trainer/trainer.py", line 598, in _fit_impl
+    self._run(model, ckpt_path=ckpt_path)
+    ~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/net/projects2/fermi2526/conda/nugraph-25-10/lib/python3.13/site-packages/pytorch_lightning/trainer/trainer.py", line 967, in _run
+    self.strategy.setup_environment()
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "/net/projects2/fermi2526/conda/nugraph-25-10/lib/python3.13/site-packages/pytorch_lightning/strategies/ddp.py", line 154, in setup_environment
+    self.setup_distributed()
+    ~~~~~~~~~~~~~~~~~~~~~~^^
+  File "/net/projects2/fermi2526/conda/nugraph-25-10/lib/python3.13/site-packages/pytorch_lightning/strategies/ddp.py", line 206, in setup_distributed
+    _init_dist_connection(self.cluster_environment, self._process_group_backend, **kwargs)
+    ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/net/projects2/fermi2526/conda/nugraph-25-10/lib/python3.13/site-packages/lightning_fabric/utilities/distributed.py", line 298, in _init_dist_connection
+    torch.distributed.init_process_group(torch_distributed_backend, rank=global_rank, world_size=world_size, **kwargs)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/net/projects2/fermi2526/conda/nugraph-25-10/lib/python3.13/site-packages/torch/distributed/c10d_logger.py", line 81, in wrapper
+    return func(*args, **kwargs)
+  File "/net/projects2/fermi2526/conda/nugraph-25-10/lib/python3.13/site-packages/torch/distributed/c10d_logger.py", line 95, in wrapper
+    func_return = func(*args, **kwargs)
+  File "/net/projects2/fermi2526/conda/nugraph-25-10/lib/python3.13/site-packages/torch/distributed/distributed_c10d.py", line 1757, in init_process_group
+    store, rank, world_size = next(rendezvous_iterator)
+                              ~~~~^^^^^^^^^^^^^^^^^^^^^
+  File "/net/projects2/fermi2526/conda/nugraph-25-10/lib/python3.13/site-packages/torch/distributed/rendezvous.py", line 278, in _env_rendezvous_handler
+    store = _create_c10d_store(
+        master_addr, master_port, rank, world_size, timeout, use_libuv
+    )
+  File "/net/projects2/fermi2526/conda/nugraph-25-10/lib/python3.13/site-packages/torch/distributed/rendezvous.py", line 198, in _create_c10d_store
+    return TCPStore(
+        host_name=hostname,
+    ...<5 lines>...
+        use_libuv=use_libuv,
+    )
+torch.distributed.DistNetworkError: The client socket has timed out after 1800000ms while trying to connect to (j001-ds, 18316).
+srun: error: j002-ds: task 5: Exited with exit code 1
+[E626 19:52:33.482578225 socket.cpp:1019] [c10d] The client socket has timed out after 1800000ms while trying to connect to (j001-ds, 18316).
+[E626 19:52:33.482770724 TCPStore.cpp:328] [c10d] TCP client failed to connect/validate to host j001-ds:18316 - timed out (try=1, timeout=1800000ms): The client socket has timed out after 1800000ms while trying to connect to (j001-ds, 18316).
+Exception raised from throwTimeoutError at /home/conda/feedstock_root/build_artifacts/libtorch_1760296002163/work/torch/csrc/distributed/c10d/socket.cpp:1021 (most recent call first):
+frame #0: c10::Error::Error(c10::SourceLocation, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >) + 0x8f (0x72f24ce8003f in /net/projects2/fermi2526/conda/nugraph-25-10/lib/python3.13/site-packages/torch/../../.././libc10.so)
+frame #1: <unknown function> + 0x691e32c (0x72f2bdd4132c in /net/projects2/fermi2526/conda/nugraph-25-10/lib/python3.13/site-packages/torch/../../.././libtorch_cpu.so)
+frame #2: <unknown function> + 0x13eb175 (0x72f2b880e175 in /net/projects2/fermi2526/conda/nugraph-25-10/lib/python3.13/site-packages/torch/../../.././libtorch_cpu.so)
+frame #3: <unknown function> + 0x69932bd (0x72f2bddb62bd in /net/projects2/fermi2526/conda/nugraph-25-10/lib/python3.13/site-packages/torch/../../.././libtorch_cpu.so)
+frame #4: <unknown function> + 0x69934d3 (0x72f2bddb64d3 in /net/projects2/fermi2526/conda/nugraph-25-10/lib/python3.13/site-packages/torch/../../.././libtorch_cpu.so)
+frame #5: <unknown function> + 0x69938ea (0x72f2bddb68ea in /net/projects2/fermi2526/conda/nugraph-25-10/lib/python3.13/site-packages/torch/../../.././libtorch_cpu.so)
+frame #6: <unknown function> + 0x691e4c2 (0x72f2bdd414c2 in /net/projects2/fermi2526/conda/nugraph-25-10/lib/python3.13/site-packages/torch/../../.././libtorch_cpu.so)
+frame #7: c10d::TCPStore::TCPStore(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, c10d::TCPStoreOptions const&) + 0x454 (0x72f2bdd49464 in /net/projects2/fermi2526/conda/nugraph-25-10/lib/python3.13/site-packages/torch/../../.././libtorch_cpu.so)
+frame #8: <unknown function> + 0xcfb425 (0x72f2c66ca425 in /net/projects2/fermi2526/conda/nugraph-25-10/lib/python3.13/site-packages/torch/../../../libtorch_python.so)
+frame #9: <unknown function> + 0xd8b296 (0x72f2c675a296 in /net/projects2/fermi2526/conda/nugraph-25-10/lib/python3.13/site-packages/torch/../../../libtorch_python.so)
+frame #10: <unknown function> + 0x40760f (0x72f2c5dd660f in /net/projects2/fermi2526/conda/nugraph-25-10/lib/python3.13/site-packages/torch/../../../libtorch_python.so)
+frame #11: <unknown function> + 0x1dbbfc (0x6529e8e8bbfc in /net/projects2/fermi2526/conda/nugraph-25-10/bin/python)
+frame #12: _PyObject_MakeTpCall + 0x27c (0x6529e8e59dbc in /net/projects2/fermi2526/conda/nugraph-25-10/bin/python)
+frame #13: <unknown function> + 0x210ec3 (0x6529e8ec0ec3 in /net/projects2/fermi2526/conda/nugraph-25-10/bin/python)
+frame #14: <unknown function> + 0x290ddb (0x6529e8f40ddb in /net/projects2/fermi2526/conda/nugraph-25-10/bin/python)
+frame #15: <unknown function> + 0x1ef2d0 (0x6529e8e9f2d0 in /net/projects2/fermi2526/conda/nugraph-25-10/bin/python)
+frame #16: <unknown function> + 0x1aa0c6 (0x6529e8e5a0c6 in /net/projects2/fermi2526/conda/nugraph-25-10/bin/python)
+frame #17: <unknown function> + 0x401a59 (0x72f2c5dd0a59 in /net/projects2/fermi2526/conda/nugraph-25-10/lib/python3.13/site-packages/torch/../../../libtorch_python.so)
+frame #18: _PyObject_MakeTpCall + 0x27c (0x6529e8e59dbc in /net/projects2/fermi2526/conda/nugraph-25-10/bin/python)
+frame #19: _PyEval_EvalFrameDefault + 0x9621 (0x6529e8e738d1 in /net/projects2/fermi2526/conda/nugraph-25-10/bin/python)
+frame #20: <unknown function> + 0x23233e (0x6529e8ee233e in /net/projects2/fermi2526/conda/nugraph-25-10/bin/python)
+frame #21: <unknown function> + 0x1ddc43 (0x6529e8e8dc43 in /net/projects2/fermi2526/conda/nugraph-25-10/bin/python)
+frame #22: PyObject_Vectorcall + 0x2e (0x6529e8e5c05e in /net/projects2/fermi2526/conda/nugraph-25-10/bin/python)
+frame #23: _PyEval_EvalFrameDefault + 0x3a47 (0x6529e8e6dcf7 in /net/projects2/fermi2526/conda/nugraph-25-10/bin/python)
+frame #24: <unknown function> + 0x210b2c (0x6529e8ec0b2c in /net/projects2/fermi2526/conda/nugraph-25-10/bin/python)
+frame #25: _PyEval_EvalFrameDefault + 0x5092 (0x6529e8e6f342 in /net/projects2/fermi2526/conda/nugraph-25-10/bin/python)
+frame #26: <unknown function> + 0x210c69 (0x6529e8ec0c69 in /net/projects2/fermi2526/conda/nugraph-25-10/bin/python)
+frame #27: <unknown function> + 0x290ddb (0x6529e8f40ddb in /net/projects2/fermi2526/conda/nugraph-25-10/bin/python)
+frame #28: _PyEval_EvalFrameDefault + 0x5092 (0x6529e8e6f342 in /net/projects2/fermi2526/conda/nugraph-25-10/bin/python)
+frame #29: PyEval_EvalCode + 0x9f (0x6529e8f341df in /net/projects2/fermi2526/conda/nugraph-25-10/bin/python)
+frame #30: <unknown function> + 0x2c1ff3 (0x6529e8f71ff3 in /net/projects2/fermi2526/conda/nugraph-25-10/bin/python)
+frame #31: <unknown function> + 0x2bf75c (0x6529e8f6f75c in /net/projects2/fermi2526/conda/nugraph-25-10/bin/python)
+frame #32: <unknown function> + 0x2bc566 (0x6529e8f6c566 in /net/projects2/fermi2526/conda/nugraph-25-10/bin/python)
+frame #33: <unknown function> + 0x2bc1c3 (0x6529e8f6c1c3 in /net/projects2/fermi2526/conda/nugraph-25-10/bin/python)
+frame #34: <unknown function> + 0x2bbfdc (0x6529e8f6bfdc in /net/projects2/fermi2526/conda/nugraph-25-10/bin/python)
+frame #35: Py_RunMain + 0x3b4 (0x6529e8f6a624 in /net/projects2/fermi2526/conda/nugraph-25-10/bin/python)
+frame #36: Py_BytesMain + 0x37 (0x6529e8f1fac7 in /net/projects2/fermi2526/conda/nugraph-25-10/bin/python)
+frame #37: <unknown function> + 0x29d90 (0x72f2ce429d90 in /lib/x86_64-linux-gnu/libc.so.6)
+frame #38: __libc_start_main + 0x80 (0x72f2ce429e40 in /lib/x86_64-linux-gnu/libc.so.6)
+frame #39: <unknown function> + 0x26ee8d (0x6529e8f1ee8d in /net/projects2/fermi2526/conda/nugraph-25-10/bin/python)
+
+Traceback (most recent call last):
+  File "/home/vihaan/NuGraph/scripts/train.py", line 115, in <module>
+    train(args)
+    ~~~~~^^^^^^
+  File "/home/vihaan/NuGraph/scripts/train.py", line 111, in train
+    trainer.fit(model, datamodule=nudata, ckpt_path=args.resume)
+    ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/net/projects2/fermi2526/conda/nugraph-25-10/lib/python3.13/site-packages/pytorch_lightning/trainer/trainer.py", line 560, in fit
+    call._call_and_handle_interrupt(
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^
+        self, self._fit_impl, model, train_dataloaders, val_dataloaders, datamodule, ckpt_path
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/net/projects2/fermi2526/conda/nugraph-25-10/lib/python3.13/site-packages/pytorch_lightning/trainer/call.py", line 48, in _call_and_handle_interrupt
+    return trainer.strategy.launcher.launch(trainer_fn, *args, trainer=trainer, **kwargs)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/net/projects2/fermi2526/conda/nugraph-25-10/lib/python3.13/site-packages/pytorch_lightning/strategies/launchers/subprocess_script.py", line 105, in launch
+    return function(*args, **kwargs)
+  File "/net/projects2/fermi2526/conda/nugraph-25-10/lib/python3.13/site-packages/pytorch_lightning/trainer/trainer.py", line 598, in _fit_impl
+    self._run(model, ckpt_path=ckpt_path)
+    ~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/net/projects2/fermi2526/conda/nugraph-25-10/lib/python3.13/site-packages/pytorch_lightning/trainer/trainer.py", line 967, in _run
+    self.strategy.setup_environment()
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "/net/projects2/fermi2526/conda/nugraph-25-10/lib/python3.13/site-packages/pytorch_lightning/strategies/ddp.py", line 154, in setup_environment
+    self.setup_distributed()
+    ~~~~~~~~~~~~~~~~~~~~~~^^
+  File "/net/projects2/fermi2526/conda/nugraph-25-10/lib/python3.13/site-packages/pytorch_lightning/strategies/ddp.py", line 206, in setup_distributed
+    _init_dist_connection(self.cluster_environment, self._process_group_backend, **kwargs)
+    ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/net/projects2/fermi2526/conda/nugraph-25-10/lib/python3.13/site-packages/lightning_fabric/utilities/distributed.py", line 298, in _init_dist_connection
+    torch.distributed.init_process_group(torch_distributed_backend, rank=global_rank, world_size=world_size, **kwargs)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/net/projects2/fermi2526/conda/nugraph-25-10/lib/python3.13/site-packages/torch/distributed/c10d_logger.py", line 81, in wrapper
+    return func(*args, **kwargs)
+  File "/net/projects2/fermi2526/conda/nugraph-25-10/lib/python3.13/site-packages/torch/distributed/c10d_logger.py", line 95, in wrapper
+    func_return = func(*args, **kwargs)
+  File "/net/projects2/fermi2526/conda/nugraph-25-10/lib/python3.13/site-packages/torch/distributed/distributed_c10d.py", line 1757, in init_process_group
+    store, rank, world_size = next(rendezvous_iterator)
+                              ~~~~^^^^^^^^^^^^^^^^^^^^^
+  File "/net/projects2/fermi2526/conda/nugraph-25-10/lib/python3.13/site-packages/torch/distributed/rendezvous.py", line 278, in _env_rendezvous_handler
+    store = _create_c10d_store(
+        master_addr, master_port, rank, world_size, timeout, use_libuv
+    )
+  File "/net/projects2/fermi2526/conda/nugraph-25-10/lib/python3.13/site-packages/torch/distributed/rendezvous.py", line 198, in _create_c10d_store
+    return TCPStore(
+        host_name=hostname,
+    ...<5 lines>...
+        use_libuv=use_libuv,
+    )
+torch.distributed.DistNetworkError: The client socket has timed out after 1800000ms while trying to connect to (j001-ds, 18316).
+srun: error: j002-ds: task 4: Exited with exit code 1
+[E626 19:54:04.244690683 socket.cpp:1019] [c10d] The client socket has timed out after 1800000ms while trying to connect to (j001-ds, 18316).
+[E626 19:54:04.244916542 TCPStore.cpp:328] [c10d] TCP client failed to connect/validate to host j001-ds:18316 - timed out (try=1, timeout=1800000ms): The client socket has timed out after 1800000ms while trying to connect to (j001-ds, 18316).
+Exception raised from throwTimeoutError at /home/conda/feedstock_root/build_artifacts/libtorch_1760296002163/work/torch/csrc/distributed/c10d/socket.cpp:1021 (most recent call first):
+frame #0: c10::Error::Error(c10::SourceLocation, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >) + 0x8f (0x7927a357603f in /net/projects2/fermi2526/conda/nugraph-25-10/lib/python3.13/site-packages/torch/../../.././libc10.so)
+frame #1: <unknown function> + 0x691e32c (0x79281443732c in /net/projects2/fermi2526/conda/nugraph-25-10/lib/python3.13/site-packages/torch/../../.././libtorch_cpu.so)
+frame #2: <unknown function> + 0x13eb175 (0x79280ef04175 in /net/projects2/fermi2526/conda/nugraph-25-10/lib/python3.13/site-packages/torch/../../.././libtorch_cpu.so)
+frame #3: <unknown function> + 0x69932bd (0x7928144ac2bd in /net/projects2/fermi2526/conda/nugraph-25-10/lib/python3.13/site-packages/torch/../../.././libtorch_cpu.so)
+frame #4: <unknown function> + 0x69934d3 (0x7928144ac4d3 in /net/projects2/fermi2526/conda/nugraph-25-10/lib/python3.13/site-packages/torch/../../.././libtorch_cpu.so)
+frame #5: <unknown function> + 0x69938ea (0x7928144ac8ea in /net/projects2/fermi2526/conda/nugraph-25-10/lib/python3.13/site-packages/torch/../../.././libtorch_cpu.so)
+frame #6: <unknown function> + 0x691e4c2 (0x7928144374c2 in /net/projects2/fermi2526/conda/nugraph-25-10/lib/python3.13/site-packages/torch/../../.././libtorch_cpu.so)
+frame #7: c10d::TCPStore::TCPStore(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, c10d::TCPStoreOptions const&) + 0x454 (0x79281443f464 in /net/projects2/fermi2526/conda/nugraph-25-10/lib/python3.13/site-packages/torch/../../.././libtorch_cpu.so)
+frame #8: <unknown function> + 0xcfb425 (0x79281cdc0425 in /net/projects2/fermi2526/conda/nugraph-25-10/lib/python3.13/site-packages/torch/../../../libtorch_python.so)
+frame #9: <unknown function> + 0xd8b296 (0x79281ce50296 in /net/projects2/fermi2526/conda/nugraph-25-10/lib/python3.13/site-packages/torch/../../../libtorch_python.so)
+frame #10: <unknown function> + 0x40760f (0x79281c4cc60f in /net/projects2/fermi2526/conda/nugraph-25-10/lib/python3.13/site-packages/torch/../../../libtorch_python.so)
+frame #11: <unknown function> + 0x1dbbfc (0x6347b7e56bfc in /net/projects2/fermi2526/conda/nugraph-25-10/bin/python)
+frame #12: _PyObject_MakeTpCall + 0x27c (0x6347b7e24dbc in /net/projects2/fermi2526/conda/nugraph-25-10/bin/python)
+frame #13: <unknown function> + 0x210ec3 (0x6347b7e8bec3 in /net/projects2/fermi2526/conda/nugraph-25-10/bin/python)
+frame #14: <unknown function> + 0x290ddb (0x6347b7f0bddb in /net/projects2/fermi2526/conda/nugraph-25-10/bin/python)
+frame #15: <unknown function> + 0x1ef2d0 (0x6347b7e6a2d0 in /net/projects2/fermi2526/conda/nugraph-25-10/bin/python)
+frame #16: <unknown function> + 0x1aa0c6 (0x6347b7e250c6 in /net/projects2/fermi2526/conda/nugraph-25-10/bin/python)
+frame #17: <unknown function> + 0x401a59 (0x79281c4c6a59 in /net/projects2/fermi2526/conda/nugraph-25-10/lib/python3.13/site-packages/torch/../../../libtorch_python.so)
+frame #18: _PyObject_MakeTpCall + 0x27c (0x6347b7e24dbc in /net/projects2/fermi2526/conda/nugraph-25-10/bin/python)
+frame #19: _PyEval_EvalFrameDefault + 0x9621 (0x6347b7e3e8d1 in /net/projects2/fermi2526/conda/nugraph-25-10/bin/python)
+frame #20: <unknown function> + 0x23233e (0x6347b7ead33e in /net/projects2/fermi2526/conda/nugraph-25-10/bin/python)
+frame #21: <unknown function> + 0x1ddc43 (0x6347b7e58c43 in /net/projects2/fermi2526/conda/nugraph-25-10/bin/python)
+frame #22: PyObject_Vectorcall + 0x2e (0x6347b7e2705e in /net/projects2/fermi2526/conda/nugraph-25-10/bin/python)
+frame #23: _PyEval_EvalFrameDefault + 0x3a47 (0x6347b7e38cf7 in /net/projects2/fermi2526/conda/nugraph-25-10/bin/python)
+frame #24: <unknown function> + 0x210b2c (0x6347b7e8bb2c in /net/projects2/fermi2526/conda/nugraph-25-10/bin/python)
+frame #25: _PyEval_EvalFrameDefault + 0x5092 (0x6347b7e3a342 in /net/projects2/fermi2526/conda/nugraph-25-10/bin/python)
+frame #26: <unknown function> + 0x210c69 (0x6347b7e8bc69 in /net/projects2/fermi2526/conda/nugraph-25-10/bin/python)
+frame #27: <unknown function> + 0x290ddb (0x6347b7f0bddb in /net/projects2/fermi2526/conda/nugraph-25-10/bin/python)
+frame #28: _PyEval_EvalFrameDefault + 0x5092 (0x6347b7e3a342 in /net/projects2/fermi2526/conda/nugraph-25-10/bin/python)
+frame #29: PyEval_EvalCode + 0x9f (0x6347b7eff1df in /net/projects2/fermi2526/conda/nugraph-25-10/bin/python)
+frame #30: <unknown function> + 0x2c1ff3 (0x6347b7f3cff3 in /net/projects2/fermi2526/conda/nugraph-25-10/bin/python)
+frame #31: <unknown function> + 0x2bf75c (0x6347b7f3a75c in /net/projects2/fermi2526/conda/nugraph-25-10/bin/python)
+frame #32: <unknown function> + 0x2bc566 (0x6347b7f37566 in /net/projects2/fermi2526/conda/nugraph-25-10/bin/python)
+frame #33: <unknown function> + 0x2bc1c3 (0x6347b7f371c3 in /net/projects2/fermi2526/conda/nugraph-25-10/bin/python)
+frame #34: <unknown function> + 0x2bbfdc (0x6347b7f36fdc in /net/projects2/fermi2526/conda/nugraph-25-10/bin/python)
+frame #35: Py_RunMain + 0x3b4 (0x6347b7f35624 in /net/projects2/fermi2526/conda/nugraph-25-10/bin/python)
+frame #36: Py_BytesMain + 0x37 (0x6347b7eeaac7 in /net/projects2/fermi2526/conda/nugraph-25-10/bin/python)
+frame #37: <unknown function> + 0x29d90 (0x792824c29d90 in /lib/x86_64-linux-gnu/libc.so.6)
+frame #38: __libc_start_main + 0x80 (0x792824c29e40 in /lib/x86_64-linux-gnu/libc.so.6)
+frame #39: <unknown function> + 0x26ee8d (0x6347b7ee9e8d in /net/projects2/fermi2526/conda/nugraph-25-10/bin/python)
+
+Traceback (most recent call last):
+  File "/home/vihaan/NuGraph/scripts/train.py", line 115, in <module>
+    train(args)
+    ~~~~~^^^^^^
+  File "/home/vihaan/NuGraph/scripts/train.py", line 111, in train
+    trainer.fit(model, datamodule=nudata, ckpt_path=args.resume)
+    ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/net/projects2/fermi2526/conda/nugraph-25-10/lib/python3.13/site-packages/pytorch_lightning/trainer/trainer.py", line 560, in fit
+    call._call_and_handle_interrupt(
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^
+        self, self._fit_impl, model, train_dataloaders, val_dataloaders, datamodule, ckpt_path
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/net/projects2/fermi2526/conda/nugraph-25-10/lib/python3.13/site-packages/pytorch_lightning/trainer/call.py", line 48, in _call_and_handle_interrupt
+    return trainer.strategy.launcher.launch(trainer_fn, *args, trainer=trainer, **kwargs)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/net/projects2/fermi2526/conda/nugraph-25-10/lib/python3.13/site-packages/pytorch_lightning/strategies/launchers/subprocess_script.py", line 105, in launch
+    return function(*args, **kwargs)
+  File "/net/projects2/fermi2526/conda/nugraph-25-10/lib/python3.13/site-packages/pytorch_lightning/trainer/trainer.py", line 598, in _fit_impl
+    self._run(model, ckpt_path=ckpt_path)
+    ~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/net/projects2/fermi2526/conda/nugraph-25-10/lib/python3.13/site-packages/pytorch_lightning/trainer/trainer.py", line 967, in _run
+    self.strategy.setup_environment()
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "/net/projects2/fermi2526/conda/nugraph-25-10/lib/python3.13/site-packages/pytorch_lightning/strategies/ddp.py", line 154, in setup_environment
+    self.setup_distributed()
+    ~~~~~~~~~~~~~~~~~~~~~~^^
+  File "/net/projects2/fermi2526/conda/nugraph-25-10/lib/python3.13/site-packages/pytorch_lightning/strategies/ddp.py", line 206, in setup_distributed
+    _init_dist_connection(self.cluster_environment, self._process_group_backend, **kwargs)
+    ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/net/projects2/fermi2526/conda/nugraph-25-10/lib/python3.13/site-packages/lightning_fabric/utilities/distributed.py", line 298, in _init_dist_connection
+    torch.distributed.init_process_group(torch_distributed_backend, rank=global_rank, world_size=world_size, **kwargs)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/net/projects2/fermi2526/conda/nugraph-25-10/lib/python3.13/site-packages/torch/distributed/c10d_logger.py", line 81, in wrapper
+    return func(*args, **kwargs)
+  File "/net/projects2/fermi2526/conda/nugraph-25-10/lib/python3.13/site-packages/torch/distributed/c10d_logger.py", line 95, in wrapper
+    func_return = func(*args, **kwargs)
+  File "/net/projects2/fermi2526/conda/nugraph-25-10/lib/python3.13/site-packages/torch/distributed/distributed_c10d.py", line 1757, in init_process_group
+    store, rank, world_size = next(rendezvous_iterator)
+                              ~~~~^^^^^^^^^^^^^^^^^^^^^
+  File "/net/projects2/fermi2526/conda/nugraph-25-10/lib/python3.13/site-packages/torch/distributed/rendezvous.py", line 278, in _env_rendezvous_handler
+    store = _create_c10d_store(
+        master_addr, master_port, rank, world_size, timeout, use_libuv
+    )
+  File "/net/projects2/fermi2526/conda/nugraph-25-10/lib/python3.13/site-packages/torch/distributed/rendezvous.py", line 198, in _create_c10d_store
+    return TCPStore(
+        host_name=hostname,
+    ...<5 lines>...
+        use_libuv=use_libuv,
+    )
+torch.distributed.DistNetworkError: The client socket has timed out after 1800000ms while trying to connect to (j001-ds, 18316).
+srun: error: j002-ds: task 7: Exited with exit code 1

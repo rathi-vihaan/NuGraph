@@ -1,0 +1,19 @@
+/net/projects2/fermi2526/conda/nugraph-25-10/bin/python
+Traceback (most recent call last):
+  File "/home/vihaan/NuGraph/scripts/train.py", line 11, in <module>
+    import nugraph as ng
+ModuleNotFoundError: No module named 'nugraph'
+Traceback (most recent call last):
+  File "/home/vihaan/NuGraph/scripts/train.py", line 11, in <module>
+    import nugraph as ng
+ModuleNotFoundError: No module named 'nugraph'
+Traceback (most recent call last):
+  File "/home/vihaan/NuGraph/scripts/train.py", line 11, in <module>
+    import nugraph as ng
+ModuleNotFoundError: No module named 'nugraph'
+Traceback (most recent call last):
+  File "/home/vihaan/NuGraph/scripts/train.py", line 11, in <module>
+    import nugraph as ng
+ModuleNotFoundError: No module named 'nugraph'
+srun: error: i001-ds: tasks 0-2: Exited with exit code 1
+srun: error: i001-ds: task 3: Exited with exit code 1

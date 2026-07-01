@@ -4,7 +4,6 @@ import argparse
 import pathlib
 import signal
 import warnings
-
 import torch
 import pytorch_lightning as pl
 from pytorch_lightning.plugins.environments import SLURMEnvironment
@@ -90,14 +89,14 @@ def train(args):
         callbacks.append(ModelCheckpoint(monitor="loss/val", mode="min"))
 
     # configure plugins
-    plugins = [
-        SLURMEnvironment(),
-    ]
+    plugins = [ SLURMEnvironment(requeue_signal=signal.SIGUSR1) ]
 
     #accelerator, devices = ng.util.configure_device(args.device)
     trainer = pl.Trainer(
-        accelerator="gpu",#accelerator,
-        devices=[0],#devices,
+        accelerator="gpu",
+        devices=8,
+        num_nodes=1,
+        strategy="ddp",
         max_epochs=args.epochs,
         limit_train_batches=args.limit_train_batches,
         limit_val_batches=args.limit_val_batches,

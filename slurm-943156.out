@@ -1,0 +1,764 @@
+/net/projects2/fermi2526/conda/nugraph-25-10/bin/python
+/home/vihaan/NuGraph/pynuml/pynuml/data/nugraph_data.py:108: UserWarning:
+
+Unable to accurately infer 'num_nodes' from the attribute set '{'y', 'y_vtx'}'. Please explicitly set 'num_nodes' as an attribute of 'data[evt]' to suppress this warning
+
+Initializing distributed: GLOBAL_RANK: 1, MEMBER: 2/8
+[W626 14:18:11.928216680 socket.cpp:755] [c10d] The client socket has failed to connect to [j002-ds]:18156 (errno: 22 - Invalid argument).
+[W626 14:18:12.585762614 socket.cpp:755] [c10d] The client socket has failed to connect to [j002-ds]:18156 (errno: 22 - Invalid argument).
+/home/vihaan/NuGraph/pynuml/pynuml/data/nugraph_data.py:108: UserWarning:
+
+Unable to accurately infer 'num_nodes' from the attribute set '{'y', 'y_vtx'}'. Please explicitly set 'num_nodes' as an attribute of 'data[evt]' to suppress this warning
+
+Initializing distributed: GLOBAL_RANK: 2, MEMBER: 3/8
+[W626 14:18:13.141654526 socket.cpp:755] [c10d] The client socket has failed to connect to [j002-ds]:18156 (errno: 22 - Invalid argument).
+/home/vihaan/NuGraph/pynuml/pynuml/data/nugraph_data.py:108: UserWarning:
+
+Unable to accurately infer 'num_nodes' from the attribute set '{'y', 'y_vtx'}'. Please explicitly set 'num_nodes' as an attribute of 'data[evt]' to suppress this warning
+
+[W626 14:18:13.307976870 socket.cpp:755] [c10d] The client socket has failed to connect to [j002-ds]:18156 (errno: 22 - Invalid argument).
+Initializing distributed: GLOBAL_RANK: 3, MEMBER: 4/8
+[W626 14:18:13.487819230 socket.cpp:755] [c10d] The client socket has failed to connect to [j002-ds]:18156 (errno: 22 - Invalid argument).
+[W626 14:18:13.688747179 socket.cpp:755] [c10d] The client socket has failed to connect to [j002-ds]:18156 (errno: 22 - Invalid argument).
+[W626 14:18:13.900072667 socket.cpp:755] [c10d] The client socket has failed to connect to [j002-ds]:18156 (errno: 22 - Invalid argument).
+[W626 14:18:14.097176092 socket.cpp:755] [c10d] The client socket has failed to connect to [j002-ds]:18156 (errno: 22 - Invalid argument).
+[W626 14:18:14.311305161 socket.cpp:755] [c10d] The client socket has failed to connect to [j002-ds]:18156 (errno: 22 - Invalid argument).
+[W626 14:18:15.962435895 socket.cpp:755] [c10d] The client socket has failed to connect to [j002-ds]:18156 (errno: 22 - Invalid argument).
+[W626 14:18:15.145132818 socket.cpp:755] [c10d] The client socket has failed to connect to [j002-ds]:18156 (errno: 22 - Invalid argument).
+[W626 14:18:15.329923678 socket.cpp:755] [c10d] The client socket has failed to connect to [j002-ds]:18156 (errno: 22 - Invalid argument).
+[W626 14:18:16.391683079 socket.cpp:755] [c10d] The client socket has failed to connect to [j002-ds]:18156 (errno: 22 - Invalid argument).
+/home/vihaan/NuGraph/pynuml/pynuml/data/nugraph_data.py:108: UserWarning:
+
+Unable to accurately infer 'num_nodes' from the attribute set '{'y', 'y_vtx'}'. Please explicitly set 'num_nodes' as an attribute of 'data[evt]' to suppress this warning
+
+💡 Tip: For seamless cloud uploads and versioning, try installing [litmodels](https://pypi.org/project/litmodels/) to enable LitModelCheckpoint, which syncs automatically with the Lightning model registry.
+GPU available: True (cuda), used: True
+TPU available: False, using: 0 TPU cores
+HPU available: False, using: 0 HPUs
+You are using a CUDA device ('NVIDIA A100 80GB PCIe') that has Tensor Cores. To properly utilize them, you should set `torch.set_float32_matmul_precision('medium' | 'high')` which will trade-off precision for performance. For more details, read https://pytorch.org/docs/stable/generated/torch.set_float32_matmul_precision.html#torch.set_float32_matmul_precision
+Initializing distributed: GLOBAL_RANK: 0, MEMBER: 1/8
+/home/vihaan/NuGraph/pynuml/pynuml/data/nugraph_data.py:108: UserWarning:
+
+Unable to accurately infer 'num_nodes' from the attribute set '{'y_vtx', 'y'}'. Please explicitly set 'num_nodes' as an attribute of 'data[evt]' to suppress this warning
+
+/home/vihaan/NuGraph/pynuml/pynuml/data/nugraph_data.py:108: UserWarning:
+
+Unable to accurately infer 'num_nodes' from the attribute set '{'y_vtx', 'y'}'. Please explicitly set 'num_nodes' as an attribute of 'data[evt]' to suppress this warning
+
+/home/vihaan/NuGraph/pynuml/pynuml/data/nugraph_data.py:108: UserWarning:
+
+Unable to accurately infer 'num_nodes' from the attribute set '{'y', 'y_vtx'}'. Please explicitly set 'num_nodes' as an attribute of 'data[evt]' to suppress this warning
+
+/home/vihaan/NuGraph/pynuml/pynuml/data/nugraph_data.py:108: UserWarning:
+
+Unable to accurately infer 'num_nodes' from the attribute set '{'y', 'y_vtx'}'. Please explicitly set 'num_nodes' as an attribute of 'data[evt]' to suppress this warning
+
+Initializing distributed: GLOBAL_RANK: 5, MEMBER: 6/8
+Initializing distributed: GLOBAL_RANK: 4, MEMBER: 5/8
+Initializing distributed: GLOBAL_RANK: 7, MEMBER: 8/8
+Initializing distributed: GLOBAL_RANK: 6, MEMBER: 7/8
+----------------------------------------------------------------------------------------------------
+distributed_backend=nccl
+All distributed processes registered. Starting with 8 processes
+----------------------------------------------------------------------------------------------------
+
+LOCAL_RANK: 0 - CUDA_VISIBLE_DEVICES: [0,1,2,3]
+LOCAL_RANK: 2 - CUDA_VISIBLE_DEVICES: [0,1,2,3]
+LOCAL_RANK: 3 - CUDA_VISIBLE_DEVICES: [0,1,2,3]
+LOCAL_RANK: 1 - CUDA_VISIBLE_DEVICES: [0,1,2,3]
+LOCAL_RANK: 0 - CUDA_VISIBLE_DEVICES: [0,1,2,3]
+LOCAL_RANK: 2 - CUDA_VISIBLE_DEVICES: [0,1,2,3]
+LOCAL_RANK: 1 - CUDA_VISIBLE_DEVICES: [0,1,2,3]
+LOCAL_RANK: 3 - CUDA_VISIBLE_DEVICES: [0,1,2,3]
+/net/projects2/fermi2526/conda/nugraph-25-10/lib/python3.13/site-packages/torch/distributed/algorithms/ddp_comm_hooks/__init__.py:54: FutureWarning:
+
+functools.partial will be a method descriptor in future Python versions; wrap it in enum.member() if you want to preserve the old behavior
+
+/net/projects2/fermi2526/conda/nugraph-25-10/lib/python3.13/site-packages/torch/distributed/algorithms/ddp_comm_hooks/__init__.py:54: FutureWarning:
+
+functools.partial will be a method descriptor in future Python versions; wrap it in enum.member() if you want to preserve the old behavior
+
+/net/projects2/fermi2526/conda/nugraph-25-10/lib/python3.13/site-packages/torch/distributed/algorithms/ddp_comm_hooks/__init__.py:55: FutureWarning:
+
+functools.partial will be a method descriptor in future Python versions; wrap it in enum.member() if you want to preserve the old behavior
+
+/net/projects2/fermi2526/conda/nugraph-25-10/lib/python3.13/site-packages/torch/distributed/algorithms/ddp_comm_hooks/__init__.py:58: FutureWarning:
+
+functools.partial will be a method descriptor in future Python versions; wrap it in enum.member() if you want to preserve the old behavior
+
+/net/projects2/fermi2526/conda/nugraph-25-10/lib/python3.13/site-packages/torch/distributed/algorithms/ddp_comm_hooks/__init__.py:55: FutureWarning:
+
+functools.partial will be a method descriptor in future Python versions; wrap it in enum.member() if you want to preserve the old behavior
+
+/net/projects2/fermi2526/conda/nugraph-25-10/lib/python3.13/site-packages/torch/distributed/algorithms/ddp_comm_hooks/__init__.py:58: FutureWarning:
+
+functools.partial will be a method descriptor in future Python versions; wrap it in enum.member() if you want to preserve the old behavior
+
+/net/projects2/fermi2526/conda/nugraph-25-10/lib/python3.13/site-packages/torch/distributed/algorithms/ddp_comm_hooks/__init__.py:61: FutureWarning:
+
+functools.partial will be a method descriptor in future Python versions; wrap it in enum.member() if you want to preserve the old behavior
+
+/net/projects2/fermi2526/conda/nugraph-25-10/lib/python3.13/site-packages/torch/distributed/algorithms/ddp_comm_hooks/__init__.py:61: FutureWarning:
+
+functools.partial will be a method descriptor in future Python versions; wrap it in enum.member() if you want to preserve the old behavior
+
+/net/projects2/fermi2526/conda/nugraph-25-10/lib/python3.13/site-packages/torch/distributed/algorithms/ddp_comm_hooks/__init__.py:64: FutureWarning:
+
+functools.partial will be a method descriptor in future Python versions; wrap it in enum.member() if you want to preserve the old behavior
+
+/net/projects2/fermi2526/conda/nugraph-25-10/lib/python3.13/site-packages/torch/distributed/algorithms/ddp_comm_hooks/__init__.py:67: FutureWarning:
+
+functools.partial will be a method descriptor in future Python versions; wrap it in enum.member() if you want to preserve the old behavior
+
+/net/projects2/fermi2526/conda/nugraph-25-10/lib/python3.13/site-packages/torch/distributed/algorithms/ddp_comm_hooks/__init__.py:54: FutureWarning:
+
+functools.partial will be a method descriptor in future Python versions; wrap it in enum.member() if you want to preserve the old behavior
+
+/net/projects2/fermi2526/conda/nugraph-25-10/lib/python3.13/site-packages/torch/distributed/algorithms/ddp_comm_hooks/__init__.py:64: FutureWarning:
+
+functools.partial will be a method descriptor in future Python versions; wrap it in enum.member() if you want to preserve the old behavior
+
+/net/projects2/fermi2526/conda/nugraph-25-10/lib/python3.13/site-packages/torch/distributed/algorithms/ddp_comm_hooks/__init__.py:74: FutureWarning:
+
+functools.partial will be a method descriptor in future Python versions; wrap it in enum.member() if you want to preserve the old behavior
+
+/net/projects2/fermi2526/conda/nugraph-25-10/lib/python3.13/site-packages/torch/distributed/algorithms/ddp_comm_hooks/__init__.py:80: FutureWarning:
+
+functools.partial will be a method descriptor in future Python versions; wrap it in enum.member() if you want to preserve the old behavior
+
+/net/projects2/fermi2526/conda/nugraph-25-10/lib/python3.13/site-packages/torch/distributed/algorithms/ddp_comm_hooks/__init__.py:55: FutureWarning:
+
+functools.partial will be a method descriptor in future Python versions; wrap it in enum.member() if you want to preserve the old behavior
+
+/net/projects2/fermi2526/conda/nugraph-25-10/lib/python3.13/site-packages/torch/distributed/algorithms/ddp_comm_hooks/__init__.py:67: FutureWarning:
+
+functools.partial will be a method descriptor in future Python versions; wrap it in enum.member() if you want to preserve the old behavior
+
+/net/projects2/fermi2526/conda/nugraph-25-10/lib/python3.13/site-packages/torch/distributed/algorithms/ddp_comm_hooks/__init__.py:74: FutureWarning:
+
+functools.partial will be a method descriptor in future Python versions; wrap it in enum.member() if you want to preserve the old behavior
+
+/net/projects2/fermi2526/conda/nugraph-25-10/lib/python3.13/site-packages/torch/distributed/algorithms/ddp_comm_hooks/__init__.py:85: FutureWarning:
+
+functools.partial will be a method descriptor in future Python versions; wrap it in enum.member() if you want to preserve the old behavior
+
+/net/projects2/fermi2526/conda/nugraph-25-10/lib/python3.13/site-packages/torch/distributed/algorithms/ddp_comm_hooks/__init__.py:90: FutureWarning:
+
+functools.partial will be a method descriptor in future Python versions; wrap it in enum.member() if you want to preserve the old behavior
+
+/net/projects2/fermi2526/conda/nugraph-25-10/lib/python3.13/site-packages/torch/distributed/algorithms/ddp_comm_hooks/__init__.py:58: FutureWarning:
+
+functools.partial will be a method descriptor in future Python versions; wrap it in enum.member() if you want to preserve the old behavior
+
+/net/projects2/fermi2526/conda/nugraph-25-10/lib/python3.13/site-packages/torch/distributed/algorithms/ddp_comm_hooks/__init__.py:80: FutureWarning:
+
+functools.partial will be a method descriptor in future Python versions; wrap it in enum.member() if you want to preserve the old behavior
+
+/net/projects2/fermi2526/conda/nugraph-25-10/lib/python3.13/site-packages/torch/distributed/algorithms/ddp_comm_hooks/__init__.py:61: FutureWarning:
+
+functools.partial will be a method descriptor in future Python versions; wrap it in enum.member() if you want to preserve the old behavior
+
+/net/projects2/fermi2526/conda/nugraph-25-10/lib/python3.13/site-packages/torch/distributed/algorithms/ddp_comm_hooks/__init__.py:64: FutureWarning:
+
+functools.partial will be a method descriptor in future Python versions; wrap it in enum.member() if you want to preserve the old behavior
+
+/net/projects2/fermi2526/conda/nugraph-25-10/lib/python3.13/site-packages/torch/distributed/algorithms/ddp_comm_hooks/__init__.py:85: FutureWarning:
+
+functools.partial will be a method descriptor in future Python versions; wrap it in enum.member() if you want to preserve the old behavior
+
+/net/projects2/fermi2526/conda/nugraph-25-10/lib/python3.13/site-packages/torch/distributed/algorithms/ddp_comm_hooks/__init__.py:90: FutureWarning:
+
+functools.partial will be a method descriptor in future Python versions; wrap it in enum.member() if you want to preserve the old behavior
+
+/net/projects2/fermi2526/conda/nugraph-25-10/lib/python3.13/site-packages/torch/distributed/algorithms/ddp_comm_hooks/__init__.py:67: FutureWarning:
+
+functools.partial will be a method descriptor in future Python versions; wrap it in enum.member() if you want to preserve the old behavior
+
+/net/projects2/fermi2526/conda/nugraph-25-10/lib/python3.13/site-packages/torch/distributed/algorithms/ddp_comm_hooks/__init__.py:74: FutureWarning:
+
+functools.partial will be a method descriptor in future Python versions; wrap it in enum.member() if you want to preserve the old behavior
+
+/net/projects2/fermi2526/conda/nugraph-25-10/lib/python3.13/site-packages/torch/distributed/algorithms/ddp_comm_hooks/__init__.py:80: FutureWarning:
+
+functools.partial will be a method descriptor in future Python versions; wrap it in enum.member() if you want to preserve the old behavior
+
+/net/projects2/fermi2526/conda/nugraph-25-10/lib/python3.13/site-packages/torch/distributed/algorithms/ddp_comm_hooks/__init__.py:85: FutureWarning:
+
+functools.partial will be a method descriptor in future Python versions; wrap it in enum.member() if you want to preserve the old behavior
+
+/net/projects2/fermi2526/conda/nugraph-25-10/lib/python3.13/site-packages/torch/distributed/algorithms/ddp_comm_hooks/__init__.py:90: FutureWarning:
+
+functools.partial will be a method descriptor in future Python versions; wrap it in enum.member() if you want to preserve the old behavior
+
+/net/projects2/fermi2526/conda/nugraph-25-10/lib/python3.13/site-packages/torch/distributed/algorithms/ddp_comm_hooks/__init__.py:54: FutureWarning:
+
+functools.partial will be a method descriptor in future Python versions; wrap it in enum.member() if you want to preserve the old behavior
+
+/net/projects2/fermi2526/conda/nugraph-25-10/lib/python3.13/site-packages/torch/distributed/algorithms/ddp_comm_hooks/__init__.py:55: FutureWarning:
+
+functools.partial will be a method descriptor in future Python versions; wrap it in enum.member() if you want to preserve the old behavior
+
+/net/projects2/fermi2526/conda/nugraph-25-10/lib/python3.13/site-packages/torch/distributed/algorithms/ddp_comm_hooks/__init__.py:58: FutureWarning:
+
+functools.partial will be a method descriptor in future Python versions; wrap it in enum.member() if you want to preserve the old behavior
+
+/net/projects2/fermi2526/conda/nugraph-25-10/lib/python3.13/site-packages/torch/distributed/algorithms/ddp_comm_hooks/__init__.py:61: FutureWarning:
+
+functools.partial will be a method descriptor in future Python versions; wrap it in enum.member() if you want to preserve the old behavior
+
+/net/projects2/fermi2526/conda/nugraph-25-10/lib/python3.13/site-packages/torch/distributed/algorithms/ddp_comm_hooks/__init__.py:64: FutureWarning:
+
+functools.partial will be a method descriptor in future Python versions; wrap it in enum.member() if you want to preserve the old behavior
+
+/net/projects2/fermi2526/conda/nugraph-25-10/lib/python3.13/site-packages/torch/distributed/algorithms/ddp_comm_hooks/__init__.py:67: FutureWarning:
+
+functools.partial will be a method descriptor in future Python versions; wrap it in enum.member() if you want to preserve the old behavior
+
+/net/projects2/fermi2526/conda/nugraph-25-10/lib/python3.13/site-packages/torch/distributed/algorithms/ddp_comm_hooks/__init__.py:74: FutureWarning:
+
+functools.partial will be a method descriptor in future Python versions; wrap it in enum.member() if you want to preserve the old behavior
+
+/net/projects2/fermi2526/conda/nugraph-25-10/lib/python3.13/site-packages/torch/distributed/algorithms/ddp_comm_hooks/__init__.py:80: FutureWarning:
+
+functools.partial will be a method descriptor in future Python versions; wrap it in enum.member() if you want to preserve the old behavior
+
+/net/projects2/fermi2526/conda/nugraph-25-10/lib/python3.13/site-packages/torch/distributed/algorithms/ddp_comm_hooks/__init__.py:85: FutureWarning:
+
+functools.partial will be a method descriptor in future Python versions; wrap it in enum.member() if you want to preserve the old behavior
+
+/net/projects2/fermi2526/conda/nugraph-25-10/lib/python3.13/site-packages/torch/distributed/algorithms/ddp_comm_hooks/__init__.py:90: FutureWarning:
+
+functools.partial will be a method descriptor in future Python versions; wrap it in enum.member() if you want to preserve the old behavior
+
+
+  | Name             | Type            | Params | Mode 
+-------------------------------------------------------------
+0 | encoder          | Encoder         | 1.4 K  | train
+1 | core_net         | NuGraphCore     | 501 K  | train
+2 | event_decoder    | EventDecoder    | 133    | train
+3 | semantic_decoder | SemanticDecoder | 904    | train
+4 | filter_decoder   | FilterDecoder   | 130    | train
+5 | instance_decoder | InstanceDecoder | 35.3 K | train
+-------------------------------------------------------------
+539 K     Trainable params
+19        Non-trainable params
+539 K     Total params
+2.157     Total estimated model params size (MB)
+108       Modules in train mode
+0         Modules in eval mode
+/net/projects2/fermi2526/conda/nugraph-25-10/lib/python3.13/site-packages/torch/distributed/algorithms/ddp_comm_hooks/__init__.py:54: FutureWarning:
+
+functools.partial will be a method descriptor in future Python versions; wrap it in enum.member() if you want to preserve the old behavior
+
+/net/projects2/fermi2526/conda/nugraph-25-10/lib/python3.13/site-packages/torch/distributed/algorithms/ddp_comm_hooks/__init__.py:54: FutureWarning:
+
+functools.partial will be a method descriptor in future Python versions; wrap it in enum.member() if you want to preserve the old behavior
+
+/net/projects2/fermi2526/conda/nugraph-25-10/lib/python3.13/site-packages/torch/distributed/algorithms/ddp_comm_hooks/__init__.py:55: FutureWarning:
+
+functools.partial will be a method descriptor in future Python versions; wrap it in enum.member() if you want to preserve the old behavior
+
+/net/projects2/fermi2526/conda/nugraph-25-10/lib/python3.13/site-packages/torch/distributed/algorithms/ddp_comm_hooks/__init__.py:54: FutureWarning:
+
+functools.partial will be a method descriptor in future Python versions; wrap it in enum.member() if you want to preserve the old behavior
+
+/net/projects2/fermi2526/conda/nugraph-25-10/lib/python3.13/site-packages/torch/distributed/algorithms/ddp_comm_hooks/__init__.py:58: FutureWarning:
+
+functools.partial will be a method descriptor in future Python versions; wrap it in enum.member() if you want to preserve the old behavior
+
+/net/projects2/fermi2526/conda/nugraph-25-10/lib/python3.13/site-packages/torch/distributed/algorithms/ddp_comm_hooks/__init__.py:55: FutureWarning:
+
+functools.partial will be a method descriptor in future Python versions; wrap it in enum.member() if you want to preserve the old behavior
+
+/net/projects2/fermi2526/conda/nugraph-25-10/lib/python3.13/site-packages/torch/distributed/algorithms/ddp_comm_hooks/__init__.py:61: FutureWarning:
+
+functools.partial will be a method descriptor in future Python versions; wrap it in enum.member() if you want to preserve the old behavior
+
+/net/projects2/fermi2526/conda/nugraph-25-10/lib/python3.13/site-packages/torch/distributed/algorithms/ddp_comm_hooks/__init__.py:58: FutureWarning:
+
+functools.partial will be a method descriptor in future Python versions; wrap it in enum.member() if you want to preserve the old behavior
+
+/net/projects2/fermi2526/conda/nugraph-25-10/lib/python3.13/site-packages/torch/distributed/algorithms/ddp_comm_hooks/__init__.py:55: FutureWarning:
+
+functools.partial will be a method descriptor in future Python versions; wrap it in enum.member() if you want to preserve the old behavior
+
+/net/projects2/fermi2526/conda/nugraph-25-10/lib/python3.13/site-packages/torch/distributed/algorithms/ddp_comm_hooks/__init__.py:64: FutureWarning:
+
+functools.partial will be a method descriptor in future Python versions; wrap it in enum.member() if you want to preserve the old behavior
+
+/net/projects2/fermi2526/conda/nugraph-25-10/lib/python3.13/site-packages/torch/distributed/algorithms/ddp_comm_hooks/__init__.py:67: FutureWarning:
+
+functools.partial will be a method descriptor in future Python versions; wrap it in enum.member() if you want to preserve the old behavior
+
+/net/projects2/fermi2526/conda/nugraph-25-10/lib/python3.13/site-packages/torch/distributed/algorithms/ddp_comm_hooks/__init__.py:61: FutureWarning:
+
+functools.partial will be a method descriptor in future Python versions; wrap it in enum.member() if you want to preserve the old behavior
+
+/net/projects2/fermi2526/conda/nugraph-25-10/lib/python3.13/site-packages/torch/distributed/algorithms/ddp_comm_hooks/__init__.py:58: FutureWarning:
+
+functools.partial will be a method descriptor in future Python versions; wrap it in enum.member() if you want to preserve the old behavior
+
+/net/projects2/fermi2526/conda/nugraph-25-10/lib/python3.13/site-packages/torch/distributed/algorithms/ddp_comm_hooks/__init__.py:74: FutureWarning:
+
+functools.partial will be a method descriptor in future Python versions; wrap it in enum.member() if you want to preserve the old behavior
+
+/net/projects2/fermi2526/conda/nugraph-25-10/lib/python3.13/site-packages/torch/distributed/algorithms/ddp_comm_hooks/__init__.py:64: FutureWarning:
+
+functools.partial will be a method descriptor in future Python versions; wrap it in enum.member() if you want to preserve the old behavior
+
+/net/projects2/fermi2526/conda/nugraph-25-10/lib/python3.13/site-packages/torch/distributed/algorithms/ddp_comm_hooks/__init__.py:80: FutureWarning:
+
+functools.partial will be a method descriptor in future Python versions; wrap it in enum.member() if you want to preserve the old behavior
+
+/net/projects2/fermi2526/conda/nugraph-25-10/lib/python3.13/site-packages/torch/distributed/algorithms/ddp_comm_hooks/__init__.py:61: FutureWarning:
+
+functools.partial will be a method descriptor in future Python versions; wrap it in enum.member() if you want to preserve the old behavior
+
+/net/projects2/fermi2526/conda/nugraph-25-10/lib/python3.13/site-packages/torch/distributed/algorithms/ddp_comm_hooks/__init__.py:85: FutureWarning:
+
+functools.partial will be a method descriptor in future Python versions; wrap it in enum.member() if you want to preserve the old behavior
+
+/net/projects2/fermi2526/conda/nugraph-25-10/lib/python3.13/site-packages/torch/distributed/algorithms/ddp_comm_hooks/__init__.py:67: FutureWarning:
+
+functools.partial will be a method descriptor in future Python versions; wrap it in enum.member() if you want to preserve the old behavior
+
+/net/projects2/fermi2526/conda/nugraph-25-10/lib/python3.13/site-packages/torch/distributed/algorithms/ddp_comm_hooks/__init__.py:74: FutureWarning:
+
+functools.partial will be a method descriptor in future Python versions; wrap it in enum.member() if you want to preserve the old behavior
+
+/net/projects2/fermi2526/conda/nugraph-25-10/lib/python3.13/site-packages/torch/distributed/algorithms/ddp_comm_hooks/__init__.py:64: FutureWarning:
+
+functools.partial will be a method descriptor in future Python versions; wrap it in enum.member() if you want to preserve the old behavior
+
+/net/projects2/fermi2526/conda/nugraph-25-10/lib/python3.13/site-packages/torch/distributed/algorithms/ddp_comm_hooks/__init__.py:90: FutureWarning:
+
+functools.partial will be a method descriptor in future Python versions; wrap it in enum.member() if you want to preserve the old behavior
+
+/net/projects2/fermi2526/conda/nugraph-25-10/lib/python3.13/site-packages/torch/distributed/algorithms/ddp_comm_hooks/__init__.py:54: FutureWarning:
+
+functools.partial will be a method descriptor in future Python versions; wrap it in enum.member() if you want to preserve the old behavior
+
+/net/projects2/fermi2526/conda/nugraph-25-10/lib/python3.13/site-packages/torch/distributed/algorithms/ddp_comm_hooks/__init__.py:67: FutureWarning:
+
+functools.partial will be a method descriptor in future Python versions; wrap it in enum.member() if you want to preserve the old behavior
+
+/net/projects2/fermi2526/conda/nugraph-25-10/lib/python3.13/site-packages/torch/distributed/algorithms/ddp_comm_hooks/__init__.py:80: FutureWarning:
+
+functools.partial will be a method descriptor in future Python versions; wrap it in enum.member() if you want to preserve the old behavior
+
+/net/projects2/fermi2526/conda/nugraph-25-10/lib/python3.13/site-packages/torch/distributed/algorithms/ddp_comm_hooks/__init__.py:74: FutureWarning:
+
+functools.partial will be a method descriptor in future Python versions; wrap it in enum.member() if you want to preserve the old behavior
+
+/net/projects2/fermi2526/conda/nugraph-25-10/lib/python3.13/site-packages/torch/distributed/algorithms/ddp_comm_hooks/__init__.py:85: FutureWarning:
+
+functools.partial will be a method descriptor in future Python versions; wrap it in enum.member() if you want to preserve the old behavior
+
+/net/projects2/fermi2526/conda/nugraph-25-10/lib/python3.13/site-packages/torch/distributed/algorithms/ddp_comm_hooks/__init__.py:55: FutureWarning:
+
+functools.partial will be a method descriptor in future Python versions; wrap it in enum.member() if you want to preserve the old behavior
+
+/net/projects2/fermi2526/conda/nugraph-25-10/lib/python3.13/site-packages/torch/distributed/algorithms/ddp_comm_hooks/__init__.py:80: FutureWarning:
+
+functools.partial will be a method descriptor in future Python versions; wrap it in enum.member() if you want to preserve the old behavior
+
+/net/projects2/fermi2526/conda/nugraph-25-10/lib/python3.13/site-packages/torch/distributed/algorithms/ddp_comm_hooks/__init__.py:90: FutureWarning:
+
+functools.partial will be a method descriptor in future Python versions; wrap it in enum.member() if you want to preserve the old behavior
+
+/net/projects2/fermi2526/conda/nugraph-25-10/lib/python3.13/site-packages/torch/distributed/algorithms/ddp_comm_hooks/__init__.py:58: FutureWarning:
+
+functools.partial will be a method descriptor in future Python versions; wrap it in enum.member() if you want to preserve the old behavior
+
+/net/projects2/fermi2526/conda/nugraph-25-10/lib/python3.13/site-packages/torch/distributed/algorithms/ddp_comm_hooks/__init__.py:85: FutureWarning:
+
+functools.partial will be a method descriptor in future Python versions; wrap it in enum.member() if you want to preserve the old behavior
+
+/net/projects2/fermi2526/conda/nugraph-25-10/lib/python3.13/site-packages/torch/distributed/algorithms/ddp_comm_hooks/__init__.py:61: FutureWarning:
+
+functools.partial will be a method descriptor in future Python versions; wrap it in enum.member() if you want to preserve the old behavior
+
+/net/projects2/fermi2526/conda/nugraph-25-10/lib/python3.13/site-packages/torch/distributed/algorithms/ddp_comm_hooks/__init__.py:90: FutureWarning:
+
+functools.partial will be a method descriptor in future Python versions; wrap it in enum.member() if you want to preserve the old behavior
+
+/net/projects2/fermi2526/conda/nugraph-25-10/lib/python3.13/site-packages/torch/distributed/algorithms/ddp_comm_hooks/__init__.py:64: FutureWarning:
+
+functools.partial will be a method descriptor in future Python versions; wrap it in enum.member() if you want to preserve the old behavior
+
+/net/projects2/fermi2526/conda/nugraph-25-10/lib/python3.13/site-packages/torch/distributed/algorithms/ddp_comm_hooks/__init__.py:67: FutureWarning:
+
+functools.partial will be a method descriptor in future Python versions; wrap it in enum.member() if you want to preserve the old behavior
+
+/net/projects2/fermi2526/conda/nugraph-25-10/lib/python3.13/site-packages/torch/distributed/algorithms/ddp_comm_hooks/__init__.py:74: FutureWarning:
+
+functools.partial will be a method descriptor in future Python versions; wrap it in enum.member() if you want to preserve the old behavior
+
+/net/projects2/fermi2526/conda/nugraph-25-10/lib/python3.13/site-packages/torch/distributed/algorithms/ddp_comm_hooks/__init__.py:80: FutureWarning:
+
+functools.partial will be a method descriptor in future Python versions; wrap it in enum.member() if you want to preserve the old behavior
+
+/net/projects2/fermi2526/conda/nugraph-25-10/lib/python3.13/site-packages/torch/distributed/algorithms/ddp_comm_hooks/__init__.py:85: FutureWarning:
+
+functools.partial will be a method descriptor in future Python versions; wrap it in enum.member() if you want to preserve the old behavior
+
+/net/projects2/fermi2526/conda/nugraph-25-10/lib/python3.13/site-packages/torch/distributed/algorithms/ddp_comm_hooks/__init__.py:90: FutureWarning:
+
+functools.partial will be a method descriptor in future Python versions; wrap it in enum.member() if you want to preserve the old behavior
+
+SLURM auto-requeueing enabled. Setting signal handlers.
+SLURM auto-requeueing enabled. Setting signal handlers.
+SLURM auto-requeueing enabled. Setting signal handlers.
+SLURM auto-requeueing enabled. Setting signal handlers.
+SLURM auto-requeueing enabled. Setting signal handlers.
+SLURM auto-requeueing enabled. Setting signal handlers.
+SLURM auto-requeueing enabled. Setting signal handlers.
+SLURM auto-requeueing enabled. Setting signal handlers.
+/home/vihaan/NuGraph/pynuml/pynuml/data/nugraph_data.py:108: UserWarning:
+
+Unable to accurately infer 'num_nodes' from the attribute set '{'y', 'y_vtx'}'. Please explicitly set 'num_nodes' as an attribute of 'data[evt]' to suppress this warning
+
+/home/vihaan/NuGraph/pynuml/pynuml/data/nugraph_data.py:108: UserWarning:
+
+Unable to accurately infer 'num_nodes' from the attribute set '{'y', 'y_vtx'}'. Please explicitly set 'num_nodes' as an attribute of 'data[evt]' to suppress this warning
+
+/home/vihaan/NuGraph/pynuml/pynuml/data/nugraph_data.py:108: UserWarning:
+
+Unable to accurately infer 'num_nodes' from the attribute set '{'y', 'y_vtx'}'. Please explicitly set 'num_nodes' as an attribute of 'data[evt]' to suppress this warning
+
+/home/vihaan/NuGraph/pynuml/pynuml/data/nugraph_data.py:108: UserWarning:
+
+Unable to accurately infer 'num_nodes' from the attribute set '{'y', 'y_vtx'}'. Please explicitly set 'num_nodes' as an attribute of 'data[evt]' to suppress this warning
+
+/home/vihaan/NuGraph/pynuml/pynuml/data/nugraph_data.py:108: UserWarning:
+
+Unable to accurately infer 'num_nodes' from the attribute set '{'y', 'y_vtx'}'. Please explicitly set 'num_nodes' as an attribute of 'data[evt]' to suppress this warning
+
+/home/vihaan/NuGraph/pynuml/pynuml/data/nugraph_data.py:108: UserWarning:
+
+Unable to accurately infer 'num_nodes' from the attribute set '{'y', 'y_vtx'}'. Please explicitly set 'num_nodes' as an attribute of 'data[evt]' to suppress this warning
+
+/home/vihaan/NuGraph/pynuml/pynuml/data/nugraph_data.py:108: UserWarning:
+
+Unable to accurately infer 'num_nodes' from the attribute set '{'y', 'y_vtx'}'. Please explicitly set 'num_nodes' as an attribute of 'data[evt]' to suppress this warning
+
+/home/vihaan/NuGraph/pynuml/pynuml/data/nugraph_data.py:108: UserWarning:
+
+Unable to accurately infer 'num_nodes' from the attribute set '{'y', 'y_vtx'}'. Please explicitly set 'num_nodes' as an attribute of 'data[evt]' to suppress this warning
+
+/home/vihaan/NuGraph/pynuml/pynuml/data/nugraph_data.py:108: UserWarning:
+
+Unable to accurately infer 'num_nodes' from the attribute set '{'y', 'y_vtx'}'. Please explicitly set 'num_nodes' as an attribute of 'data[evt]' to suppress this warning
+
+/home/vihaan/NuGraph/pynuml/pynuml/data/nugraph_data.py:108: UserWarning:
+
+Unable to accurately infer 'num_nodes' from the attribute set '{'y_vtx', 'y'}'. Please explicitly set 'num_nodes' as an attribute of 'data[evt]' to suppress this warning
+
+/home/vihaan/NuGraph/pynuml/pynuml/data/nugraph_data.py:108: UserWarning:
+
+Unable to accurately infer 'num_nodes' from the attribute set '{'y_vtx', 'y'}'. Please explicitly set 'num_nodes' as an attribute of 'data[evt]' to suppress this warning
+
+/home/vihaan/NuGraph/pynuml/pynuml/data/nugraph_data.py:108: UserWarning:
+
+Unable to accurately infer 'num_nodes' from the attribute set '{'y_vtx', 'y'}'. Please explicitly set 'num_nodes' as an attribute of 'data[evt]' to suppress this warning
+
+/home/vihaan/NuGraph/pynuml/pynuml/data/nugraph_data.py:108: UserWarning:
+
+Unable to accurately infer 'num_nodes' from the attribute set '{'y_vtx', 'y'}'. Please explicitly set 'num_nodes' as an attribute of 'data[evt]' to suppress this warning
+
+/home/vihaan/NuGraph/pynuml/pynuml/data/nugraph_data.py:108: UserWarning:
+
+Unable to accurately infer 'num_nodes' from the attribute set '{'y_vtx', 'y'}'. Please explicitly set 'num_nodes' as an attribute of 'data[evt]' to suppress this warning
+
+/home/vihaan/NuGraph/pynuml/pynuml/data/nugraph_data.py:108: UserWarning:
+
+Unable to accurately infer 'num_nodes' from the attribute set '{'y_vtx', 'y'}'. Please explicitly set 'num_nodes' as an attribute of 'data[evt]' to suppress this warning
+
+/home/vihaan/NuGraph/pynuml/pynuml/data/nugraph_data.py:108: UserWarning:
+
+Unable to accurately infer 'num_nodes' from the attribute set '{'y_vtx', 'y'}'. Please explicitly set 'num_nodes' as an attribute of 'data[evt]' to suppress this warning
+
+/home/vihaan/NuGraph/pynuml/pynuml/data/nugraph_data.py:108: UserWarning:
+
+Unable to accurately infer 'num_nodes' from the attribute set '{'y', 'y_vtx'}'. Please explicitly set 'num_nodes' as an attribute of 'data[evt]' to suppress this warning
+
+/home/vihaan/NuGraph/pynuml/pynuml/data/nugraph_data.py:108: UserWarning:
+
+Unable to accurately infer 'num_nodes' from the attribute set '{'y', 'y_vtx'}'. Please explicitly set 'num_nodes' as an attribute of 'data[evt]' to suppress this warning
+
+/home/vihaan/NuGraph/pynuml/pynuml/data/nugraph_data.py:108: UserWarning:
+
+Unable to accurately infer 'num_nodes' from the attribute set '{'y', 'y_vtx'}'. Please explicitly set 'num_nodes' as an attribute of 'data[evt]' to suppress this warning
+
+/home/vihaan/NuGraph/pynuml/pynuml/data/nugraph_data.py:108: UserWarning:
+
+Unable to accurately infer 'num_nodes' from the attribute set '{'y', 'y_vtx'}'. Please explicitly set 'num_nodes' as an attribute of 'data[evt]' to suppress this warning
+
+/home/vihaan/NuGraph/pynuml/pynuml/data/nugraph_data.py:108: UserWarning:
+
+Unable to accurately infer 'num_nodes' from the attribute set '{'y', 'y_vtx'}'. Please explicitly set 'num_nodes' as an attribute of 'data[evt]' to suppress this warning
+
+/home/vihaan/NuGraph/pynuml/pynuml/data/nugraph_data.py:108: UserWarning:
+
+Unable to accurately infer 'num_nodes' from the attribute set '{'y', 'y_vtx'}'. Please explicitly set 'num_nodes' as an attribute of 'data[evt]' to suppress this warning
+
+/home/vihaan/NuGraph/pynuml/pynuml/data/nugraph_data.py:108: UserWarning:
+
+Unable to accurately infer 'num_nodes' from the attribute set '{'y', 'y_vtx'}'. Please explicitly set 'num_nodes' as an attribute of 'data[evt]' to suppress this warning
+
+/home/vihaan/NuGraph/pynuml/pynuml/data/nugraph_data.py:108: UserWarning:
+
+Unable to accurately infer 'num_nodes' from the attribute set '{'y', 'y_vtx'}'. Please explicitly set 'num_nodes' as an attribute of 'data[evt]' to suppress this warning
+
+/home/vihaan/NuGraph/pynuml/pynuml/data/nugraph_data.py:108: UserWarning:
+
+Unable to accurately infer 'num_nodes' from the attribute set '{'y', 'y_vtx'}'. Please explicitly set 'num_nodes' as an attribute of 'data[evt]' to suppress this warning
+
+/home/vihaan/NuGraph/pynuml/pynuml/data/nugraph_data.py:108: UserWarning:
+
+Unable to accurately infer 'num_nodes' from the attribute set '{'y', 'y_vtx'}'. Please explicitly set 'num_nodes' as an attribute of 'data[evt]' to suppress this warning
+
+/home/vihaan/NuGraph/pynuml/pynuml/data/nugraph_data.py:108: UserWarning:
+
+Unable to accurately infer 'num_nodes' from the attribute set '{'y', 'y_vtx'}'. Please explicitly set 'num_nodes' as an attribute of 'data[evt]' to suppress this warning
+
+/home/vihaan/NuGraph/pynuml/pynuml/data/nugraph_data.py:108: UserWarning:
+
+Unable to accurately infer 'num_nodes' from the attribute set '{'y', 'y_vtx'}'. Please explicitly set 'num_nodes' as an attribute of 'data[evt]' to suppress this warning
+
+/home/vihaan/NuGraph/pynuml/pynuml/data/nugraph_data.py:108: UserWarning:
+
+Unable to accurately infer 'num_nodes' from the attribute set '{'y', 'y_vtx'}'. Please explicitly set 'num_nodes' as an attribute of 'data[evt]' to suppress this warning
+
+/home/vihaan/NuGraph/pynuml/pynuml/data/nugraph_data.py:108: UserWarning:
+
+Unable to accurately infer 'num_nodes' from the attribute set '{'y', 'y_vtx'}'. Please explicitly set 'num_nodes' as an attribute of 'data[evt]' to suppress this warning
+
+/home/vihaan/NuGraph/pynuml/pynuml/data/nugraph_data.py:108: UserWarning:
+
+Unable to accurately infer 'num_nodes' from the attribute set '{'y', 'y_vtx'}'. Please explicitly set 'num_nodes' as an attribute of 'data[evt]' to suppress this warning
+
+/home/vihaan/NuGraph/pynuml/pynuml/data/nugraph_data.py:108: UserWarning:
+
+Unable to accurately infer 'num_nodes' from the attribute set '{'y', 'y_vtx'}'. Please explicitly set 'num_nodes' as an attribute of 'data[evt]' to suppress this warning
+
+/home/vihaan/NuGraph/pynuml/pynuml/data/nugraph_data.py:108: UserWarning:
+
+Unable to accurately infer 'num_nodes' from the attribute set '{'y', 'y_vtx'}'. Please explicitly set 'num_nodes' as an attribute of 'data[evt]' to suppress this warning
+
+/home/vihaan/NuGraph/pynuml/pynuml/data/nugraph_data.py:108: UserWarning:
+
+Unable to accurately infer 'num_nodes' from the attribute set '{'y', 'y_vtx'}'. Please explicitly set 'num_nodes' as an attribute of 'data[evt]' to suppress this warning
+
+/home/vihaan/NuGraph/pynuml/pynuml/data/nugraph_data.py:108: UserWarning:
+
+Unable to accurately infer 'num_nodes' from the attribute set '{'y', 'y_vtx'}'. Please explicitly set 'num_nodes' as an attribute of 'data[evt]' to suppress this warning
+
+/home/vihaan/NuGraph/pynuml/pynuml/data/nugraph_data.py:108: UserWarning:
+
+Unable to accurately infer 'num_nodes' from the attribute set '{'y', 'y_vtx'}'. Please explicitly set 'num_nodes' as an attribute of 'data[evt]' to suppress this warning
+
+/home/vihaan/NuGraph/pynuml/pynuml/data/nugraph_data.py:108: UserWarning:
+
+Unable to accurately infer 'num_nodes' from the attribute set '{'y_vtx', 'y'}'. Please explicitly set 'num_nodes' as an attribute of 'data[evt]' to suppress this warning
+
+/home/vihaan/NuGraph/pynuml/pynuml/data/nugraph_data.py:108: UserWarning:
+
+Unable to accurately infer 'num_nodes' from the attribute set '{'y', 'y_vtx'}'. Please explicitly set 'num_nodes' as an attribute of 'data[evt]' to suppress this warning
+
+/home/vihaan/NuGraph/pynuml/pynuml/data/nugraph_data.py:108: UserWarning:
+
+Unable to accurately infer 'num_nodes' from the attribute set '{'y_vtx', 'y'}'. Please explicitly set 'num_nodes' as an attribute of 'data[evt]' to suppress this warning
+
+/home/vihaan/NuGraph/pynuml/pynuml/data/nugraph_data.py:108: UserWarning:
+
+Unable to accurately infer 'num_nodes' from the attribute set '{'y_vtx', 'y'}'. Please explicitly set 'num_nodes' as an attribute of 'data[evt]' to suppress this warning
+
+/home/vihaan/NuGraph/pynuml/pynuml/data/nugraph_data.py:108: UserWarning:
+
+Unable to accurately infer 'num_nodes' from the attribute set '{'y', 'y_vtx'}'. Please explicitly set 'num_nodes' as an attribute of 'data[evt]' to suppress this warning
+
+/home/vihaan/NuGraph/pynuml/pynuml/data/nugraph_data.py:108: UserWarning:
+
+Unable to accurately infer 'num_nodes' from the attribute set '{'y', 'y_vtx'}'. Please explicitly set 'num_nodes' as an attribute of 'data[evt]' to suppress this warning
+
+/home/vihaan/NuGraph/pynuml/pynuml/data/nugraph_data.py:108: UserWarning:
+
+Unable to accurately infer 'num_nodes' from the attribute set '{'y', 'y_vtx'}'. Please explicitly set 'num_nodes' as an attribute of 'data[evt]' to suppress this warning
+
+/home/vihaan/NuGraph/pynuml/pynuml/data/nugraph_data.py:108: UserWarning:
+
+Unable to accurately infer 'num_nodes' from the attribute set '{'y_vtx', 'y'}'. Please explicitly set 'num_nodes' as an attribute of 'data[evt]' to suppress this warning
+
+/home/vihaan/NuGraph/pynuml/pynuml/data/nugraph_data.py:108: UserWarning:
+
+Unable to accurately infer 'num_nodes' from the attribute set '{'y_vtx', 'y'}'. Please explicitly set 'num_nodes' as an attribute of 'data[evt]' to suppress this warning
+
+/home/vihaan/NuGraph/pynuml/pynuml/data/nugraph_data.py:108: UserWarning:
+
+Unable to accurately infer 'num_nodes' from the attribute set '{'y_vtx', 'y'}'. Please explicitly set 'num_nodes' as an attribute of 'data[evt]' to suppress this warning
+
+/home/vihaan/NuGraph/pynuml/pynuml/data/nugraph_data.py:108: UserWarning:
+
+Unable to accurately infer 'num_nodes' from the attribute set '{'y_vtx', 'y'}'. Please explicitly set 'num_nodes' as an attribute of 'data[evt]' to suppress this warning
+
+/home/vihaan/NuGraph/pynuml/pynuml/data/nugraph_data.py:108: UserWarning:
+
+Unable to accurately infer 'num_nodes' from the attribute set '{'y_vtx', 'y'}'. Please explicitly set 'num_nodes' as an attribute of 'data[evt]' to suppress this warning
+
+/home/vihaan/NuGraph/pynuml/pynuml/data/nugraph_data.py:108: UserWarning:
+
+Unable to accurately infer 'num_nodes' from the attribute set '{'y', 'y_vtx'}'. Please explicitly set 'num_nodes' as an attribute of 'data[evt]' to suppress this warning
+
+/home/vihaan/NuGraph/pynuml/pynuml/data/nugraph_data.py:108: UserWarning:
+
+Unable to accurately infer 'num_nodes' from the attribute set '{'y', 'y_vtx'}'. Please explicitly set 'num_nodes' as an attribute of 'data[evt]' to suppress this warning
+
+/home/vihaan/NuGraph/pynuml/pynuml/data/nugraph_data.py:108: UserWarning:
+
+Unable to accurately infer 'num_nodes' from the attribute set '{'y', 'y_vtx'}'. Please explicitly set 'num_nodes' as an attribute of 'data[evt]' to suppress this warning
+
+/home/vihaan/NuGraph/pynuml/pynuml/data/nugraph_data.py:108: UserWarning:
+
+Unable to accurately infer 'num_nodes' from the attribute set '{'y', 'y_vtx'}'. Please explicitly set 'num_nodes' as an attribute of 'data[evt]' to suppress this warning
+
+/home/vihaan/NuGraph/pynuml/pynuml/data/nugraph_data.py:108: UserWarning:
+
+Unable to accurately infer 'num_nodes' from the attribute set '{'y', 'y_vtx'}'. Please explicitly set 'num_nodes' as an attribute of 'data[evt]' to suppress this warning
+
+/home/vihaan/NuGraph/pynuml/pynuml/data/nugraph_data.py:108: UserWarning:
+
+Unable to accurately infer 'num_nodes' from the attribute set '{'y_vtx', 'y'}'. Please explicitly set 'num_nodes' as an attribute of 'data[evt]' to suppress this warning
+
+/home/vihaan/NuGraph/pynuml/pynuml/data/nugraph_data.py:108: UserWarning:
+
+Unable to accurately infer 'num_nodes' from the attribute set '{'y_vtx', 'y'}'. Please explicitly set 'num_nodes' as an attribute of 'data[evt]' to suppress this warning
+
+/home/vihaan/NuGraph/pynuml/pynuml/data/nugraph_data.py:108: UserWarning:
+
+Unable to accurately infer 'num_nodes' from the attribute set '{'y', 'y_vtx'}'. Please explicitly set 'num_nodes' as an attribute of 'data[evt]' to suppress this warning
+
+/home/vihaan/NuGraph/pynuml/pynuml/data/nugraph_data.py:108: UserWarning:
+
+Unable to accurately infer 'num_nodes' from the attribute set '{'y_vtx', 'y'}'. Please explicitly set 'num_nodes' as an attribute of 'data[evt]' to suppress this warning
+
+/home/vihaan/NuGraph/pynuml/pynuml/data/nugraph_data.py:108: UserWarning:
+
+Unable to accurately infer 'num_nodes' from the attribute set '{'y_vtx', 'y'}'. Please explicitly set 'num_nodes' as an attribute of 'data[evt]' to suppress this warning
+
+/home/vihaan/NuGraph/pynuml/pynuml/data/nugraph_data.py:108: UserWarning:
+
+Unable to accurately infer 'num_nodes' from the attribute set '{'y', 'y_vtx'}'. Please explicitly set 'num_nodes' as an attribute of 'data[evt]' to suppress this warning
+
+/home/vihaan/NuGraph/pynuml/pynuml/data/nugraph_data.py:108: UserWarning:
+
+Unable to accurately infer 'num_nodes' from the attribute set '{'y_vtx', 'y'}'. Please explicitly set 'num_nodes' as an attribute of 'data[evt]' to suppress this warning
+
+/home/vihaan/NuGraph/pynuml/pynuml/data/nugraph_data.py:108: UserWarning:
+
+Unable to accurately infer 'num_nodes' from the attribute set '{'y', 'y_vtx'}'. Please explicitly set 'num_nodes' as an attribute of 'data[evt]' to suppress this warning
+
+/home/vihaan/NuGraph/pynuml/pynuml/data/nugraph_data.py:108: UserWarning:
+
+Unable to accurately infer 'num_nodes' from the attribute set '{'y', 'y_vtx'}'. Please explicitly set 'num_nodes' as an attribute of 'data[evt]' to suppress this warning
+
+/home/vihaan/NuGraph/pynuml/pynuml/data/nugraph_data.py:108: UserWarning:
+
+Unable to accurately infer 'num_nodes' from the attribute set '{'y', 'y_vtx'}'. Please explicitly set 'num_nodes' as an attribute of 'data[evt]' to suppress this warning
+
+/home/vihaan/NuGraph/pynuml/pynuml/data/nugraph_data.py:108: UserWarning:
+
+Unable to accurately infer 'num_nodes' from the attribute set '{'y', 'y_vtx'}'. Please explicitly set 'num_nodes' as an attribute of 'data[evt]' to suppress this warning
+
+/home/vihaan/NuGraph/pynuml/pynuml/data/nugraph_data.py:108: UserWarning:
+
+Unable to accurately infer 'num_nodes' from the attribute set '{'y', 'y_vtx'}'. Please explicitly set 'num_nodes' as an attribute of 'data[evt]' to suppress this warning
+
+/home/vihaan/NuGraph/pynuml/pynuml/data/nugraph_data.py:108: UserWarning:
+
+Unable to accurately infer 'num_nodes' from the attribute set '{'y', 'y_vtx'}'. Please explicitly set 'num_nodes' as an attribute of 'data[evt]' to suppress this warning
+
+/home/vihaan/NuGraph/pynuml/pynuml/data/nugraph_data.py:108: UserWarning:
+
+Unable to accurately infer 'num_nodes' from the attribute set '{'y', 'y_vtx'}'. Please explicitly set 'num_nodes' as an attribute of 'data[evt]' to suppress this warning
+
+/home/vihaan/NuGraph/pynuml/pynuml/data/nugraph_data.py:108: UserWarning:
+
+Unable to accurately infer 'num_nodes' from the attribute set '{'y', 'y_vtx'}'. Please explicitly set 'num_nodes' as an attribute of 'data[evt]' to suppress this warning
+
+/home/vihaan/NuGraph/pynuml/pynuml/data/nugraph_data.py:108: UserWarning:
+
+Unable to accurately infer 'num_nodes' from the attribute set '{'y', 'y_vtx'}'. Please explicitly set 'num_nodes' as an attribute of 'data[evt]' to suppress this warning
+
+/home/vihaan/NuGraph/pynuml/pynuml/data/nugraph_data.py:108: UserWarning:
+
+Unable to accurately infer 'num_nodes' from the attribute set '{'y', 'y_vtx'}'. Please explicitly set 'num_nodes' as an attribute of 'data[evt]' to suppress this warning
+
+/home/vihaan/NuGraph/pynuml/pynuml/data/nugraph_data.py:108: UserWarning:
+
+Unable to accurately infer 'num_nodes' from the attribute set '{'y', 'y_vtx'}'. Please explicitly set 'num_nodes' as an attribute of 'data[evt]' to suppress this warning
+
+/home/vihaan/NuGraph/pynuml/pynuml/data/nugraph_data.py:108: UserWarning:
+
+Unable to accurately infer 'num_nodes' from the attribute set '{'y', 'y_vtx'}'. Please explicitly set 'num_nodes' as an attribute of 'data[evt]' to suppress this warning
+
+/home/vihaan/NuGraph/pynuml/pynuml/data/nugraph_data.py:108: UserWarning:
+
+Unable to accurately infer 'num_nodes' from the attribute set '{'y', 'y_vtx'}'. Please explicitly set 'num_nodes' as an attribute of 'data[evt]' to suppress this warning
+
+/home/vihaan/NuGraph/pynuml/pynuml/data/nugraph_data.py:108: UserWarning:
+
+Unable to accurately infer 'num_nodes' from the attribute set '{'y', 'y_vtx'}'. Please explicitly set 'num_nodes' as an attribute of 'data[evt]' to suppress this warning
+
+/home/vihaan/NuGraph/pynuml/pynuml/data/nugraph_data.py:108: UserWarning:
+
+Unable to accurately infer 'num_nodes' from the attribute set '{'y', 'y_vtx'}'. Please explicitly set 'num_nodes' as an attribute of 'data[evt]' to suppress this warning
+
+/home/vihaan/NuGraph/pynuml/pynuml/data/nugraph_data.py:108: UserWarning:
+
+Unable to accurately infer 'num_nodes' from the attribute set '{'y', 'y_vtx'}'. Please explicitly set 'num_nodes' as an attribute of 'data[evt]' to suppress this warning
+
+/home/vihaan/NuGraph/pynuml/pynuml/data/nugraph_data.py:108: UserWarning:
+
+Unable to accurately infer 'num_nodes' from the attribute set '{'y', 'y_vtx'}'. Please explicitly set 'num_nodes' as an attribute of 'data[evt]' to suppress this warning
+
+/home/vihaan/NuGraph/pynuml/pynuml/data/nugraph_data.py:108: UserWarning:
+
+Unable to accurately infer 'num_nodes' from the attribute set '{'y', 'y_vtx'}'. Please explicitly set 'num_nodes' as an attribute of 'data[evt]' to suppress this warning
+
+/home/vihaan/NuGraph/pynuml/pynuml/data/nugraph_data.py:108: UserWarning:
+
+Unable to accurately infer 'num_nodes' from the attribute set '{'y', 'y_vtx'}'. Please explicitly set 'num_nodes' as an attribute of 'data[evt]' to suppress this warning
+
+/home/vihaan/NuGraph/pynuml/pynuml/data/nugraph_data.py:108: UserWarning:
+
+Unable to accurately infer 'num_nodes' from the attribute set '{'y', 'y_vtx'}'. Please explicitly set 'num_nodes' as an attribute of 'data[evt]' to suppress this warning
+
+[rank3]:[E626 14:34:17.711511354 ProcessGroupNCCL.cpp:1870] [PG ID 0 PG GUID 0(default_pg) Rank 3] ProcessGroupNCCL's watchdog got stuck for 480 seconds without making progress in monitoring enqueued collectives. This typically indicates a NCCL/CUDA API (e.g., CudaEventDestroy) hang blocking the watchdog, and could be triggered by another thread holding the GIL inside a CUDA api (for example, CudaEventDestroy), or other deadlock-prone behaviors.If you suspect the watchdog is not actually stuck and a longer timeout would help, you can either increase the timeout (TORCH_NCCL_HEARTBEAT_TIMEOUT_SEC) to a larger value or disable the heartbeat monitor (TORCH_NCCL_ENABLE_MONITORING=0).If either of aforementioned helps, feel free to file an issue to PyTorch about the short timeout or false positive abort; otherwise, please attempt to debug the hang. 
+[rank3]:[E626 14:34:17.712061801 ProcessGroupNCCL.cpp:1589] [PG ID 0 PG GUID 0(default_pg) Rank 3] ProcessGroupNCCL preparing to dump debug info. Include stack trace: 1
+[rank1]:[E626 14:34:17.748026348 ProcessGroupNCCL.cpp:1870] [PG ID 0 PG GUID 0(default_pg) Rank 1] ProcessGroupNCCL's watchdog got stuck for 480 seconds without making progress in monitoring enqueued collectives. This typically indicates a NCCL/CUDA API (e.g., CudaEventDestroy) hang blocking the watchdog, and could be triggered by another thread holding the GIL inside a CUDA api (for example, CudaEventDestroy), or other deadlock-prone behaviors.If you suspect the watchdog is not actually stuck and a longer timeout would help, you can either increase the timeout (TORCH_NCCL_HEARTBEAT_TIMEOUT_SEC) to a larger value or disable the heartbeat monitor (TORCH_NCCL_ENABLE_MONITORING=0).If either of aforementioned helps, feel free to file an issue to PyTorch about the short timeout or false positive abort; otherwise, please attempt to debug the hang. 
+[rank1]:[E626 14:34:17.748546015 ProcessGroupNCCL.cpp:1589] [PG ID 0 PG GUID 0(default_pg) Rank 1] ProcessGroupNCCL preparing to dump debug info. Include stack trace: 1
+[rank2]:[E626 14:34:20.698487138 ProcessGroupNCCL.cpp:1870] [PG ID 0 PG GUID 0(default_pg) Rank 2] ProcessGroupNCCL's watchdog got stuck for 480 seconds without making progress in monitoring enqueued collectives. This typically indicates a NCCL/CUDA API (e.g., CudaEventDestroy) hang blocking the watchdog, and could be triggered by another thread holding the GIL inside a CUDA api (for example, CudaEventDestroy), or other deadlock-prone behaviors.If you suspect the watchdog is not actually stuck and a longer timeout would help, you can either increase the timeout (TORCH_NCCL_HEARTBEAT_TIMEOUT_SEC) to a larger value or disable the heartbeat monitor (TORCH_NCCL_ENABLE_MONITORING=0).If either of aforementioned helps, feel free to file an issue to PyTorch about the short timeout or false positive abort; otherwise, please attempt to debug the hang. 
+[rank2]:[E626 14:34:20.698909465 ProcessGroupNCCL.cpp:1589] [PG ID 0 PG GUID 0(default_pg) Rank 2] ProcessGroupNCCL preparing to dump debug info. Include stack trace: 1
+[rank0]:[E626 14:34:35.676327547 ProcessGroupNCCL.cpp:1870] [PG ID 0 PG GUID 0(default_pg) Rank 0] ProcessGroupNCCL's watchdog got stuck for 480 seconds without making progress in monitoring enqueued collectives. This typically indicates a NCCL/CUDA API (e.g., CudaEventDestroy) hang blocking the watchdog, and could be triggered by another thread holding the GIL inside a CUDA api (for example, CudaEventDestroy), or other deadlock-prone behaviors.If you suspect the watchdog is not actually stuck and a longer timeout would help, you can either increase the timeout (TORCH_NCCL_HEARTBEAT_TIMEOUT_SEC) to a larger value or disable the heartbeat monitor (TORCH_NCCL_ENABLE_MONITORING=0).If either of aforementioned helps, feel free to file an issue to PyTorch about the short timeout or false positive abort; otherwise, please attempt to debug the hang. 
+[rank0]:[E626 14:34:35.676713095 ProcessGroupNCCL.cpp:1589] [PG ID 0 PG GUID 0(default_pg) Rank 0] ProcessGroupNCCL preparing to dump debug info. Include stack trace: 1
+[rank4]:[E626 14:34:35.245960609 ProcessGroupNCCL.cpp:1870] [PG ID 0 PG GUID 0(default_pg) Rank 4] ProcessGroupNCCL's watchdog got stuck for 480 seconds without making progress in monitoring enqueued collectives. This typically indicates a NCCL/CUDA API (e.g., CudaEventDestroy) hang blocking the watchdog, and could be triggered by another thread holding the GIL inside a CUDA api (for example, CudaEventDestroy), or other deadlock-prone behaviors.If you suspect the watchdog is not actually stuck and a longer timeout would help, you can either increase the timeout (TORCH_NCCL_HEARTBEAT_TIMEOUT_SEC) to a larger value or disable the heartbeat monitor (TORCH_NCCL_ENABLE_MONITORING=0).If either of aforementioned helps, feel free to file an issue to PyTorch about the short timeout or false positive abort; otherwise, please attempt to debug the hang. 
+[rank5]:[E626 14:34:35.245919867 ProcessGroupNCCL.cpp:1870] [PG ID 0 PG GUID 0(default_pg) Rank 5] ProcessGroupNCCL's watchdog got stuck for 480 seconds without making progress in monitoring enqueued collectives. This typically indicates a NCCL/CUDA API (e.g., CudaEventDestroy) hang blocking the watchdog, and could be triggered by another thread holding the GIL inside a CUDA api (for example, CudaEventDestroy), or other deadlock-prone behaviors.If you suspect the watchdog is not actually stuck and a longer timeout would help, you can either increase the timeout (TORCH_NCCL_HEARTBEAT_TIMEOUT_SEC) to a larger value or disable the heartbeat monitor (TORCH_NCCL_ENABLE_MONITORING=0).If either of aforementioned helps, feel free to file an issue to PyTorch about the short timeout or false positive abort; otherwise, please attempt to debug the hang. 
+[rank6]:[E626 14:34:35.245931378 ProcessGroupNCCL.cpp:1870] [PG ID 0 PG GUID 0(default_pg) Rank 6] ProcessGroupNCCL's watchdog got stuck for 480 seconds without making progress in monitoring enqueued collectives. This typically indicates a NCCL/CUDA API (e.g., CudaEventDestroy) hang blocking the watchdog, and could be triggered by another thread holding the GIL inside a CUDA api (for example, CudaEventDestroy), or other deadlock-prone behaviors.If you suspect the watchdog is not actually stuck and a longer timeout would help, you can either increase the timeout (TORCH_NCCL_HEARTBEAT_TIMEOUT_SEC) to a larger value or disable the heartbeat monitor (TORCH_NCCL_ENABLE_MONITORING=0).If either of aforementioned helps, feel free to file an issue to PyTorch about the short timeout or false positive abort; otherwise, please attempt to debug the hang. 
+[rank7]:[E626 14:34:35.245989580 ProcessGroupNCCL.cpp:1870] [PG ID 0 PG GUID 0(default_pg) Rank 7] ProcessGroupNCCL's watchdog got stuck for 480 seconds without making progress in monitoring enqueued collectives. This typically indicates a NCCL/CUDA API (e.g., CudaEventDestroy) hang blocking the watchdog, and could be triggered by another thread holding the GIL inside a CUDA api (for example, CudaEventDestroy), or other deadlock-prone behaviors.If you suspect the watchdog is not actually stuck and a longer timeout would help, you can either increase the timeout (TORCH_NCCL_HEARTBEAT_TIMEOUT_SEC) to a larger value or disable the heartbeat monitor (TORCH_NCCL_ENABLE_MONITORING=0).If either of aforementioned helps, feel free to file an issue to PyTorch about the short timeout or false positive abort; otherwise, please attempt to debug the hang. 
+[rank4]:[E626 14:34:35.246192557 ProcessGroupNCCL.cpp:1589] [PG ID 0 PG GUID 0(default_pg) Rank 4] ProcessGroupNCCL preparing to dump debug info. Include stack trace: 1
+[rank6]:[E626 14:34:35.246183187 ProcessGroupNCCL.cpp:1589] [PG ID 0 PG GUID 0(default_pg) Rank 6] ProcessGroupNCCL preparing to dump debug info. Include stack trace: 1
+[rank5]:[E626 14:34:35.246225038 ProcessGroupNCCL.cpp:1589] [PG ID 0 PG GUID 0(default_pg) Rank 5] ProcessGroupNCCL preparing to dump debug info. Include stack trace: 1
+[rank7]:[E626 14:34:35.246290081 ProcessGroupNCCL.cpp:1589] [PG ID 0 PG GUID 0(default_pg) Rank 7] ProcessGroupNCCL preparing to dump debug info. Include stack trace: 1
+[rank3]:[F626 14:42:17.715471611 ProcessGroupNCCL.cpp:1614] [PG ID 0 PG GUID 0(default_pg) Rank 3] [PG ID 0 PG GUID 0(default_pg) Rank 3] Terminating the process after attempting to dump debug info, due to ProcessGroupNCCL watchdog hang.
+[rank1]:[F626 14:42:17.750734717 ProcessGroupNCCL.cpp:1614] [PG ID 0 PG GUID 0(default_pg) Rank 1] [PG ID 0 PG GUID 0(default_pg) Rank 1] Terminating the process after attempting to dump debug info, due to ProcessGroupNCCL watchdog hang.
+srun: error: j002-ds: tasks 1,3: Aborted
+[rank2]:[F626 14:42:20.701705831 ProcessGroupNCCL.cpp:1614] [PG ID 0 PG GUID 0(default_pg) Rank 2] [PG ID 0 PG GUID 0(default_pg) Rank 2] Terminating the process after attempting to dump debug info, due to ProcessGroupNCCL watchdog hang.
+srun: error: j002-ds: task 2: Aborted
+[rank0]:[F626 14:42:35.679470070 ProcessGroupNCCL.cpp:1614] [PG ID 0 PG GUID 0(default_pg) Rank 0] [PG ID 0 PG GUID 0(default_pg) Rank 0] Terminating the process after attempting to dump debug info, due to ProcessGroupNCCL watchdog hang.
+[rank6]:[F626 14:42:35.299365652 ProcessGroupNCCL.cpp:1614] [PG ID 0 PG GUID 0(default_pg) Rank 6] [PG ID 0 PG GUID 0(default_pg) Rank 6] Terminating the process after attempting to dump debug info, due to ProcessGroupNCCL watchdog hang.
+[rank7]:[F626 14:42:35.299840779 ProcessGroupNCCL.cpp:1614] [PG ID 0 PG GUID 0(default_pg) Rank 7] [PG ID 0 PG GUID 0(default_pg) Rank 7] Terminating the process after attempting to dump debug info, due to ProcessGroupNCCL watchdog hang.
+[rank4]:[F626 14:42:35.299983354 ProcessGroupNCCL.cpp:1614] [PG ID 0 PG GUID 0(default_pg) Rank 4] [PG ID 0 PG GUID 0(default_pg) Rank 4] Terminating the process after attempting to dump debug info, due to ProcessGroupNCCL watchdog hang.
+[rank5]:[F626 14:42:35.300523384 ProcessGroupNCCL.cpp:1614] [PG ID 0 PG GUID 0(default_pg) Rank 5] [PG ID 0 PG GUID 0(default_pg) Rank 5] Terminating the process after attempting to dump debug info, due to ProcessGroupNCCL watchdog hang.
+Sanity Checking: |          | 0/? [00:00<?, ?it/s]Sanity Checking: |          | 0/? [00:00<?, ?it/s]Sanity Checking DataLoader 0:   0%|          | 0/2 [00:00<?, ?it/s]Sanity Checking DataLoader 0:  50%|█████     | 1/2 [00:04<00:04,  0.24it/s]Sanity Checking DataLoader 0: 100%|██████████| 2/2 [00:04<00:00,  0.46it/s]                                                                           Training: |          | 0/? [00:00<?, ?it/s]Training: |          | 0/? [00:00<?, ?it/s]Epoch 0:   0%|          | 0/6208 [00:00<?, ?it/s]srun: error: j002-ds: task 0: Aborted
+srun: error: n001: tasks 4-7: Aborted

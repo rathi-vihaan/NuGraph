@@ -77,7 +77,7 @@ class InstanceDecoder(nn.Module):
         if (self.particle_loss):
             x_semantic = h.x_semantic
             y_semantic = h.y_semantic
-            semantic_loss_func = RecallLoss()
+            semantic_loss_func = RecallLoss(num_classes=x_semantic.shape[1])
             loss_semantic = semantic_loss_func(x_semantic, y_semantic)
 
         # calculate loss
