@@ -92,9 +92,9 @@ class Transform(BaseTransform):
         h = data["hit"]
         h.x = torch.cat((h.pos, h.x), dim=-1)
 
-        # fix  edge type ('flash', 'in', 'evt')
-        if ("flash", "in", "evt") in data.edge_types:
-            if data["flash", "in", "evt"].edge_index.dim() == 1:
-                data["flash", "in", "evt"].edge_index = data["flash", "in", "evt"].edge_index.unsqueeze(1)
+        for edge_type in [("flash", "in", "evt"), ("ophit", "in", "pmt")]:
+            if edge_type in data.edge_types:
+                if data[edge_type].edge_index.dim() == 1:
+                    data[edge_type].edge_index = data[edge_type].edge_index.unsqueeze(1)
 
         return data
