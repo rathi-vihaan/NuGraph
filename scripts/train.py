@@ -11,6 +11,7 @@ import warnings
 import pytorch_lightning as pl
 from pytorch_lightning.plugins.environments import SLURMEnvironment
 from pytorch_lightning.callbacks import LearningRateMonitor, ModelCheckpoint
+from pytorch_lightning.strategies import DDPStrategy
 import nugraph as ng
 
 torch.set_num_threads(4)
@@ -97,9 +98,9 @@ def train(args):
     #accelerator, devices = ng.util.configure_device(args.device)
     trainer = pl.Trainer(
         accelerator="gpu",
-        devices=4,
+        devices=8,
         num_nodes=1,
-        strategy="ddp",
+        strategy="ddp", # DDPStrategy(find_unused_parameters=True) is slower but prevents crashes
         max_epochs=args.epochs,
         limit_train_batches=args.limit_train_batches,
         limit_val_batches=args.limit_val_batches,
