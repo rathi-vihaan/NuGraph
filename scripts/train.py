@@ -93,7 +93,9 @@ def train(args):
         callbacks.append(ModelCheckpoint(monitor="loss/val", mode="min"))
 
     # configure plugins
-    plugins = [ SLURMEnvironment(requeue_signal=signal.SIGUSR1) ]
+    plugins = [
+        SLURMEnvironment(),
+    ]
 
     #accelerator, devices = ng.util.configure_device(args.device)
     trainer = pl.Trainer(
