@@ -281,7 +281,10 @@ class HitGraphProducer(ProcessorBase):
             data["pmt", "in", "flash"].edge_index = edge2.long()
 
             # flash to event edges
-            edge3 = torch.tensor([opflash["flash_id"].values[0], 0])
+            edge3 = torch.stack((
+                torch.tensor(opflash["flash_id"].values, dtype=torch.long),
+                torch.zeros(opflash.shape[0], dtype=torch.long)
+            ), dim=0)
             data["flash", "in", "evt"].edge_index = edge3
 
             # nexus to pmt edges
