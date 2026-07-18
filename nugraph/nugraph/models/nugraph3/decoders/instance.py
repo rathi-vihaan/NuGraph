@@ -129,10 +129,14 @@ class InstanceDecoder(nn.Module):
 
                 # calculate rand score per graph
                 rand = []
-                for l in data.to_data_list():
-                    mask = l["hit"].y_semantic >= 0
-                    rand.append(adjusted_rand_score(l.x_i()[mask], l.y_i()[mask]))
-                rand = torch.stack(rand).mean()
+                for x_i_graph, y_i_graph, y_sem_graph in zip(
+                        unbatch(data.x_i(), h.batch),
+                        unbatch(data.y_i(), h.batch),
+                        unbatch(h.y_semantic >= 0, h.batch)):
+                    if y_sem_graph.sum() == 0:
+                        continue
+                    rand.append(adjusted_rand_score(x_i_graph[y_sem_graph], y_i_graph[y_sem_graph]))
+                rand = torch.tensor(0., device=device) if len(rand) == 0 else torch.stack(rand).mean()
 
             else:
                 data[N_IP].x, data[E_H_IP].edge_index = self.materialize(h.ox, mask)
