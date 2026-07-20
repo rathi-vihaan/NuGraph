@@ -32,7 +32,7 @@ child_pid=""
 # configure these three depending on your particular training run
 export NUGRAPH_LOG="/home/vihaan/NuGraph/logs"
 NAME_NAME="optical-main"
-VERSION_NAME="test-optical-message"
+VERSION_NAME="test-optical-cross"
 
 CKPT_DIR="${NUGRAPH_LOG}/${NAME_NAME}/${VERSION_NAME}/checkpoints"
 mkdir -p "$CKPT_DIR"

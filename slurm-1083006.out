@@ -1,0 +1,1149 @@
+/net/projects2/fermi2526/conda/nugraph-25-10/bin/python
+Obtaining file:///home/vihaan/NuGraph/nugraph
+  Installing build dependencies: started
+  Installing build dependencies: finished with status 'done'
+  Checking if build backend supports build_editable: started
+  Checking if build backend supports build_editable: finished with status 'done'
+  Getting requirements to build editable: started
+  Getting requirements to build editable: finished with status 'done'
+  Preparing editable metadata (pyproject.toml): started
+  Preparing editable metadata (pyproject.toml): finished with status 'done'
+Building wheels for collected packages: nugraph
+  Building editable for nugraph (pyproject.toml): started
+  Building editable for nugraph (pyproject.toml): finished with status 'done'
+  Created wheel for nugraph: filename=nugraph-25.4.dev0-py3-none-any.whl size=3472 sha256=b9a169ce4dde0ba1418f1f65cf32f62dfa2dcd762c6bf24eb3f8452c312f3f5c
+  Stored in directory: /tmp/pip-ephem-wheel-cache-pnfdefbs/wheels/15/f6/a6/f0d66e89fc094362e365c85c3a0b86b30a25765b95b9b63453
+Successfully built nugraph
+Installing collected packages: nugraph
+  Attempting uninstall: nugraph
+    Found existing installation: nugraph 25.4.dev0
+    Uninstalling nugraph-25.4.dev0:
+      Successfully uninstalled nugraph-25.4.dev0
+Successfully installed nugraph-25.4.dev0
+Obtaining file:///home/vihaan/NuGraph/pynuml
+  Installing build dependencies: started
+  Installing build dependencies: finished with status 'done'
+  Checking if build backend supports build_editable: started
+  Checking if build backend supports build_editable: finished with status 'done'
+  Getting requirements to build editable: started
+  Getting requirements to build editable: finished with status 'done'
+  Preparing editable metadata (pyproject.toml): started
+  Preparing editable metadata (pyproject.toml): finished with status 'done'
+Building wheels for collected packages: pynuml
+  Building editable for pynuml (pyproject.toml): started
+  Building editable for pynuml (pyproject.toml): finished with status 'done'
+  Created wheel for pynuml: filename=pynuml-25.4.dev0-py3-none-any.whl size=4490 sha256=cacbe6f899d206dc8dadc16284bbcdac24a17a568f5052f14c0fbf2f9864f58c
+  Stored in directory: /tmp/pip-ephem-wheel-cache-rhvxem1w/wheels/7b/6a/a9/fbf69809664120c9401dde4019f4074ac271934425d420c586
+Successfully built pynuml
+Installing collected packages: pynuml
+  Attempting uninstall: pynuml
+    Found existing installation: pynuml 25.4.dev0
+    Uninstalling pynuml-25.4.dev0:
+      Successfully uninstalled pynuml-25.4.dev0
+Successfully installed pynuml-25.4.dev0
+fd limit set to: 65536
+[Sat Jul 18 02:23:39 PM CDT 2026] Starting fresh training run
+💡 Tip: For seamless cloud uploads and versioning, try installing [litmodels](https://pypi.org/project/litmodels/) to enable LitModelCheckpoint, which syncs automatically with the Lightning model registry.
+GPU available: True (cuda), used: True
+TPU available: False, using: 0 TPU cores
+HPU available: False, using: 0 HPUs
+You are using a CUDA device ('NVIDIA A100 80GB PCIe') that has Tensor Cores. To properly utilize them, you should set `torch.set_float32_matmul_precision('medium' | 'high')` which will trade-off precision for performance. For more details, read https://pytorch.org/docs/stable/generated/torch.set_float32_matmul_precision.html#torch.set_float32_matmul_precision
+Initializing distributed: GLOBAL_RANK: 5, MEMBER: 6/8
+Initializing distributed: GLOBAL_RANK: 4, MEMBER: 5/8
+[W718 14:26:04.713423917 socket.cpp:755] [c10d] The client socket has failed to connect to [j005-ds]:18006 (errno: 22 - Invalid argument).
+Initializing distributed: GLOBAL_RANK: 1, MEMBER: 2/8
+Initializing distributed: GLOBAL_RANK: 7, MEMBER: 8/8
+[W718 14:26:04.715675032 socket.cpp:755] [c10d] The client socket has failed to connect to [j005-ds]:18006 (errno: 22 - Invalid argument).
+Initializing distributed: GLOBAL_RANK: 6, MEMBER: 7/8
+Initializing distributed: GLOBAL_RANK: 0, MEMBER: 1/8
+Initializing distributed: GLOBAL_RANK: 3, MEMBER: 4/8
+Initializing distributed: GLOBAL_RANK: 2, MEMBER: 3/8
+[W718 14:26:04.720047987 socket.cpp:755] [c10d] The client socket has failed to connect to [j005-ds]:18006 (errno: 22 - Invalid argument).
+[W718 14:26:04.720630880 socket.cpp:755] [c10d] The client socket has failed to connect to [j005-ds]:18006 (errno: 22 - Invalid argument).
+[W718 14:26:04.724545469 socket.cpp:755] [c10d] The client socket has failed to connect to [j005-ds]:18006 (errno: 22 - Invalid argument).
+[W718 14:26:04.724896979 socket.cpp:755] [c10d] The client socket has failed to connect to [j005-ds]:18006 (errno: 22 - Invalid argument).
+[W718 14:26:04.725291022 socket.cpp:755] [c10d] The client socket has failed to connect to [j005-ds]:18006 (errno: 22 - Invalid argument).
+----------------------------------------------------------------------------------------------------
+distributed_backend=nccl
+All distributed processes registered. Starting with 8 processes
+----------------------------------------------------------------------------------------------------
+
+LOCAL_RANK: 0 - CUDA_VISIBLE_DEVICES: [0,1,2,3,4,5,6,7]
+LOCAL_RANK: 2 - CUDA_VISIBLE_DEVICES: [0,1,2,3,4,5,6,7]
+LOCAL_RANK: 3 - CUDA_VISIBLE_DEVICES: [0,1,2,3,4,5,6,7]
+LOCAL_RANK: 4 - CUDA_VISIBLE_DEVICES: [0,1,2,3,4,5,6,7]
+LOCAL_RANK: 5 - CUDA_VISIBLE_DEVICES: [0,1,2,3,4,5,6,7]
+LOCAL_RANK: 6 - CUDA_VISIBLE_DEVICES: [0,1,2,3,4,5,6,7]
+LOCAL_RANK: 1 - CUDA_VISIBLE_DEVICES: [0,1,2,3,4,5,6,7]
+LOCAL_RANK: 7 - CUDA_VISIBLE_DEVICES: [0,1,2,3,4,5,6,7]
+Loading `train_dataloader` to estimate number of stepping batches.
+/net/projects2/fermi2526/conda/nugraph-25-10/lib/python3.13/site-packages/torch/utils/data/dataloader.py:627: UserWarning:
+
+This DataLoader will create 8 worker processes in total. Our suggested max number of worker in current system is 4, which is smaller than what this DataLoader is going to create. Please be aware that excessive worker creation might get DataLoader running slow or even freeze, lower the worker number to avoid potential slowness/freeze if necessary.
+
+/net/projects2/fermi2526/conda/nugraph-25-10/lib/python3.13/site-packages/torch/utils/data/dataloader.py:627: UserWarning:
+
+This DataLoader will create 8 worker processes in total. Our suggested max number of worker in current system is 4, which is smaller than what this DataLoader is going to create. Please be aware that excessive worker creation might get DataLoader running slow or even freeze, lower the worker number to avoid potential slowness/freeze if necessary.
+
+/net/projects2/fermi2526/conda/nugraph-25-10/lib/python3.13/site-packages/torch/utils/data/dataloader.py:627: UserWarning:
+
+This DataLoader will create 8 worker processes in total. Our suggested max number of worker in current system is 4, which is smaller than what this DataLoader is going to create. Please be aware that excessive worker creation might get DataLoader running slow or even freeze, lower the worker number to avoid potential slowness/freeze if necessary.
+
+/net/projects2/fermi2526/conda/nugraph-25-10/lib/python3.13/site-packages/torch/utils/data/dataloader.py:627: UserWarning:
+
+This DataLoader will create 8 worker processes in total. Our suggested max number of worker in current system is 4, which is smaller than what this DataLoader is going to create. Please be aware that excessive worker creation might get DataLoader running slow or even freeze, lower the worker number to avoid potential slowness/freeze if necessary.
+
+/net/projects2/fermi2526/conda/nugraph-25-10/lib/python3.13/site-packages/torch/utils/data/dataloader.py:627: UserWarning:
+
+This DataLoader will create 8 worker processes in total. Our suggested max number of worker in current system is 4, which is smaller than what this DataLoader is going to create. Please be aware that excessive worker creation might get DataLoader running slow or even freeze, lower the worker number to avoid potential slowness/freeze if necessary.
+
+/net/projects2/fermi2526/conda/nugraph-25-10/lib/python3.13/site-packages/torch/utils/data/dataloader.py:627: UserWarning:
+
+This DataLoader will create 8 worker processes in total. Our suggested max number of worker in current system is 4, which is smaller than what this DataLoader is going to create. Please be aware that excessive worker creation might get DataLoader running slow or even freeze, lower the worker number to avoid potential slowness/freeze if necessary.
+
+/net/projects2/fermi2526/conda/nugraph-25-10/lib/python3.13/site-packages/torch/utils/data/dataloader.py:627: UserWarning:
+
+This DataLoader will create 8 worker processes in total. Our suggested max number of worker in current system is 4, which is smaller than what this DataLoader is going to create. Please be aware that excessive worker creation might get DataLoader running slow or even freeze, lower the worker number to avoid potential slowness/freeze if necessary.
+
+/net/projects2/fermi2526/conda/nugraph-25-10/lib/python3.13/site-packages/torch/utils/data/dataloader.py:627: UserWarning:
+
+This DataLoader will create 8 worker processes in total. Our suggested max number of worker in current system is 4, which is smaller than what this DataLoader is going to create. Please be aware that excessive worker creation might get DataLoader running slow or even freeze, lower the worker number to avoid potential slowness/freeze if necessary.
+
+/net/projects2/fermi2526/conda/nugraph-25-10/lib/python3.13/site-packages/torch/distributed/algorithms/ddp_comm_hooks/__init__.py:54: FutureWarning:
+
+functools.partial will be a method descriptor in future Python versions; wrap it in enum.member() if you want to preserve the old behavior
+
+/net/projects2/fermi2526/conda/nugraph-25-10/lib/python3.13/site-packages/torch/distributed/algorithms/ddp_comm_hooks/__init__.py:54: FutureWarning:
+
+functools.partial will be a method descriptor in future Python versions; wrap it in enum.member() if you want to preserve the old behavior
+
+/net/projects2/fermi2526/conda/nugraph-25-10/lib/python3.13/site-packages/torch/distributed/algorithms/ddp_comm_hooks/__init__.py:54: FutureWarning:
+
+functools.partial will be a method descriptor in future Python versions; wrap it in enum.member() if you want to preserve the old behavior
+
+/net/projects2/fermi2526/conda/nugraph-25-10/lib/python3.13/site-packages/torch/distributed/algorithms/ddp_comm_hooks/__init__.py:54: FutureWarning:
+
+functools.partial will be a method descriptor in future Python versions; wrap it in enum.member() if you want to preserve the old behavior
+
+/net/projects2/fermi2526/conda/nugraph-25-10/lib/python3.13/site-packages/torch/distributed/algorithms/ddp_comm_hooks/__init__.py:54: FutureWarning:
+
+functools.partial will be a method descriptor in future Python versions; wrap it in enum.member() if you want to preserve the old behavior
+
+/net/projects2/fermi2526/conda/nugraph-25-10/lib/python3.13/site-packages/torch/distributed/algorithms/ddp_comm_hooks/__init__.py:54: FutureWarning:
+
+functools.partial will be a method descriptor in future Python versions; wrap it in enum.member() if you want to preserve the old behavior
+
+/net/projects2/fermi2526/conda/nugraph-25-10/lib/python3.13/site-packages/torch/distributed/algorithms/ddp_comm_hooks/__init__.py:54: FutureWarning:
+
+functools.partial will be a method descriptor in future Python versions; wrap it in enum.member() if you want to preserve the old behavior
+
+/net/projects2/fermi2526/conda/nugraph-25-10/lib/python3.13/site-packages/torch/distributed/algorithms/ddp_comm_hooks/__init__.py:55: FutureWarning:
+
+functools.partial will be a method descriptor in future Python versions; wrap it in enum.member() if you want to preserve the old behavior
+
+/net/projects2/fermi2526/conda/nugraph-25-10/lib/python3.13/site-packages/torch/distributed/algorithms/ddp_comm_hooks/__init__.py:55: FutureWarning:
+
+functools.partial will be a method descriptor in future Python versions; wrap it in enum.member() if you want to preserve the old behavior
+
+/net/projects2/fermi2526/conda/nugraph-25-10/lib/python3.13/site-packages/torch/distributed/algorithms/ddp_comm_hooks/__init__.py:55: FutureWarning:
+
+functools.partial will be a method descriptor in future Python versions; wrap it in enum.member() if you want to preserve the old behavior
+
+/net/projects2/fermi2526/conda/nugraph-25-10/lib/python3.13/site-packages/torch/distributed/algorithms/ddp_comm_hooks/__init__.py:58: FutureWarning:
+
+functools.partial will be a method descriptor in future Python versions; wrap it in enum.member() if you want to preserve the old behavior
+
+/net/projects2/fermi2526/conda/nugraph-25-10/lib/python3.13/site-packages/torch/distributed/algorithms/ddp_comm_hooks/__init__.py:58: FutureWarning:
+
+functools.partial will be a method descriptor in future Python versions; wrap it in enum.member() if you want to preserve the old behavior
+
+/net/projects2/fermi2526/conda/nugraph-25-10/lib/python3.13/site-packages/torch/distributed/algorithms/ddp_comm_hooks/__init__.py:55: FutureWarning:
+
+functools.partial will be a method descriptor in future Python versions; wrap it in enum.member() if you want to preserve the old behavior
+
+/net/projects2/fermi2526/conda/nugraph-25-10/lib/python3.13/site-packages/torch/distributed/algorithms/ddp_comm_hooks/__init__.py:55: FutureWarning:
+
+functools.partial will be a method descriptor in future Python versions; wrap it in enum.member() if you want to preserve the old behavior
+
+/net/projects2/fermi2526/conda/nugraph-25-10/lib/python3.13/site-packages/torch/distributed/algorithms/ddp_comm_hooks/__init__.py:58: FutureWarning:
+
+functools.partial will be a method descriptor in future Python versions; wrap it in enum.member() if you want to preserve the old behavior
+
+/net/projects2/fermi2526/conda/nugraph-25-10/lib/python3.13/site-packages/torch/distributed/algorithms/ddp_comm_hooks/__init__.py:55: FutureWarning:
+
+functools.partial will be a method descriptor in future Python versions; wrap it in enum.member() if you want to preserve the old behavior
+
+/net/projects2/fermi2526/conda/nugraph-25-10/lib/python3.13/site-packages/torch/distributed/algorithms/ddp_comm_hooks/__init__.py:58: FutureWarning:
+
+functools.partial will be a method descriptor in future Python versions; wrap it in enum.member() if you want to preserve the old behavior
+
+/net/projects2/fermi2526/conda/nugraph-25-10/lib/python3.13/site-packages/torch/distributed/algorithms/ddp_comm_hooks/__init__.py:61: FutureWarning:
+
+functools.partial will be a method descriptor in future Python versions; wrap it in enum.member() if you want to preserve the old behavior
+
+/net/projects2/fermi2526/conda/nugraph-25-10/lib/python3.13/site-packages/torch/distributed/algorithms/ddp_comm_hooks/__init__.py:64: FutureWarning:
+
+functools.partial will be a method descriptor in future Python versions; wrap it in enum.member() if you want to preserve the old behavior
+
+/net/projects2/fermi2526/conda/nugraph-25-10/lib/python3.13/site-packages/torch/distributed/algorithms/ddp_comm_hooks/__init__.py:61: FutureWarning:
+
+functools.partial will be a method descriptor in future Python versions; wrap it in enum.member() if you want to preserve the old behavior
+
+/net/projects2/fermi2526/conda/nugraph-25-10/lib/python3.13/site-packages/torch/distributed/algorithms/ddp_comm_hooks/__init__.py:64: FutureWarning:
+
+functools.partial will be a method descriptor in future Python versions; wrap it in enum.member() if you want to preserve the old behavior
+
+/net/projects2/fermi2526/conda/nugraph-25-10/lib/python3.13/site-packages/torch/distributed/algorithms/ddp_comm_hooks/__init__.py:58: FutureWarning:
+
+functools.partial will be a method descriptor in future Python versions; wrap it in enum.member() if you want to preserve the old behavior
+
+/net/projects2/fermi2526/conda/nugraph-25-10/lib/python3.13/site-packages/torch/distributed/algorithms/ddp_comm_hooks/__init__.py:61: FutureWarning:
+
+functools.partial will be a method descriptor in future Python versions; wrap it in enum.member() if you want to preserve the old behavior
+
+/net/projects2/fermi2526/conda/nugraph-25-10/lib/python3.13/site-packages/torch/distributed/algorithms/ddp_comm_hooks/__init__.py:58: FutureWarning:
+
+functools.partial will be a method descriptor in future Python versions; wrap it in enum.member() if you want to preserve the old behavior
+
+/net/projects2/fermi2526/conda/nugraph-25-10/lib/python3.13/site-packages/torch/distributed/algorithms/ddp_comm_hooks/__init__.py:61: FutureWarning:
+
+functools.partial will be a method descriptor in future Python versions; wrap it in enum.member() if you want to preserve the old behavior
+
+/net/projects2/fermi2526/conda/nugraph-25-10/lib/python3.13/site-packages/torch/distributed/algorithms/ddp_comm_hooks/__init__.py:61: FutureWarning:
+
+functools.partial will be a method descriptor in future Python versions; wrap it in enum.member() if you want to preserve the old behavior
+
+/net/projects2/fermi2526/conda/nugraph-25-10/lib/python3.13/site-packages/torch/distributed/algorithms/ddp_comm_hooks/__init__.py:64: FutureWarning:
+
+functools.partial will be a method descriptor in future Python versions; wrap it in enum.member() if you want to preserve the old behavior
+
+/net/projects2/fermi2526/conda/nugraph-25-10/lib/python3.13/site-packages/torch/distributed/algorithms/ddp_comm_hooks/__init__.py:61: FutureWarning:
+
+functools.partial will be a method descriptor in future Python versions; wrap it in enum.member() if you want to preserve the old behavior
+
+/net/projects2/fermi2526/conda/nugraph-25-10/lib/python3.13/site-packages/torch/distributed/algorithms/ddp_comm_hooks/__init__.py:64: FutureWarning:
+
+functools.partial will be a method descriptor in future Python versions; wrap it in enum.member() if you want to preserve the old behavior
+
+/net/projects2/fermi2526/conda/nugraph-25-10/lib/python3.13/site-packages/torch/distributed/algorithms/ddp_comm_hooks/__init__.py:67: FutureWarning:
+
+functools.partial will be a method descriptor in future Python versions; wrap it in enum.member() if you want to preserve the old behavior
+
+/net/projects2/fermi2526/conda/nugraph-25-10/lib/python3.13/site-packages/torch/distributed/algorithms/ddp_comm_hooks/__init__.py:74: FutureWarning:
+
+functools.partial will be a method descriptor in future Python versions; wrap it in enum.member() if you want to preserve the old behavior
+
+/net/projects2/fermi2526/conda/nugraph-25-10/lib/python3.13/site-packages/torch/distributed/algorithms/ddp_comm_hooks/__init__.py:67: FutureWarning:
+
+functools.partial will be a method descriptor in future Python versions; wrap it in enum.member() if you want to preserve the old behavior
+
+/net/projects2/fermi2526/conda/nugraph-25-10/lib/python3.13/site-packages/torch/distributed/algorithms/ddp_comm_hooks/__init__.py:74: FutureWarning:
+
+functools.partial will be a method descriptor in future Python versions; wrap it in enum.member() if you want to preserve the old behavior
+
+/net/projects2/fermi2526/conda/nugraph-25-10/lib/python3.13/site-packages/torch/distributed/algorithms/ddp_comm_hooks/__init__.py:64: FutureWarning:
+
+functools.partial will be a method descriptor in future Python versions; wrap it in enum.member() if you want to preserve the old behavior
+
+/net/projects2/fermi2526/conda/nugraph-25-10/lib/python3.13/site-packages/torch/distributed/algorithms/ddp_comm_hooks/__init__.py:67: FutureWarning:
+
+functools.partial will be a method descriptor in future Python versions; wrap it in enum.member() if you want to preserve the old behavior
+
+/net/projects2/fermi2526/conda/nugraph-25-10/lib/python3.13/site-packages/torch/distributed/algorithms/ddp_comm_hooks/__init__.py:74: FutureWarning:
+
+functools.partial will be a method descriptor in future Python versions; wrap it in enum.member() if you want to preserve the old behavior
+
+/net/projects2/fermi2526/conda/nugraph-25-10/lib/python3.13/site-packages/torch/distributed/algorithms/ddp_comm_hooks/__init__.py:55: FutureWarning:
+
+functools.partial will be a method descriptor in future Python versions; wrap it in enum.member() if you want to preserve the old behavior
+
+/net/projects2/fermi2526/conda/nugraph-25-10/lib/python3.13/site-packages/torch/distributed/algorithms/ddp_comm_hooks/__init__.py:58: FutureWarning:
+
+functools.partial will be a method descriptor in future Python versions; wrap it in enum.member() if you want to preserve the old behavior
+
+/net/projects2/fermi2526/conda/nugraph-25-10/lib/python3.13/site-packages/torch/distributed/algorithms/ddp_comm_hooks/__init__.py:61: FutureWarning:
+
+functools.partial will be a method descriptor in future Python versions; wrap it in enum.member() if you want to preserve the old behavior
+
+/net/projects2/fermi2526/conda/nugraph-25-10/lib/python3.13/site-packages/torch/distributed/algorithms/ddp_comm_hooks/__init__.py:64: FutureWarning:
+
+functools.partial will be a method descriptor in future Python versions; wrap it in enum.member() if you want to preserve the old behavior
+
+/net/projects2/fermi2526/conda/nugraph-25-10/lib/python3.13/site-packages/torch/distributed/algorithms/ddp_comm_hooks/__init__.py:67: FutureWarning:
+
+functools.partial will be a method descriptor in future Python versions; wrap it in enum.member() if you want to preserve the old behavior
+
+/net/projects2/fermi2526/conda/nugraph-25-10/lib/python3.13/site-packages/torch/distributed/algorithms/ddp_comm_hooks/__init__.py:74: FutureWarning:
+
+functools.partial will be a method descriptor in future Python versions; wrap it in enum.member() if you want to preserve the old behavior
+
+/net/projects2/fermi2526/conda/nugraph-25-10/lib/python3.13/site-packages/torch/distributed/algorithms/ddp_comm_hooks/__init__.py:67: FutureWarning:
+
+functools.partial will be a method descriptor in future Python versions; wrap it in enum.member() if you want to preserve the old behavior
+
+/net/projects2/fermi2526/conda/nugraph-25-10/lib/python3.13/site-packages/torch/distributed/algorithms/ddp_comm_hooks/__init__.py:74: FutureWarning:
+
+functools.partial will be a method descriptor in future Python versions; wrap it in enum.member() if you want to preserve the old behavior
+
+/net/projects2/fermi2526/conda/nugraph-25-10/lib/python3.13/site-packages/torch/distributed/algorithms/ddp_comm_hooks/__init__.py:80: FutureWarning:
+
+functools.partial will be a method descriptor in future Python versions; wrap it in enum.member() if you want to preserve the old behavior
+
+/net/projects2/fermi2526/conda/nugraph-25-10/lib/python3.13/site-packages/torch/distributed/algorithms/ddp_comm_hooks/__init__.py:67: FutureWarning:
+
+functools.partial will be a method descriptor in future Python versions; wrap it in enum.member() if you want to preserve the old behavior
+
+/net/projects2/fermi2526/conda/nugraph-25-10/lib/python3.13/site-packages/torch/distributed/algorithms/ddp_comm_hooks/__init__.py:74: FutureWarning:
+
+functools.partial will be a method descriptor in future Python versions; wrap it in enum.member() if you want to preserve the old behavior
+
+/net/projects2/fermi2526/conda/nugraph-25-10/lib/python3.13/site-packages/torch/distributed/algorithms/ddp_comm_hooks/__init__.py:80: FutureWarning:
+
+functools.partial will be a method descriptor in future Python versions; wrap it in enum.member() if you want to preserve the old behavior
+
+/net/projects2/fermi2526/conda/nugraph-25-10/lib/python3.13/site-packages/torch/distributed/algorithms/ddp_comm_hooks/__init__.py:80: FutureWarning:
+
+functools.partial will be a method descriptor in future Python versions; wrap it in enum.member() if you want to preserve the old behavior
+
+/net/projects2/fermi2526/conda/nugraph-25-10/lib/python3.13/site-packages/torch/distributed/algorithms/ddp_comm_hooks/__init__.py:85: FutureWarning:
+
+functools.partial will be a method descriptor in future Python versions; wrap it in enum.member() if you want to preserve the old behavior
+
+/net/projects2/fermi2526/conda/nugraph-25-10/lib/python3.13/site-packages/torch/distributed/algorithms/ddp_comm_hooks/__init__.py:90: FutureWarning:
+
+functools.partial will be a method descriptor in future Python versions; wrap it in enum.member() if you want to preserve the old behavior
+
+/net/projects2/fermi2526/conda/nugraph-25-10/lib/python3.13/site-packages/torch/distributed/algorithms/ddp_comm_hooks/__init__.py:80: FutureWarning:
+
+functools.partial will be a method descriptor in future Python versions; wrap it in enum.member() if you want to preserve the old behavior
+
+/net/projects2/fermi2526/conda/nugraph-25-10/lib/python3.13/site-packages/torch/distributed/algorithms/ddp_comm_hooks/__init__.py:85: FutureWarning:
+
+functools.partial will be a method descriptor in future Python versions; wrap it in enum.member() if you want to preserve the old behavior
+
+/net/projects2/fermi2526/conda/nugraph-25-10/lib/python3.13/site-packages/torch/distributed/algorithms/ddp_comm_hooks/__init__.py:90: FutureWarning:
+
+functools.partial will be a method descriptor in future Python versions; wrap it in enum.member() if you want to preserve the old behavior
+
+/net/projects2/fermi2526/conda/nugraph-25-10/lib/python3.13/site-packages/torch/distributed/algorithms/ddp_comm_hooks/__init__.py:80: FutureWarning:
+
+functools.partial will be a method descriptor in future Python versions; wrap it in enum.member() if you want to preserve the old behavior
+
+/net/projects2/fermi2526/conda/nugraph-25-10/lib/python3.13/site-packages/torch/distributed/algorithms/ddp_comm_hooks/__init__.py:85: FutureWarning:
+
+functools.partial will be a method descriptor in future Python versions; wrap it in enum.member() if you want to preserve the old behavior
+
+/net/projects2/fermi2526/conda/nugraph-25-10/lib/python3.13/site-packages/torch/distributed/algorithms/ddp_comm_hooks/__init__.py:90: FutureWarning:
+
+functools.partial will be a method descriptor in future Python versions; wrap it in enum.member() if you want to preserve the old behavior
+
+/net/projects2/fermi2526/conda/nugraph-25-10/lib/python3.13/site-packages/torch/distributed/algorithms/ddp_comm_hooks/__init__.py:64: FutureWarning:
+
+functools.partial will be a method descriptor in future Python versions; wrap it in enum.member() if you want to preserve the old behavior
+
+/net/projects2/fermi2526/conda/nugraph-25-10/lib/python3.13/site-packages/torch/distributed/algorithms/ddp_comm_hooks/__init__.py:67: FutureWarning:
+
+functools.partial will be a method descriptor in future Python versions; wrap it in enum.member() if you want to preserve the old behavior
+
+/net/projects2/fermi2526/conda/nugraph-25-10/lib/python3.13/site-packages/torch/distributed/algorithms/ddp_comm_hooks/__init__.py:74: FutureWarning:
+
+functools.partial will be a method descriptor in future Python versions; wrap it in enum.member() if you want to preserve the old behavior
+
+/net/projects2/fermi2526/conda/nugraph-25-10/lib/python3.13/site-packages/torch/distributed/algorithms/ddp_comm_hooks/__init__.py:80: FutureWarning:
+
+functools.partial will be a method descriptor in future Python versions; wrap it in enum.member() if you want to preserve the old behavior
+
+/net/projects2/fermi2526/conda/nugraph-25-10/lib/python3.13/site-packages/torch/distributed/algorithms/ddp_comm_hooks/__init__.py:85: FutureWarning:
+
+functools.partial will be a method descriptor in future Python versions; wrap it in enum.member() if you want to preserve the old behavior
+
+/net/projects2/fermi2526/conda/nugraph-25-10/lib/python3.13/site-packages/torch/distributed/algorithms/ddp_comm_hooks/__init__.py:90: FutureWarning:
+
+functools.partial will be a method descriptor in future Python versions; wrap it in enum.member() if you want to preserve the old behavior
+
+/net/projects2/fermi2526/conda/nugraph-25-10/lib/python3.13/site-packages/torch/distributed/algorithms/ddp_comm_hooks/__init__.py:85: FutureWarning:
+
+functools.partial will be a method descriptor in future Python versions; wrap it in enum.member() if you want to preserve the old behavior
+
+/net/projects2/fermi2526/conda/nugraph-25-10/lib/python3.13/site-packages/torch/distributed/algorithms/ddp_comm_hooks/__init__.py:90: FutureWarning:
+
+functools.partial will be a method descriptor in future Python versions; wrap it in enum.member() if you want to preserve the old behavior
+
+/net/projects2/fermi2526/conda/nugraph-25-10/lib/python3.13/site-packages/torch/distributed/algorithms/ddp_comm_hooks/__init__.py:85: FutureWarning:
+
+functools.partial will be a method descriptor in future Python versions; wrap it in enum.member() if you want to preserve the old behavior
+
+/net/projects2/fermi2526/conda/nugraph-25-10/lib/python3.13/site-packages/torch/distributed/algorithms/ddp_comm_hooks/__init__.py:90: FutureWarning:
+
+functools.partial will be a method descriptor in future Python versions; wrap it in enum.member() if you want to preserve the old behavior
+
+/net/projects2/fermi2526/conda/nugraph-25-10/lib/python3.13/site-packages/torch/distributed/algorithms/ddp_comm_hooks/__init__.py:80: FutureWarning:
+
+functools.partial will be a method descriptor in future Python versions; wrap it in enum.member() if you want to preserve the old behavior
+
+/net/projects2/fermi2526/conda/nugraph-25-10/lib/python3.13/site-packages/torch/distributed/algorithms/ddp_comm_hooks/__init__.py:85: FutureWarning:
+
+functools.partial will be a method descriptor in future Python versions; wrap it in enum.member() if you want to preserve the old behavior
+
+/net/projects2/fermi2526/conda/nugraph-25-10/lib/python3.13/site-packages/torch/distributed/algorithms/ddp_comm_hooks/__init__.py:90: FutureWarning:
+
+functools.partial will be a method descriptor in future Python versions; wrap it in enum.member() if you want to preserve the old behavior
+
+/net/projects2/fermi2526/conda/nugraph-25-10/lib/python3.13/site-packages/torch/distributed/algorithms/ddp_comm_hooks/__init__.py:54: FutureWarning:
+
+functools.partial will be a method descriptor in future Python versions; wrap it in enum.member() if you want to preserve the old behavior
+
+/net/projects2/fermi2526/conda/nugraph-25-10/lib/python3.13/site-packages/torch/distributed/algorithms/ddp_comm_hooks/__init__.py:55: FutureWarning:
+
+functools.partial will be a method descriptor in future Python versions; wrap it in enum.member() if you want to preserve the old behavior
+
+/net/projects2/fermi2526/conda/nugraph-25-10/lib/python3.13/site-packages/torch/distributed/algorithms/ddp_comm_hooks/__init__.py:58: FutureWarning:
+
+functools.partial will be a method descriptor in future Python versions; wrap it in enum.member() if you want to preserve the old behavior
+
+/net/projects2/fermi2526/conda/nugraph-25-10/lib/python3.13/site-packages/torch/distributed/algorithms/ddp_comm_hooks/__init__.py:61: FutureWarning:
+
+functools.partial will be a method descriptor in future Python versions; wrap it in enum.member() if you want to preserve the old behavior
+
+/net/projects2/fermi2526/conda/nugraph-25-10/lib/python3.13/site-packages/torch/distributed/algorithms/ddp_comm_hooks/__init__.py:64: FutureWarning:
+
+functools.partial will be a method descriptor in future Python versions; wrap it in enum.member() if you want to preserve the old behavior
+
+/net/projects2/fermi2526/conda/nugraph-25-10/lib/python3.13/site-packages/torch/distributed/algorithms/ddp_comm_hooks/__init__.py:67: FutureWarning:
+
+functools.partial will be a method descriptor in future Python versions; wrap it in enum.member() if you want to preserve the old behavior
+
+/net/projects2/fermi2526/conda/nugraph-25-10/lib/python3.13/site-packages/torch/distributed/algorithms/ddp_comm_hooks/__init__.py:74: FutureWarning:
+
+functools.partial will be a method descriptor in future Python versions; wrap it in enum.member() if you want to preserve the old behavior
+
+/net/projects2/fermi2526/conda/nugraph-25-10/lib/python3.13/site-packages/torch/distributed/algorithms/ddp_comm_hooks/__init__.py:80: FutureWarning:
+
+functools.partial will be a method descriptor in future Python versions; wrap it in enum.member() if you want to preserve the old behavior
+
+/net/projects2/fermi2526/conda/nugraph-25-10/lib/python3.13/site-packages/torch/distributed/algorithms/ddp_comm_hooks/__init__.py:85: FutureWarning:
+
+functools.partial will be a method descriptor in future Python versions; wrap it in enum.member() if you want to preserve the old behavior
+
+/net/projects2/fermi2526/conda/nugraph-25-10/lib/python3.13/site-packages/torch/distributed/algorithms/ddp_comm_hooks/__init__.py:90: FutureWarning:
+
+functools.partial will be a method descriptor in future Python versions; wrap it in enum.member() if you want to preserve the old behavior
+
+
+  | Name             | Type            | Params | Mode 
+-------------------------------------------------------------
+0 | encoder          | Encoder         | 3.6 K  | train
+1 | core_net         | NuGraphCore     | 501 K  | train
+2 | optical_net      | NuGraphOptical  | 106 K  | train
+3 | event_decoder    | EventDecoder    | 133    | train
+4 | semantic_decoder | SemanticDecoder | 904    | train
+5 | filter_decoder   | FilterDecoder   | 130    | train
+6 | instance_decoder | InstanceDecoder | 35.3 K | train
+-------------------------------------------------------------
+648 K     Trainable params
+25        Non-trainable params
+648 K     Total params
+2.592     Total estimated model params size (MB)
+202       Modules in train mode
+0         Modules in eval mode
+SLURM auto-requeueing enabled. Setting signal handlers.
+SLURM auto-requeueing enabled. Setting signal handlers.
+SLURM auto-requeueing enabled. Setting signal handlers.
+SLURM auto-requeueing enabled. Setting signal handlers.
+SLURM auto-requeueing enabled. Setting signal handlers.
+SLURM auto-requeueing enabled. Setting signal handlers.
+SLURM auto-requeueing enabled. Setting signal handlers.
+SLURM auto-requeueing enabled. Setting signal handlers.
+[rank3]: Traceback (most recent call last):
+[rank3]:   File "/home/vihaan/NuGraph/scripts/train.py", line 117, in <module>
+[rank3]:     train(args)
+[rank3]:     ~~~~~^^^^^^
+[rank3]:   File "/home/vihaan/NuGraph/scripts/train.py", line 113, in train
+[rank3]:     trainer.fit(model, datamodule=nudata, ckpt_path=args.resume)
+[rank3]:     ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank3]:   File "/net/projects2/fermi2526/conda/nugraph-25-10/lib/python3.13/site-packages/pytorch_lightning/trainer/trainer.py", line 560, in fit
+[rank3]:     call._call_and_handle_interrupt(
+[rank3]:     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^
+[rank3]:         self, self._fit_impl, model, train_dataloaders, val_dataloaders, datamodule, ckpt_path
+[rank3]:         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank3]:     )
+[rank3]:     ^
+[rank3]:   File "/net/projects2/fermi2526/conda/nugraph-25-10/lib/python3.13/site-packages/pytorch_lightning/trainer/call.py", line 48, in _call_and_handle_interrupt
+[rank3]:     return trainer.strategy.launcher.launch(trainer_fn, *args, trainer=trainer, **kwargs)
+[rank3]:            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank3]:   File "/net/projects2/fermi2526/conda/nugraph-25-10/lib/python3.13/site-packages/pytorch_lightning/strategies/launchers/subprocess_script.py", line 105, in launch
+[rank3]:     return function(*args, **kwargs)
+[rank3]:   File "/net/projects2/fermi2526/conda/nugraph-25-10/lib/python3.13/site-packages/pytorch_lightning/trainer/trainer.py", line 598, in _fit_impl
+[rank3]:     self._run(model, ckpt_path=ckpt_path)
+[rank3]:     ~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank3]:   File "/net/projects2/fermi2526/conda/nugraph-25-10/lib/python3.13/site-packages/pytorch_lightning/trainer/trainer.py", line 1011, in _run
+[rank3]:     results = self._run_stage()
+[rank3]:   File "/net/projects2/fermi2526/conda/nugraph-25-10/lib/python3.13/site-packages/pytorch_lightning/trainer/trainer.py", line 1053, in _run_stage
+[rank3]:     self._run_sanity_check()
+[rank3]:     ~~~~~~~~~~~~~~~~~~~~~~^^
+[rank3]:   File "/net/projects2/fermi2526/conda/nugraph-25-10/lib/python3.13/site-packages/pytorch_lightning/trainer/trainer.py", line 1082, in _run_sanity_check
+[rank3]:     val_loop.run()
+[rank3]:     ~~~~~~~~~~~~^^
+[rank3]:   File "/net/projects2/fermi2526/conda/nugraph-25-10/lib/python3.13/site-packages/pytorch_lightning/loops/utilities.py", line 179, in _decorator
+[rank3]:     return loop_run(self, *args, **kwargs)
+[rank3]:   File "/net/projects2/fermi2526/conda/nugraph-25-10/lib/python3.13/site-packages/pytorch_lightning/loops/evaluation_loop.py", line 145, in run
+[rank3]:     self._evaluation_step(batch, batch_idx, dataloader_idx, dataloader_iter)
+[rank3]:     ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank3]:   File "/net/projects2/fermi2526/conda/nugraph-25-10/lib/python3.13/site-packages/pytorch_lightning/loops/evaluation_loop.py", line 437, in _evaluation_step
+[rank3]:     output = call._call_strategy_hook(trainer, hook_name, *step_args)
+[rank3]:   File "/net/projects2/fermi2526/conda/nugraph-25-10/lib/python3.13/site-packages/pytorch_lightning/trainer/call.py", line 329, in _call_strategy_hook
+[rank3]:     output = fn(*args, **kwargs)
+[rank3]:   File "/net/projects2/fermi2526/conda/nugraph-25-10/lib/python3.13/site-packages/pytorch_lightning/strategies/strategy.py", line 411, in validation_step
+[rank3]:     return self._forward_redirection(self.model, self.lightning_module, "validation_step", *args, **kwargs)
+[rank3]:            ~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank3]:   File "/net/projects2/fermi2526/conda/nugraph-25-10/lib/python3.13/site-packages/pytorch_lightning/strategies/strategy.py", line 641, in __call__
+[rank3]:     wrapper_output = wrapper_module(*args, **kwargs)
+[rank3]:   File "/net/projects2/fermi2526/conda/nugraph-25-10/lib/python3.13/site-packages/torch/nn/modules/module.py", line 1773, in _wrapped_call_impl
+[rank3]:     return self._call_impl(*args, **kwargs)
+[rank3]:            ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+[rank3]:   File "/net/projects2/fermi2526/conda/nugraph-25-10/lib/python3.13/site-packages/torch/nn/modules/module.py", line 1784, in _call_impl
+[rank3]:     return forward_call(*args, **kwargs)
+[rank3]:   File "/net/projects2/fermi2526/conda/nugraph-25-10/lib/python3.13/site-packages/torch/nn/parallel/distributed.py", line 1648, in forward
+[rank3]:     else self._run_ddp_forward(*inputs, **kwargs)
+[rank3]:          ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^
+[rank3]:   File "/net/projects2/fermi2526/conda/nugraph-25-10/lib/python3.13/site-packages/torch/nn/parallel/distributed.py", line 1474, in _run_ddp_forward
+[rank3]:     return self.module(*inputs, **kwargs)  # type: ignore[index]
+[rank3]:            ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^
+[rank3]:   File "/net/projects2/fermi2526/conda/nugraph-25-10/lib/python3.13/site-packages/torch/nn/modules/module.py", line 1773, in _wrapped_call_impl
+[rank3]:     return self._call_impl(*args, **kwargs)
+[rank3]:            ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+[rank3]:   File "/net/projects2/fermi2526/conda/nugraph-25-10/lib/python3.13/site-packages/torch/nn/modules/module.py", line 1784, in _call_impl
+[rank3]:     return forward_call(*args, **kwargs)
+[rank3]:   File "/net/projects2/fermi2526/conda/nugraph-25-10/lib/python3.13/site-packages/pytorch_lightning/strategies/strategy.py", line 634, in wrapped_forward
+[rank3]:     out = method(*_args, **_kwargs)
+[rank3]:   File "/home/vihaan/NuGraph/nugraph/nugraph/models/nugraph3/nugraph3.py", line 177, in validation_step
+[rank3]:     loss, metrics = self(batch, 'val')
+[rank3]:                     ~~~~^^^^^^^^^^^^^^
+[rank3]:   File "/net/projects2/fermi2526/conda/nugraph-25-10/lib/python3.13/site-packages/torch/nn/modules/module.py", line 1773, in _wrapped_call_impl
+[rank3]:     return self._call_impl(*args, **kwargs)
+[rank3]:            ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+[rank3]:   File "/net/projects2/fermi2526/conda/nugraph-25-10/lib/python3.13/site-packages/torch/nn/modules/module.py", line 1784, in _call_impl
+[rank3]:     return forward_call(*args, **kwargs)
+[rank3]:   File "/home/vihaan/NuGraph/nugraph/nugraph/models/nugraph3/nugraph3.py", line 152, in forward
+[rank3]:     self.optical_net(data)
+[rank3]:     ~~~~~~~~~~~~~~~~^^^^^^
+[rank3]:   File "/net/projects2/fermi2526/conda/nugraph-25-10/lib/python3.13/site-packages/torch/nn/modules/module.py", line 1773, in _wrapped_call_impl
+[rank3]:     return self._call_impl(*args, **kwargs)
+[rank3]:            ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+[rank3]:   File "/net/projects2/fermi2526/conda/nugraph-25-10/lib/python3.13/site-packages/torch/nn/modules/module.py", line 1784, in _call_impl
+[rank3]:     return forward_call(*args, **kwargs)
+[rank3]:   File "/home/vihaan/NuGraph/nugraph/nugraph/models/nugraph3/optical.py", line 77, in forward
+[rank3]:     data["pmt", "knn", "sp"].edge_index)
+[rank3]:     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank3]:   File "/net/projects2/fermi2526/conda/nugraph-25-10/lib/python3.13/site-packages/torch_geometric/data/storage.py", line 96, in __getattr__
+[rank3]:     raise AttributeError(
+[rank3]:         f"'{self.__class__.__name__}' object has no attribute '{key}'"
+[rank3]:     ) from None
+[rank3]: AttributeError: 'EdgeStorage' object has no attribute 'edge_index'
+[rank7]: Traceback (most recent call last):
+[rank7]:   File "/home/vihaan/NuGraph/scripts/train.py", line 117, in <module>
+[rank7]:     train(args)
+[rank7]:     ~~~~~^^^^^^
+[rank7]:   File "/home/vihaan/NuGraph/scripts/train.py", line 113, in train
+[rank7]:     trainer.fit(model, datamodule=nudata, ckpt_path=args.resume)
+[rank7]:     ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank7]:   File "/net/projects2/fermi2526/conda/nugraph-25-10/lib/python3.13/site-packages/pytorch_lightning/trainer/trainer.py", line 560, in fit
+[rank7]:     call._call_and_handle_interrupt(
+[rank7]:     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^
+[rank7]:         self, self._fit_impl, model, train_dataloaders, val_dataloaders, datamodule, ckpt_path
+[rank7]:         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank7]:     )
+[rank7]:     ^
+[rank7]:   File "/net/projects2/fermi2526/conda/nugraph-25-10/lib/python3.13/site-packages/pytorch_lightning/trainer/call.py", line 48, in _call_and_handle_interrupt
+[rank7]:     return trainer.strategy.launcher.launch(trainer_fn, *args, trainer=trainer, **kwargs)
+[rank7]:            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank7]:   File "/net/projects2/fermi2526/conda/nugraph-25-10/lib/python3.13/site-packages/pytorch_lightning/strategies/launchers/subprocess_script.py", line 105, in launch
+[rank7]:     return function(*args, **kwargs)
+[rank7]:   File "/net/projects2/fermi2526/conda/nugraph-25-10/lib/python3.13/site-packages/pytorch_lightning/trainer/trainer.py", line 598, in _fit_impl
+[rank7]:     self._run(model, ckpt_path=ckpt_path)
+[rank7]:     ~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank7]:   File "/net/projects2/fermi2526/conda/nugraph-25-10/lib/python3.13/site-packages/pytorch_lightning/trainer/trainer.py", line 1011, in _run
+[rank7]:     results = self._run_stage()
+[rank7]:   File "/net/projects2/fermi2526/conda/nugraph-25-10/lib/python3.13/site-packages/pytorch_lightning/trainer/trainer.py", line 1053, in _run_stage
+[rank7]:     self._run_sanity_check()
+[rank7]:     ~~~~~~~~~~~~~~~~~~~~~~^^
+[rank7]:   File "/net/projects2/fermi2526/conda/nugraph-25-10/lib/python3.13/site-packages/pytorch_lightning/trainer/trainer.py", line 1082, in _run_sanity_check
+[rank7]:     val_loop.run()
+[rank7]:     ~~~~~~~~~~~~^^
+[rank7]:   File "/net/projects2/fermi2526/conda/nugraph-25-10/lib/python3.13/site-packages/pytorch_lightning/loops/utilities.py", line 179, in _decorator
+[rank7]:     return loop_run(self, *args, **kwargs)
+[rank7]:   File "/net/projects2/fermi2526/conda/nugraph-25-10/lib/python3.13/site-packages/pytorch_lightning/loops/evaluation_loop.py", line 145, in run
+[rank7]:     self._evaluation_step(batch, batch_idx, dataloader_idx, dataloader_iter)
+[rank7]:     ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank7]:   File "/net/projects2/fermi2526/conda/nugraph-25-10/lib/python3.13/site-packages/pytorch_lightning/loops/evaluation_loop.py", line 437, in _evaluation_step
+[rank7]:     output = call._call_strategy_hook(trainer, hook_name, *step_args)
+[rank7]:   File "/net/projects2/fermi2526/conda/nugraph-25-10/lib/python3.13/site-packages/pytorch_lightning/trainer/call.py", line 329, in _call_strategy_hook
+[rank7]:     output = fn(*args, **kwargs)
+[rank7]:   File "/net/projects2/fermi2526/conda/nugraph-25-10/lib/python3.13/site-packages/pytorch_lightning/strategies/strategy.py", line 411, in validation_step
+[rank7]:     return self._forward_redirection(self.model, self.lightning_module, "validation_step", *args, **kwargs)
+[rank7]:            ~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank7]:   File "/net/projects2/fermi2526/conda/nugraph-25-10/lib/python3.13/site-packages/pytorch_lightning/strategies/strategy.py", line 641, in __call__
+[rank7]:     wrapper_output = wrapper_module(*args, **kwargs)
+[rank7]:   File "/net/projects2/fermi2526/conda/nugraph-25-10/lib/python3.13/site-packages/torch/nn/modules/module.py", line 1773, in _wrapped_call_impl
+[rank7]:     return self._call_impl(*args, **kwargs)
+[rank7]:            ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+[rank7]:   File "/net/projects2/fermi2526/conda/nugraph-25-10/lib/python3.13/site-packages/torch/nn/modules/module.py", line 1784, in _call_impl
+[rank7]:     return forward_call(*args, **kwargs)
+[rank7]:   File "/net/projects2/fermi2526/conda/nugraph-25-10/lib/python3.13/site-packages/torch/nn/parallel/distributed.py", line 1648, in forward
+[rank7]:     else self._run_ddp_forward(*inputs, **kwargs)
+[rank7]:          ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^
+[rank7]:   File "/net/projects2/fermi2526/conda/nugraph-25-10/lib/python3.13/site-packages/torch/nn/parallel/distributed.py", line 1474, in _run_ddp_forward
+[rank7]:     return self.module(*inputs, **kwargs)  # type: ignore[index]
+[rank7]:            ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^
+[rank7]:   File "/net/projects2/fermi2526/conda/nugraph-25-10/lib/python3.13/site-packages/torch/nn/modules/module.py", line 1773, in _wrapped_call_impl
+[rank7]:     return self._call_impl(*args, **kwargs)
+[rank7]:            ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+[rank7]:   File "/net/projects2/fermi2526/conda/nugraph-25-10/lib/python3.13/site-packages/torch/nn/modules/module.py", line 1784, in _call_impl
+[rank7]:     return forward_call(*args, **kwargs)
+[rank7]:   File "/net/projects2/fermi2526/conda/nugraph-25-10/lib/python3.13/site-packages/pytorch_lightning/strategies/strategy.py", line 634, in wrapped_forward
+[rank7]:     out = method(*_args, **_kwargs)
+[rank7]:   File "/home/vihaan/NuGraph/nugraph/nugraph/models/nugraph3/nugraph3.py", line 177, in validation_step
+[rank7]:     loss, metrics = self(batch, 'val')
+[rank7]:                     ~~~~^^^^^^^^^^^^^^
+[rank7]:   File "/net/projects2/fermi2526/conda/nugraph-25-10/lib/python3.13/site-packages/torch/nn/modules/module.py", line 1773, in _wrapped_call_impl
+[rank7]:     return self._call_impl(*args, **kwargs)
+[rank7]:            ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+[rank7]:   File "/net/projects2/fermi2526/conda/nugraph-25-10/lib/python3.13/site-packages/torch/nn/modules/module.py", line 1784, in _call_impl
+[rank7]:     return forward_call(*args, **kwargs)
+[rank7]:   File "/home/vihaan/NuGraph/nugraph/nugraph/models/nugraph3/nugraph3.py", line 152, in forward
+[rank7]:     self.optical_net(data)
+[rank7]:     ~~~~~~~~~~~~~~~~^^^^^^
+[rank7]:   File "/net/projects2/fermi2526/conda/nugraph-25-10/lib/python3.13/site-packages/torch/nn/modules/module.py", line 1773, in _wrapped_call_impl
+[rank7]:     return self._call_impl(*args, **kwargs)
+[rank7]:            ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+[rank7]:   File "/net/projects2/fermi2526/conda/nugraph-25-10/lib/python3.13/site-packages/torch/nn/modules/module.py", line 1784, in _call_impl
+[rank7]:     return forward_call(*args, **kwargs)
+[rank7]:   File "/home/vihaan/NuGraph/nugraph/nugraph/models/nugraph3/optical.py", line 77, in forward
+[rank7]:     data["pmt", "knn", "sp"].edge_index)
+[rank7]:     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank7]:   File "/net/projects2/fermi2526/conda/nugraph-25-10/lib/python3.13/site-packages/torch_geometric/data/storage.py", line 96, in __getattr__
+[rank7]:     raise AttributeError(
+[rank7]:         f"'{self.__class__.__name__}' object has no attribute '{key}'"
+[rank7]:     ) from None
+[rank7]: AttributeError: 'EdgeStorage' object has no attribute 'edge_index'
+[rank0]: Traceback (most recent call last):
+[rank0]:   File "/home/vihaan/NuGraph/scripts/train.py", line 117, in <module>
+[rank0]:     train(args)
+[rank0]:     ~~~~~^^^^^^
+[rank0]:   File "/home/vihaan/NuGraph/scripts/train.py", line 113, in train
+[rank0]:     trainer.fit(model, datamodule=nudata, ckpt_path=args.resume)
+[rank0]:     ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank0]:   File "/net/projects2/fermi2526/conda/nugraph-25-10/lib/python3.13/site-packages/pytorch_lightning/trainer/trainer.py", line 560, in fit
+[rank0]:     call._call_and_handle_interrupt(
+[rank0]:     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^
+[rank0]:         self, self._fit_impl, model, train_dataloaders, val_dataloaders, datamodule, ckpt_path
+[rank0]:         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank0]:     )
+[rank0]:     ^
+[rank0]:   File "/net/projects2/fermi2526/conda/nugraph-25-10/lib/python3.13/site-packages/pytorch_lightning/trainer/call.py", line 48, in _call_and_handle_interrupt
+[rank0]:     return trainer.strategy.launcher.launch(trainer_fn, *args, trainer=trainer, **kwargs)
+[rank0]:            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank0]:   File "/net/projects2/fermi2526/conda/nugraph-25-10/lib/python3.13/site-packages/pytorch_lightning/strategies/launchers/subprocess_script.py", line 105, in launch
+[rank0]:     return function(*args, **kwargs)
+[rank0]:   File "/net/projects2/fermi2526/conda/nugraph-25-10/lib/python3.13/site-packages/pytorch_lightning/trainer/trainer.py", line 598, in _fit_impl
+[rank0]:     self._run(model, ckpt_path=ckpt_path)
+[rank0]:     ~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank0]:   File "/net/projects2/fermi2526/conda/nugraph-25-10/lib/python3.13/site-packages/pytorch_lightning/trainer/trainer.py", line 1011, in _run
+[rank0]:     results = self._run_stage()
+[rank0]:   File "/net/projects2/fermi2526/conda/nugraph-25-10/lib/python3.13/site-packages/pytorch_lightning/trainer/trainer.py", line 1053, in _run_stage
+[rank0]:     self._run_sanity_check()
+[rank0]:     ~~~~~~~~~~~~~~~~~~~~~~^^
+[rank0]:   File "/net/projects2/fermi2526/conda/nugraph-25-10/lib/python3.13/site-packages/pytorch_lightning/trainer/trainer.py", line 1082, in _run_sanity_check
+[rank0]:     val_loop.run()
+[rank0]:     ~~~~~~~~~~~~^^
+[rank0]:   File "/net/projects2/fermi2526/conda/nugraph-25-10/lib/python3.13/site-packages/pytorch_lightning/loops/utilities.py", line 179, in _decorator
+[rank0]:     return loop_run(self, *args, **kwargs)
+[rank0]:   File "/net/projects2/fermi2526/conda/nugraph-25-10/lib/python3.13/site-packages/pytorch_lightning/loops/evaluation_loop.py", line 145, in run
+[rank0]:     self._evaluation_step(batch, batch_idx, dataloader_idx, dataloader_iter)
+[rank0]:     ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank0]:   File "/net/projects2/fermi2526/conda/nugraph-25-10/lib/python3.13/site-packages/pytorch_lightning/loops/evaluation_loop.py", line 437, in _evaluation_step
+[rank0]:     output = call._call_strategy_hook(trainer, hook_name, *step_args)
+[rank0]:   File "/net/projects2/fermi2526/conda/nugraph-25-10/lib/python3.13/site-packages/pytorch_lightning/trainer/call.py", line 329, in _call_strategy_hook
+[rank0]:     output = fn(*args, **kwargs)
+[rank0]:   File "/net/projects2/fermi2526/conda/nugraph-25-10/lib/python3.13/site-packages/pytorch_lightning/strategies/strategy.py", line 411, in validation_step
+[rank0]:     return self._forward_redirection(self.model, self.lightning_module, "validation_step", *args, **kwargs)
+[rank0]:            ~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank0]:   File "/net/projects2/fermi2526/conda/nugraph-25-10/lib/python3.13/site-packages/pytorch_lightning/strategies/strategy.py", line 641, in __call__
+[rank0]:     wrapper_output = wrapper_module(*args, **kwargs)
+[rank0]:   File "/net/projects2/fermi2526/conda/nugraph-25-10/lib/python3.13/site-packages/torch/nn/modules/module.py", line 1773, in _wrapped_call_impl
+[rank0]:     return self._call_impl(*args, **kwargs)
+[rank0]:            ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+[rank0]:   File "/net/projects2/fermi2526/conda/nugraph-25-10/lib/python3.13/site-packages/torch/nn/modules/module.py", line 1784, in _call_impl
+[rank0]:     return forward_call(*args, **kwargs)
+[rank0]:   File "/net/projects2/fermi2526/conda/nugraph-25-10/lib/python3.13/site-packages/torch/nn/parallel/distributed.py", line 1648, in forward
+[rank0]:     else self._run_ddp_forward(*inputs, **kwargs)
+[rank0]:          ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^
+[rank0]:   File "/net/projects2/fermi2526/conda/nugraph-25-10/lib/python3.13/site-packages/torch/nn/parallel/distributed.py", line 1474, in _run_ddp_forward
+[rank0]:     return self.module(*inputs, **kwargs)  # type: ignore[index]
+[rank0]:            ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^
+[rank0]:   File "/net/projects2/fermi2526/conda/nugraph-25-10/lib/python3.13/site-packages/torch/nn/modules/module.py", line 1773, in _wrapped_call_impl
+[rank0]:     return self._call_impl(*args, **kwargs)
+[rank0]:            ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+[rank0]:   File "/net/projects2/fermi2526/conda/nugraph-25-10/lib/python3.13/site-packages/torch/nn/modules/module.py", line 1784, in _call_impl
+[rank0]:     return forward_call(*args, **kwargs)
+[rank0]:   File "/net/projects2/fermi2526/conda/nugraph-25-10/lib/python3.13/site-packages/pytorch_lightning/strategies/strategy.py", line 634, in wrapped_forward
+[rank0]:     out = method(*_args, **_kwargs)
+[rank0]:   File "/home/vihaan/NuGraph/nugraph/nugraph/models/nugraph3/nugraph3.py", line 177, in validation_step
+[rank0]:     loss, metrics = self(batch, 'val')
+[rank0]:                     ~~~~^^^^^^^^^^^^^^
+[rank0]:   File "/net/projects2/fermi2526/conda/nugraph-25-10/lib/python3.13/site-packages/torch/nn/modules/module.py", line 1773, in _wrapped_call_impl
+[rank0]:     return self._call_impl(*args, **kwargs)
+[rank0]:            ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+[rank0]:   File "/net/projects2/fermi2526/conda/nugraph-25-10/lib/python3.13/site-packages/torch/nn/modules/module.py", line 1784, in _call_impl
+[rank0]:     return forward_call(*args, **kwargs)
+[rank0]:   File "/home/vihaan/NuGraph/nugraph/nugraph/models/nugraph3/nugraph3.py", line 152, in forward
+[rank0]:     self.optical_net(data)
+[rank0]:     ~~~~~~~~~~~~~~~~^^^^^^
+[rank0]:   File "/net/projects2/fermi2526/conda/nugraph-25-10/lib/python3.13/site-packages/torch/nn/modules/module.py", line 1773, in _wrapped_call_impl
+[rank0]:     return self._call_impl(*args, **kwargs)
+[rank0]:            ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+[rank0]:   File "/net/projects2/fermi2526/conda/nugraph-25-10/lib/python3.13/site-packages/torch/nn/modules/module.py", line 1784, in _call_impl
+[rank0]:     return forward_call(*args, **kwargs)
+[rank0]:   File "/home/vihaan/NuGraph/nugraph/nugraph/models/nugraph3/optical.py", line 77, in forward
+[rank0]:     data["pmt", "knn", "sp"].edge_index)
+[rank0]:     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank0]:   File "/net/projects2/fermi2526/conda/nugraph-25-10/lib/python3.13/site-packages/torch_geometric/data/storage.py", line 96, in __getattr__
+[rank0]:     raise AttributeError(
+[rank0]:         f"'{self.__class__.__name__}' object has no attribute '{key}'"
+[rank0]:     ) from None
+[rank0]: AttributeError: 'EdgeStorage' object has no attribute 'edge_index'
+[rank1]: Traceback (most recent call last):
+[rank1]:   File "/home/vihaan/NuGraph/scripts/train.py", line 117, in <module>
+[rank1]:     train(args)
+[rank1]:     ~~~~~^^^^^^
+[rank1]:   File "/home/vihaan/NuGraph/scripts/train.py", line 113, in train
+[rank1]:     trainer.fit(model, datamodule=nudata, ckpt_path=args.resume)
+[rank1]:     ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank1]:   File "/net/projects2/fermi2526/conda/nugraph-25-10/lib/python3.13/site-packages/pytorch_lightning/trainer/trainer.py", line 560, in fit
+[rank1]:     call._call_and_handle_interrupt(
+[rank1]:     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^
+[rank1]:         self, self._fit_impl, model, train_dataloaders, val_dataloaders, datamodule, ckpt_path
+[rank1]:         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank1]:     )
+[rank1]:     ^
+[rank1]:   File "/net/projects2/fermi2526/conda/nugraph-25-10/lib/python3.13/site-packages/pytorch_lightning/trainer/call.py", line 48, in _call_and_handle_interrupt
+[rank1]:     return trainer.strategy.launcher.launch(trainer_fn, *args, trainer=trainer, **kwargs)
+[rank1]:            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank1]:   File "/net/projects2/fermi2526/conda/nugraph-25-10/lib/python3.13/site-packages/pytorch_lightning/strategies/launchers/subprocess_script.py", line 105, in launch
+[rank1]:     return function(*args, **kwargs)
+[rank1]:   File "/net/projects2/fermi2526/conda/nugraph-25-10/lib/python3.13/site-packages/pytorch_lightning/trainer/trainer.py", line 598, in _fit_impl
+[rank1]:     self._run(model, ckpt_path=ckpt_path)
+[rank1]:     ~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank1]:   File "/net/projects2/fermi2526/conda/nugraph-25-10/lib/python3.13/site-packages/pytorch_lightning/trainer/trainer.py", line 1011, in _run
+[rank1]:     results = self._run_stage()
+[rank1]:   File "/net/projects2/fermi2526/conda/nugraph-25-10/lib/python3.13/site-packages/pytorch_lightning/trainer/trainer.py", line 1053, in _run_stage
+[rank1]:     self._run_sanity_check()
+[rank1]:     ~~~~~~~~~~~~~~~~~~~~~~^^
+[rank1]:   File "/net/projects2/fermi2526/conda/nugraph-25-10/lib/python3.13/site-packages/pytorch_lightning/trainer/trainer.py", line 1082, in _run_sanity_check
+[rank1]:     val_loop.run()
+[rank1]:     ~~~~~~~~~~~~^^
+[rank1]:   File "/net/projects2/fermi2526/conda/nugraph-25-10/lib/python3.13/site-packages/pytorch_lightning/loops/utilities.py", line 179, in _decorator
+[rank1]:     return loop_run(self, *args, **kwargs)
+[rank1]:   File "/net/projects2/fermi2526/conda/nugraph-25-10/lib/python3.13/site-packages/pytorch_lightning/loops/evaluation_loop.py", line 145, in run
+[rank1]:     self._evaluation_step(batch, batch_idx, dataloader_idx, dataloader_iter)
+[rank1]:     ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank1]:   File "/net/projects2/fermi2526/conda/nugraph-25-10/lib/python3.13/site-packages/pytorch_lightning/loops/evaluation_loop.py", line 437, in _evaluation_step
+[rank1]:     output = call._call_strategy_hook(trainer, hook_name, *step_args)
+[rank1]:   File "/net/projects2/fermi2526/conda/nugraph-25-10/lib/python3.13/site-packages/pytorch_lightning/trainer/call.py", line 329, in _call_strategy_hook
+[rank1]:     output = fn(*args, **kwargs)
+[rank1]:   File "/net/projects2/fermi2526/conda/nugraph-25-10/lib/python3.13/site-packages/pytorch_lightning/strategies/strategy.py", line 411, in validation_step
+[rank1]:     return self._forward_redirection(self.model, self.lightning_module, "validation_step", *args, **kwargs)
+[rank1]:            ~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank1]:   File "/net/projects2/fermi2526/conda/nugraph-25-10/lib/python3.13/site-packages/pytorch_lightning/strategies/strategy.py", line 641, in __call__
+[rank1]:     wrapper_output = wrapper_module(*args, **kwargs)
+[rank1]:   File "/net/projects2/fermi2526/conda/nugraph-25-10/lib/python3.13/site-packages/torch/nn/modules/module.py", line 1773, in _wrapped_call_impl
+[rank1]:     return self._call_impl(*args, **kwargs)
+[rank1]:            ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+[rank1]:   File "/net/projects2/fermi2526/conda/nugraph-25-10/lib/python3.13/site-packages/torch/nn/modules/module.py", line 1784, in _call_impl
+[rank1]:     return forward_call(*args, **kwargs)
+[rank1]:   File "/net/projects2/fermi2526/conda/nugraph-25-10/lib/python3.13/site-packages/torch/nn/parallel/distributed.py", line 1648, in forward
+[rank1]:     else self._run_ddp_forward(*inputs, **kwargs)
+[rank1]:          ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^
+[rank1]:   File "/net/projects2/fermi2526/conda/nugraph-25-10/lib/python3.13/site-packages/torch/nn/parallel/distributed.py", line 1474, in _run_ddp_forward
+[rank1]:     return self.module(*inputs, **kwargs)  # type: ignore[index]
+[rank1]:            ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^
+[rank1]:   File "/net/projects2/fermi2526/conda/nugraph-25-10/lib/python3.13/site-packages/torch/nn/modules/module.py", line 1773, in _wrapped_call_impl
+[rank1]:     return self._call_impl(*args, **kwargs)
+[rank1]:            ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+[rank1]:   File "/net/projects2/fermi2526/conda/nugraph-25-10/lib/python3.13/site-packages/torch/nn/modules/module.py", line 1784, in _call_impl
+[rank1]:     return forward_call(*args, **kwargs)
+[rank1]:   File "/net/projects2/fermi2526/conda/nugraph-25-10/lib/python3.13/site-packages/pytorch_lightning/strategies/strategy.py", line 634, in wrapped_forward
+[rank1]:     out = method(*_args, **_kwargs)
+[rank1]:   File "/home/vihaan/NuGraph/nugraph/nugraph/models/nugraph3/nugraph3.py", line 177, in validation_step
+[rank1]:     loss, metrics = self(batch, 'val')
+[rank1]:                     ~~~~^^^^^^^^^^^^^^
+[rank1]:   File "/net/projects2/fermi2526/conda/nugraph-25-10/lib/python3.13/site-packages/torch/nn/modules/module.py", line 1773, in _wrapped_call_impl
+[rank1]:     return self._call_impl(*args, **kwargs)
+[rank1]:            ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+[rank1]:   File "/net/projects2/fermi2526/conda/nugraph-25-10/lib/python3.13/site-packages/torch/nn/modules/module.py", line 1784, in _call_impl
+[rank1]:     return forward_call(*args, **kwargs)
+[rank1]:   File "/home/vihaan/NuGraph/nugraph/nugraph/models/nugraph3/nugraph3.py", line 152, in forward
+[rank1]:     self.optical_net(data)
+[rank1]:     ~~~~~~~~~~~~~~~~^^^^^^
+[rank1]:   File "/net/projects2/fermi2526/conda/nugraph-25-10/lib/python3.13/site-packages/torch/nn/modules/module.py", line 1773, in _wrapped_call_impl
+[rank1]:     return self._call_impl(*args, **kwargs)
+[rank1]:            ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+[rank1]:   File "/net/projects2/fermi2526/conda/nugraph-25-10/lib/python3.13/site-packages/torch/nn/modules/module.py", line 1784, in _call_impl
+[rank1]:     return forward_call(*args, **kwargs)
+[rank1]:   File "/home/vihaan/NuGraph/nugraph/nugraph/models/nugraph3/optical.py", line 77, in forward
+[rank1]:     data["pmt", "knn", "sp"].edge_index)
+[rank1]:     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank1]:   File "/net/projects2/fermi2526/conda/nugraph-25-10/lib/python3.13/site-packages/torch_geometric/data/storage.py", line 96, in __getattr__
+[rank1]:     raise AttributeError(
+[rank1]:         f"'{self.__class__.__name__}' object has no attribute '{key}'"
+[rank1]:     ) from None
+[rank1]: AttributeError: 'EdgeStorage' object has no attribute 'edge_index'
+[rank5]: Traceback (most recent call last):
+[rank5]:   File "/home/vihaan/NuGraph/scripts/train.py", line 117, in <module>
+[rank5]:     train(args)
+[rank5]:     ~~~~~^^^^^^
+[rank5]:   File "/home/vihaan/NuGraph/scripts/train.py", line 113, in train
+[rank5]:     trainer.fit(model, datamodule=nudata, ckpt_path=args.resume)
+[rank5]:     ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank5]:   File "/net/projects2/fermi2526/conda/nugraph-25-10/lib/python3.13/site-packages/pytorch_lightning/trainer/trainer.py", line 560, in fit
+[rank5]:     call._call_and_handle_interrupt(
+[rank5]:     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^
+[rank5]:         self, self._fit_impl, model, train_dataloaders, val_dataloaders, datamodule, ckpt_path
+[rank5]:         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank5]:     )
+[rank5]:     ^
+[rank5]:   File "/net/projects2/fermi2526/conda/nugraph-25-10/lib/python3.13/site-packages/pytorch_lightning/trainer/call.py", line 48, in _call_and_handle_interrupt
+[rank5]:     return trainer.strategy.launcher.launch(trainer_fn, *args, trainer=trainer, **kwargs)
+[rank5]:            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank5]:   File "/net/projects2/fermi2526/conda/nugraph-25-10/lib/python3.13/site-packages/pytorch_lightning/strategies/launchers/subprocess_script.py", line 105, in launch
+[rank5]:     return function(*args, **kwargs)
+[rank5]:   File "/net/projects2/fermi2526/conda/nugraph-25-10/lib/python3.13/site-packages/pytorch_lightning/trainer/trainer.py", line 598, in _fit_impl
+[rank5]:     self._run(model, ckpt_path=ckpt_path)
+[rank5]:     ~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank5]:   File "/net/projects2/fermi2526/conda/nugraph-25-10/lib/python3.13/site-packages/pytorch_lightning/trainer/trainer.py", line 1011, in _run
+[rank5]:     results = self._run_stage()
+[rank5]:   File "/net/projects2/fermi2526/conda/nugraph-25-10/lib/python3.13/site-packages/pytorch_lightning/trainer/trainer.py", line 1053, in _run_stage
+[rank5]:     self._run_sanity_check()
+[rank5]:     ~~~~~~~~~~~~~~~~~~~~~~^^
+[rank5]:   File "/net/projects2/fermi2526/conda/nugraph-25-10/lib/python3.13/site-packages/pytorch_lightning/trainer/trainer.py", line 1082, in _run_sanity_check
+[rank5]:     val_loop.run()
+[rank5]:     ~~~~~~~~~~~~^^
+[rank5]:   File "/net/projects2/fermi2526/conda/nugraph-25-10/lib/python3.13/site-packages/pytorch_lightning/loops/utilities.py", line 179, in _decorator
+[rank5]:     return loop_run(self, *args, **kwargs)
+[rank5]:   File "/net/projects2/fermi2526/conda/nugraph-25-10/lib/python3.13/site-packages/pytorch_lightning/loops/evaluation_loop.py", line 145, in run
+[rank5]:     self._evaluation_step(batch, batch_idx, dataloader_idx, dataloader_iter)
+[rank5]:     ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank5]:   File "/net/projects2/fermi2526/conda/nugraph-25-10/lib/python3.13/site-packages/pytorch_lightning/loops/evaluation_loop.py", line 437, in _evaluation_step
+[rank5]:     output = call._call_strategy_hook(trainer, hook_name, *step_args)
+[rank5]:   File "/net/projects2/fermi2526/conda/nugraph-25-10/lib/python3.13/site-packages/pytorch_lightning/trainer/call.py", line 329, in _call_strategy_hook
+[rank5]:     output = fn(*args, **kwargs)
+[rank5]:   File "/net/projects2/fermi2526/conda/nugraph-25-10/lib/python3.13/site-packages/pytorch_lightning/strategies/strategy.py", line 411, in validation_step
+[rank5]:     return self._forward_redirection(self.model, self.lightning_module, "validation_step", *args, **kwargs)
+[rank5]:            ~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank5]:   File "/net/projects2/fermi2526/conda/nugraph-25-10/lib/python3.13/site-packages/pytorch_lightning/strategies/strategy.py", line 641, in __call__
+[rank5]:     wrapper_output = wrapper_module(*args, **kwargs)
+[rank5]:   File "/net/projects2/fermi2526/conda/nugraph-25-10/lib/python3.13/site-packages/torch/nn/modules/module.py", line 1773, in _wrapped_call_impl
+[rank5]:     return self._call_impl(*args, **kwargs)
+[rank5]:            ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+[rank5]:   File "/net/projects2/fermi2526/conda/nugraph-25-10/lib/python3.13/site-packages/torch/nn/modules/module.py", line 1784, in _call_impl
+[rank5]:     return forward_call(*args, **kwargs)
+[rank5]:   File "/net/projects2/fermi2526/conda/nugraph-25-10/lib/python3.13/site-packages/torch/nn/parallel/distributed.py", line 1648, in forward
+[rank5]:     else self._run_ddp_forward(*inputs, **kwargs)
+[rank5]:          ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^
+[rank5]:   File "/net/projects2/fermi2526/conda/nugraph-25-10/lib/python3.13/site-packages/torch/nn/parallel/distributed.py", line 1474, in _run_ddp_forward
+[rank5]:     return self.module(*inputs, **kwargs)  # type: ignore[index]
+[rank5]:            ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^
+[rank5]:   File "/net/projects2/fermi2526/conda/nugraph-25-10/lib/python3.13/site-packages/torch/nn/modules/module.py", line 1773, in _wrapped_call_impl
+[rank5]:     return self._call_impl(*args, **kwargs)
+[rank5]:            ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+[rank5]:   File "/net/projects2/fermi2526/conda/nugraph-25-10/lib/python3.13/site-packages/torch/nn/modules/module.py", line 1784, in _call_impl
+[rank5]:     return forward_call(*args, **kwargs)
+[rank5]:   File "/net/projects2/fermi2526/conda/nugraph-25-10/lib/python3.13/site-packages/pytorch_lightning/strategies/strategy.py", line 634, in wrapped_forward
+[rank5]:     out = method(*_args, **_kwargs)
+[rank5]:   File "/home/vihaan/NuGraph/nugraph/nugraph/models/nugraph3/nugraph3.py", line 177, in validation_step
+[rank5]:     loss, metrics = self(batch, 'val')
+[rank5]:                     ~~~~^^^^^^^^^^^^^^
+[rank5]:   File "/net/projects2/fermi2526/conda/nugraph-25-10/lib/python3.13/site-packages/torch/nn/modules/module.py", line 1773, in _wrapped_call_impl
+[rank5]:     return self._call_impl(*args, **kwargs)
+[rank5]:            ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+[rank5]:   File "/net/projects2/fermi2526/conda/nugraph-25-10/lib/python3.13/site-packages/torch/nn/modules/module.py", line 1784, in _call_impl
+[rank5]:     return forward_call(*args, **kwargs)
+[rank5]:   File "/home/vihaan/NuGraph/nugraph/nugraph/models/nugraph3/nugraph3.py", line 152, in forward
+[rank5]:     self.optical_net(data)
+[rank5]:     ~~~~~~~~~~~~~~~~^^^^^^
+[rank5]:   File "/net/projects2/fermi2526/conda/nugraph-25-10/lib/python3.13/site-packages/torch/nn/modules/module.py", line 1773, in _wrapped_call_impl
+[rank5]:     return self._call_impl(*args, **kwargs)
+[rank5]:            ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+[rank5]:   File "/net/projects2/fermi2526/conda/nugraph-25-10/lib/python3.13/site-packages/torch/nn/modules/module.py", line 1784, in _call_impl
+[rank5]:     return forward_call(*args, **kwargs)
+[rank5]:   File "/home/vihaan/NuGraph/nugraph/nugraph/models/nugraph3/optical.py", line 77, in forward
+[rank5]:     data["pmt", "knn", "sp"].edge_index)
+[rank5]:     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank5]:   File "/net/projects2/fermi2526/conda/nugraph-25-10/lib/python3.13/site-packages/torch_geometric/data/storage.py", line 96, in __getattr__
+[rank5]:     raise AttributeError(
+[rank5]:         f"'{self.__class__.__name__}' object has no attribute '{key}'"
+[rank5]:     ) from None
+[rank5]: AttributeError: 'EdgeStorage' object has no attribute 'edge_index'
+[rank2]: Traceback (most recent call last):
+[rank2]:   File "/home/vihaan/NuGraph/scripts/train.py", line 117, in <module>
+[rank2]:     train(args)
+[rank2]:     ~~~~~^^^^^^
+[rank2]:   File "/home/vihaan/NuGraph/scripts/train.py", line 113, in train
+[rank2]:     trainer.fit(model, datamodule=nudata, ckpt_path=args.resume)
+[rank2]:     ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank2]:   File "/net/projects2/fermi2526/conda/nugraph-25-10/lib/python3.13/site-packages/pytorch_lightning/trainer/trainer.py", line 560, in fit
+[rank2]:     call._call_and_handle_interrupt(
+[rank2]:     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^
+[rank2]:         self, self._fit_impl, model, train_dataloaders, val_dataloaders, datamodule, ckpt_path
+[rank2]:         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank2]:     )
+[rank2]:     ^
+[rank2]:   File "/net/projects2/fermi2526/conda/nugraph-25-10/lib/python3.13/site-packages/pytorch_lightning/trainer/call.py", line 48, in _call_and_handle_interrupt
+[rank2]:     return trainer.strategy.launcher.launch(trainer_fn, *args, trainer=trainer, **kwargs)
+[rank2]:            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank2]:   File "/net/projects2/fermi2526/conda/nugraph-25-10/lib/python3.13/site-packages/pytorch_lightning/strategies/launchers/subprocess_script.py", line 105, in launch
+[rank2]:     return function(*args, **kwargs)
+[rank2]:   File "/net/projects2/fermi2526/conda/nugraph-25-10/lib/python3.13/site-packages/pytorch_lightning/trainer/trainer.py", line 598, in _fit_impl
+[rank2]:     self._run(model, ckpt_path=ckpt_path)
+[rank2]:     ~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank2]:   File "/net/projects2/fermi2526/conda/nugraph-25-10/lib/python3.13/site-packages/pytorch_lightning/trainer/trainer.py", line 1011, in _run
+[rank2]:     results = self._run_stage()
+[rank2]:   File "/net/projects2/fermi2526/conda/nugraph-25-10/lib/python3.13/site-packages/pytorch_lightning/trainer/trainer.py", line 1053, in _run_stage
+[rank2]:     self._run_sanity_check()
+[rank2]:     ~~~~~~~~~~~~~~~~~~~~~~^^
+[rank2]:   File "/net/projects2/fermi2526/conda/nugraph-25-10/lib/python3.13/site-packages/pytorch_lightning/trainer/trainer.py", line 1082, in _run_sanity_check
+[rank2]:     val_loop.run()
+[rank2]:     ~~~~~~~~~~~~^^
+[rank2]:   File "/net/projects2/fermi2526/conda/nugraph-25-10/lib/python3.13/site-packages/pytorch_lightning/loops/utilities.py", line 179, in _decorator
+[rank2]:     return loop_run(self, *args, **kwargs)
+[rank2]:   File "/net/projects2/fermi2526/conda/nugraph-25-10/lib/python3.13/site-packages/pytorch_lightning/loops/evaluation_loop.py", line 145, in run
+[rank2]:     self._evaluation_step(batch, batch_idx, dataloader_idx, dataloader_iter)
+[rank2]:     ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank2]:   File "/net/projects2/fermi2526/conda/nugraph-25-10/lib/python3.13/site-packages/pytorch_lightning/loops/evaluation_loop.py", line 437, in _evaluation_step
+[rank2]:     output = call._call_strategy_hook(trainer, hook_name, *step_args)
+[rank2]:   File "/net/projects2/fermi2526/conda/nugraph-25-10/lib/python3.13/site-packages/pytorch_lightning/trainer/call.py", line 329, in _call_strategy_hook
+[rank2]:     output = fn(*args, **kwargs)
+[rank2]:   File "/net/projects2/fermi2526/conda/nugraph-25-10/lib/python3.13/site-packages/pytorch_lightning/strategies/strategy.py", line 411, in validation_step
+[rank2]:     return self._forward_redirection(self.model, self.lightning_module, "validation_step", *args, **kwargs)
+[rank2]:            ~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank2]:   File "/net/projects2/fermi2526/conda/nugraph-25-10/lib/python3.13/site-packages/pytorch_lightning/strategies/strategy.py", line 641, in __call__
+[rank2]:     wrapper_output = wrapper_module(*args, **kwargs)
+[rank2]:   File "/net/projects2/fermi2526/conda/nugraph-25-10/lib/python3.13/site-packages/torch/nn/modules/module.py", line 1773, in _wrapped_call_impl
+[rank2]:     return self._call_impl(*args, **kwargs)
+[rank2]:            ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+[rank2]:   File "/net/projects2/fermi2526/conda/nugraph-25-10/lib/python3.13/site-packages/torch/nn/modules/module.py", line 1784, in _call_impl
+[rank2]:     return forward_call(*args, **kwargs)
+[rank2]:   File "/net/projects2/fermi2526/conda/nugraph-25-10/lib/python3.13/site-packages/torch/nn/parallel/distributed.py", line 1648, in forward
+[rank2]:     else self._run_ddp_forward(*inputs, **kwargs)
+[rank2]:          ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^
+[rank2]:   File "/net/projects2/fermi2526/conda/nugraph-25-10/lib/python3.13/site-packages/torch/nn/parallel/distributed.py", line 1474, in _run_ddp_forward
+[rank2]:     return self.module(*inputs, **kwargs)  # type: ignore[index]
+[rank2]:            ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^
+[rank2]:   File "/net/projects2/fermi2526/conda/nugraph-25-10/lib/python3.13/site-packages/torch/nn/modules/module.py", line 1773, in _wrapped_call_impl
+[rank2]:     return self._call_impl(*args, **kwargs)
+[rank2]:            ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+[rank2]:   File "/net/projects2/fermi2526/conda/nugraph-25-10/lib/python3.13/site-packages/torch/nn/modules/module.py", line 1784, in _call_impl
+[rank2]:     return forward_call(*args, **kwargs)
+[rank2]:   File "/net/projects2/fermi2526/conda/nugraph-25-10/lib/python3.13/site-packages/pytorch_lightning/strategies/strategy.py", line 634, in wrapped_forward
+[rank2]:     out = method(*_args, **_kwargs)
+[rank2]:   File "/home/vihaan/NuGraph/nugraph/nugraph/models/nugraph3/nugraph3.py", line 177, in validation_step
+[rank2]:     loss, metrics = self(batch, 'val')
+[rank2]:                     ~~~~^^^^^^^^^^^^^^
+[rank2]:   File "/net/projects2/fermi2526/conda/nugraph-25-10/lib/python3.13/site-packages/torch/nn/modules/module.py", line 1773, in _wrapped_call_impl
+[rank2]:     return self._call_impl(*args, **kwargs)
+[rank2]:            ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+[rank2]:   File "/net/projects2/fermi2526/conda/nugraph-25-10/lib/python3.13/site-packages/torch/nn/modules/module.py", line 1784, in _call_impl
+[rank2]:     return forward_call(*args, **kwargs)
+[rank2]:   File "/home/vihaan/NuGraph/nugraph/nugraph/models/nugraph3/nugraph3.py", line 152, in forward
+[rank2]:     self.optical_net(data)
+[rank2]:     ~~~~~~~~~~~~~~~~^^^^^^
+[rank2]:   File "/net/projects2/fermi2526/conda/nugraph-25-10/lib/python3.13/site-packages/torch/nn/modules/module.py", line 1773, in _wrapped_call_impl
+[rank2]:     return self._call_impl(*args, **kwargs)
+[rank2]:            ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+[rank2]:   File "/net/projects2/fermi2526/conda/nugraph-25-10/lib/python3.13/site-packages/torch/nn/modules/module.py", line 1784, in _call_impl
+[rank2]:     return forward_call(*args, **kwargs)
+[rank2]:   File "/home/vihaan/NuGraph/nugraph/nugraph/models/nugraph3/optical.py", line 77, in forward
+[rank2]:     data["pmt", "knn", "sp"].edge_index)
+[rank2]:     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank2]:   File "/net/projects2/fermi2526/conda/nugraph-25-10/lib/python3.13/site-packages/torch_geometric/data/storage.py", line 96, in __getattr__
+[rank2]:     raise AttributeError(
+[rank2]:         f"'{self.__class__.__name__}' object has no attribute '{key}'"
+[rank2]:     ) from None
+[rank2]: AttributeError: 'EdgeStorage' object has no attribute 'edge_index'
+[rank6]: Traceback (most recent call last):
+[rank6]:   File "/home/vihaan/NuGraph/scripts/train.py", line 117, in <module>
+[rank6]:     train(args)
+[rank6]:     ~~~~~^^^^^^
+[rank6]:   File "/home/vihaan/NuGraph/scripts/train.py", line 113, in train
+[rank6]:     trainer.fit(model, datamodule=nudata, ckpt_path=args.resume)
+[rank6]:     ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank6]:   File "/net/projects2/fermi2526/conda/nugraph-25-10/lib/python3.13/site-packages/pytorch_lightning/trainer/trainer.py", line 560, in fit
+[rank6]:     call._call_and_handle_interrupt(
+[rank6]:     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^
+[rank6]:         self, self._fit_impl, model, train_dataloaders, val_dataloaders, datamodule, ckpt_path
+[rank6]:         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank6]:     )
+[rank6]:     ^
+[rank6]:   File "/net/projects2/fermi2526/conda/nugraph-25-10/lib/python3.13/site-packages/pytorch_lightning/trainer/call.py", line 48, in _call_and_handle_interrupt
+[rank6]:     return trainer.strategy.launcher.launch(trainer_fn, *args, trainer=trainer, **kwargs)
+[rank6]:            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank6]:   File "/net/projects2/fermi2526/conda/nugraph-25-10/lib/python3.13/site-packages/pytorch_lightning/strategies/launchers/subprocess_script.py", line 105, in launch
+[rank6]:     return function(*args, **kwargs)
+[rank6]:   File "/net/projects2/fermi2526/conda/nugraph-25-10/lib/python3.13/site-packages/pytorch_lightning/trainer/trainer.py", line 598, in _fit_impl
+[rank6]:     self._run(model, ckpt_path=ckpt_path)
+[rank6]:     ~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank6]:   File "/net/projects2/fermi2526/conda/nugraph-25-10/lib/python3.13/site-packages/pytorch_lightning/trainer/trainer.py", line 1011, in _run
+[rank6]:     results = self._run_stage()
+[rank6]:   File "/net/projects2/fermi2526/conda/nugraph-25-10/lib/python3.13/site-packages/pytorch_lightning/trainer/trainer.py", line 1053, in _run_stage
+[rank6]:     self._run_sanity_check()
+[rank6]:     ~~~~~~~~~~~~~~~~~~~~~~^^
+[rank6]:   File "/net/projects2/fermi2526/conda/nugraph-25-10/lib/python3.13/site-packages/pytorch_lightning/trainer/trainer.py", line 1082, in _run_sanity_check
+[rank6]:     val_loop.run()
+[rank6]:     ~~~~~~~~~~~~^^
+[rank6]:   File "/net/projects2/fermi2526/conda/nugraph-25-10/lib/python3.13/site-packages/pytorch_lightning/loops/utilities.py", line 179, in _decorator
+[rank6]:     return loop_run(self, *args, **kwargs)
+[rank6]:   File "/net/projects2/fermi2526/conda/nugraph-25-10/lib/python3.13/site-packages/pytorch_lightning/loops/evaluation_loop.py", line 145, in run
+[rank6]:     self._evaluation_step(batch, batch_idx, dataloader_idx, dataloader_iter)
+[rank6]:     ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank6]:   File "/net/projects2/fermi2526/conda/nugraph-25-10/lib/python3.13/site-packages/pytorch_lightning/loops/evaluation_loop.py", line 437, in _evaluation_step
+[rank6]:     output = call._call_strategy_hook(trainer, hook_name, *step_args)
+[rank6]:   File "/net/projects2/fermi2526/conda/nugraph-25-10/lib/python3.13/site-packages/pytorch_lightning/trainer/call.py", line 329, in _call_strategy_hook
+[rank6]:     output = fn(*args, **kwargs)
+[rank6]:   File "/net/projects2/fermi2526/conda/nugraph-25-10/lib/python3.13/site-packages/pytorch_lightning/strategies/strategy.py", line 411, in validation_step
+[rank6]:     return self._forward_redirection(self.model, self.lightning_module, "validation_step", *args, **kwargs)
+[rank6]:            ~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank6]:   File "/net/projects2/fermi2526/conda/nugraph-25-10/lib/python3.13/site-packages/pytorch_lightning/strategies/strategy.py", line 641, in __call__
+[rank6]:     wrapper_output = wrapper_module(*args, **kwargs)
+[rank6]:   File "/net/projects2/fermi2526/conda/nugraph-25-10/lib/python3.13/site-packages/torch/nn/modules/module.py", line 1773, in _wrapped_call_impl
+[rank6]:     return self._call_impl(*args, **kwargs)
+[rank6]:            ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+[rank6]:   File "/net/projects2/fermi2526/conda/nugraph-25-10/lib/python3.13/site-packages/torch/nn/modules/module.py", line 1784, in _call_impl
+[rank6]:     return forward_call(*args, **kwargs)
+[rank6]:   File "/net/projects2/fermi2526/conda/nugraph-25-10/lib/python3.13/site-packages/torch/nn/parallel/distributed.py", line 1648, in forward
+[rank6]:     else self._run_ddp_forward(*inputs, **kwargs)
+[rank6]:          ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^
+[rank6]:   File "/net/projects2/fermi2526/conda/nugraph-25-10/lib/python3.13/site-packages/torch/nn/parallel/distributed.py", line 1474, in _run_ddp_forward
+[rank6]:     return self.module(*inputs, **kwargs)  # type: ignore[index]
+[rank6]:            ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^
+[rank6]:   File "/net/projects2/fermi2526/conda/nugraph-25-10/lib/python3.13/site-packages/torch/nn/modules/module.py", line 1773, in _wrapped_call_impl
+[rank6]:     return self._call_impl(*args, **kwargs)
+[rank6]:            ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+[rank6]:   File "/net/projects2/fermi2526/conda/nugraph-25-10/lib/python3.13/site-packages/torch/nn/modules/module.py", line 1784, in _call_impl
+[rank6]:     return forward_call(*args, **kwargs)
+[rank6]:   File "/net/projects2/fermi2526/conda/nugraph-25-10/lib/python3.13/site-packages/pytorch_lightning/strategies/strategy.py", line 634, in wrapped_forward
+[rank6]:     out = method(*_args, **_kwargs)
+[rank6]:   File "/home/vihaan/NuGraph/nugraph/nugraph/models/nugraph3/nugraph3.py", line 177, in validation_step
+[rank6]:     loss, metrics = self(batch, 'val')
+[rank6]:                     ~~~~^^^^^^^^^^^^^^
+[rank6]:   File "/net/projects2/fermi2526/conda/nugraph-25-10/lib/python3.13/site-packages/torch/nn/modules/module.py", line 1773, in _wrapped_call_impl
+[rank6]:     return self._call_impl(*args, **kwargs)
+[rank6]:            ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+[rank6]:   File "/net/projects2/fermi2526/conda/nugraph-25-10/lib/python3.13/site-packages/torch/nn/modules/module.py", line 1784, in _call_impl
+[rank6]:     return forward_call(*args, **kwargs)
+[rank6]:   File "/home/vihaan/NuGraph/nugraph/nugraph/models/nugraph3/nugraph3.py", line 152, in forward
+[rank6]:     self.optical_net(data)
+[rank6]:     ~~~~~~~~~~~~~~~~^^^^^^
+[rank6]:   File "/net/projects2/fermi2526/conda/nugraph-25-10/lib/python3.13/site-packages/torch/nn/modules/module.py", line 1773, in _wrapped_call_impl
+[rank6]:     return self._call_impl(*args, **kwargs)
+[rank6]:            ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+[rank6]:   File "/net/projects2/fermi2526/conda/nugraph-25-10/lib/python3.13/site-packages/torch/nn/modules/module.py", line 1784, in _call_impl
+[rank6]:     return forward_call(*args, **kwargs)
+[rank6]:   File "/home/vihaan/NuGraph/nugraph/nugraph/models/nugraph3/optical.py", line 77, in forward
+[rank6]:     data["pmt", "knn", "sp"].edge_index)
+[rank6]:     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank6]:   File "/net/projects2/fermi2526/conda/nugraph-25-10/lib/python3.13/site-packages/torch_geometric/data/storage.py", line 96, in __getattr__
+[rank6]:     raise AttributeError(
+[rank6]:         f"'{self.__class__.__name__}' object has no attribute '{key}'"
+[rank6]:     ) from None
+[rank6]: AttributeError: 'EdgeStorage' object has no attribute 'edge_index'
+[rank4]: Traceback (most recent call last):
+[rank4]:   File "/home/vihaan/NuGraph/scripts/train.py", line 117, in <module>
+[rank4]:     train(args)
+[rank4]:     ~~~~~^^^^^^
+[rank4]:   File "/home/vihaan/NuGraph/scripts/train.py", line 113, in train
+[rank4]:     trainer.fit(model, datamodule=nudata, ckpt_path=args.resume)
+[rank4]:     ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank4]:   File "/net/projects2/fermi2526/conda/nugraph-25-10/lib/python3.13/site-packages/pytorch_lightning/trainer/trainer.py", line 560, in fit
+[rank4]:     call._call_and_handle_interrupt(
+[rank4]:     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^
+[rank4]:         self, self._fit_impl, model, train_dataloaders, val_dataloaders, datamodule, ckpt_path
+[rank4]:         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank4]:     )
+[rank4]:     ^
+[rank4]:   File "/net/projects2/fermi2526/conda/nugraph-25-10/lib/python3.13/site-packages/pytorch_lightning/trainer/call.py", line 48, in _call_and_handle_interrupt
+[rank4]:     return trainer.strategy.launcher.launch(trainer_fn, *args, trainer=trainer, **kwargs)
+[rank4]:            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank4]:   File "/net/projects2/fermi2526/conda/nugraph-25-10/lib/python3.13/site-packages/pytorch_lightning/strategies/launchers/subprocess_script.py", line 105, in launch
+[rank4]:     return function(*args, **kwargs)
+[rank4]:   File "/net/projects2/fermi2526/conda/nugraph-25-10/lib/python3.13/site-packages/pytorch_lightning/trainer/trainer.py", line 598, in _fit_impl
+[rank4]:     self._run(model, ckpt_path=ckpt_path)
+[rank4]:     ~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank4]:   File "/net/projects2/fermi2526/conda/nugraph-25-10/lib/python3.13/site-packages/pytorch_lightning/trainer/trainer.py", line 1011, in _run
+[rank4]:     results = self._run_stage()
+[rank4]:   File "/net/projects2/fermi2526/conda/nugraph-25-10/lib/python3.13/site-packages/pytorch_lightning/trainer/trainer.py", line 1053, in _run_stage
+[rank4]:     self._run_sanity_check()
+[rank4]:     ~~~~~~~~~~~~~~~~~~~~~~^^
+[rank4]:   File "/net/projects2/fermi2526/conda/nugraph-25-10/lib/python3.13/site-packages/pytorch_lightning/trainer/trainer.py", line 1082, in _run_sanity_check
+[rank4]:     val_loop.run()
+[rank4]:     ~~~~~~~~~~~~^^
+[rank4]:   File "/net/projects2/fermi2526/conda/nugraph-25-10/lib/python3.13/site-packages/pytorch_lightning/loops/utilities.py", line 179, in _decorator
+[rank4]:     return loop_run(self, *args, **kwargs)
+[rank4]:   File "/net/projects2/fermi2526/conda/nugraph-25-10/lib/python3.13/site-packages/pytorch_lightning/loops/evaluation_loop.py", line 145, in run
+[rank4]:     self._evaluation_step(batch, batch_idx, dataloader_idx, dataloader_iter)
+[rank4]:     ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank4]:   File "/net/projects2/fermi2526/conda/nugraph-25-10/lib/python3.13/site-packages/pytorch_lightning/loops/evaluation_loop.py", line 437, in _evaluation_step
+[rank4]:     output = call._call_strategy_hook(trainer, hook_name, *step_args)
+[rank4]:   File "/net/projects2/fermi2526/conda/nugraph-25-10/lib/python3.13/site-packages/pytorch_lightning/trainer/call.py", line 329, in _call_strategy_hook
+[rank4]:     output = fn(*args, **kwargs)
+[rank4]:   File "/net/projects2/fermi2526/conda/nugraph-25-10/lib/python3.13/site-packages/pytorch_lightning/strategies/strategy.py", line 411, in validation_step
+[rank4]:     return self._forward_redirection(self.model, self.lightning_module, "validation_step", *args, **kwargs)
+[rank4]:            ~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank4]:   File "/net/projects2/fermi2526/conda/nugraph-25-10/lib/python3.13/site-packages/pytorch_lightning/strategies/strategy.py", line 641, in __call__
+[rank4]:     wrapper_output = wrapper_module(*args, **kwargs)
+[rank4]:   File "/net/projects2/fermi2526/conda/nugraph-25-10/lib/python3.13/site-packages/torch/nn/modules/module.py", line 1773, in _wrapped_call_impl
+[rank4]:     return self._call_impl(*args, **kwargs)
+[rank4]:            ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+[rank4]:   File "/net/projects2/fermi2526/conda/nugraph-25-10/lib/python3.13/site-packages/torch/nn/modules/module.py", line 1784, in _call_impl
+[rank4]:     return forward_call(*args, **kwargs)
+[rank4]:   File "/net/projects2/fermi2526/conda/nugraph-25-10/lib/python3.13/site-packages/torch/nn/parallel/distributed.py", line 1648, in forward
+[rank4]:     else self._run_ddp_forward(*inputs, **kwargs)
+[rank4]:          ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^
+[rank4]:   File "/net/projects2/fermi2526/conda/nugraph-25-10/lib/python3.13/site-packages/torch/nn/parallel/distributed.py", line 1474, in _run_ddp_forward
+[rank4]:     return self.module(*inputs, **kwargs)  # type: ignore[index]
+[rank4]:            ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^
+[rank4]:   File "/net/projects2/fermi2526/conda/nugraph-25-10/lib/python3.13/site-packages/torch/nn/modules/module.py", line 1773, in _wrapped_call_impl
+[rank4]:     return self._call_impl(*args, **kwargs)
+[rank4]:            ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+[rank4]:   File "/net/projects2/fermi2526/conda/nugraph-25-10/lib/python3.13/site-packages/torch/nn/modules/module.py", line 1784, in _call_impl
+[rank4]:     return forward_call(*args, **kwargs)
+[rank4]:   File "/net/projects2/fermi2526/conda/nugraph-25-10/lib/python3.13/site-packages/pytorch_lightning/strategies/strategy.py", line 634, in wrapped_forward
+[rank4]:     out = method(*_args, **_kwargs)
+[rank4]:   File "/home/vihaan/NuGraph/nugraph/nugraph/models/nugraph3/nugraph3.py", line 177, in validation_step
+[rank4]:     loss, metrics = self(batch, 'val')
+[rank4]:                     ~~~~^^^^^^^^^^^^^^
+[rank4]:   File "/net/projects2/fermi2526/conda/nugraph-25-10/lib/python3.13/site-packages/torch/nn/modules/module.py", line 1773, in _wrapped_call_impl
+[rank4]:     return self._call_impl(*args, **kwargs)
+[rank4]:            ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+[rank4]:   File "/net/projects2/fermi2526/conda/nugraph-25-10/lib/python3.13/site-packages/torch/nn/modules/module.py", line 1784, in _call_impl
+[rank4]:     return forward_call(*args, **kwargs)
+[rank4]:   File "/home/vihaan/NuGraph/nugraph/nugraph/models/nugraph3/nugraph3.py", line 152, in forward
+[rank4]:     self.optical_net(data)
+[rank4]:     ~~~~~~~~~~~~~~~~^^^^^^
+[rank4]:   File "/net/projects2/fermi2526/conda/nugraph-25-10/lib/python3.13/site-packages/torch/nn/modules/module.py", line 1773, in _wrapped_call_impl
+[rank4]:     return self._call_impl(*args, **kwargs)
+[rank4]:            ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+[rank4]:   File "/net/projects2/fermi2526/conda/nugraph-25-10/lib/python3.13/site-packages/torch/nn/modules/module.py", line 1784, in _call_impl
+[rank4]:     return forward_call(*args, **kwargs)
+[rank4]:   File "/home/vihaan/NuGraph/nugraph/nugraph/models/nugraph3/optical.py", line 77, in forward
+[rank4]:     data["pmt", "knn", "sp"].edge_index)
+[rank4]:     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank4]:   File "/net/projects2/fermi2526/conda/nugraph-25-10/lib/python3.13/site-packages/torch_geometric/data/storage.py", line 96, in __getattr__
+[rank4]:     raise AttributeError(
+[rank4]:         f"'{self.__class__.__name__}' object has no attribute '{key}'"
+[rank4]:     ) from None
+[rank4]: AttributeError: 'EdgeStorage' object has no attribute 'edge_index'
+Sanity Checking: |          | 0/? [00:00<?, ?it/s]Sanity Checking: |          | 0/? [00:00<?, ?it/s]Sanity Checking DataLoader 0:   0%|          | 0/2 [00:00<?, ?it/s]                                                                   srun: error: j005-ds: tasks 6-7: Exited with exit code 1
+srun: error: j005-ds: tasks 1,4: Exited with exit code 1
+srun: error: j005-ds: tasks 0,3,5: Exited with exit code 1
+srun: error: j005-ds: task 2: Exited with exit code 1
+[Sat Jul 18 02:27:04 PM CDT 2026] Training exited with code 1

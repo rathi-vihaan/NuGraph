@@ -302,17 +302,22 @@ class HitGraphProducer(ProcessorBase):
             ), dim=0)
             data["flash", "in", "evt"].edge_index = edge3
 
-            # nexus to pmt edges
+            # pmt to spacepoint edges
             spacepoints_nodes = torch.tensor(spacepoints[["position_y", "position_z"]].values)
-            distances = torch.cdist( spacepoints_nodes, data["pmt"].pos, p=2)
-            nnear = 2
-            _, nearest_indices = torch.topk(distances, nnear, largest=False, dim=1)
+            n_sp = spacepoints_nodes.size(0)
+            n_pmt = data["pmt"].pos.size(0)
+            if n_sp == 0 or n_pmt == 0:
+                edges = torch.empty((2, 0), dtype=torch.long)
+            else:
+                distances = torch.cdist(data["pmt"].pos, spacepoints_nodes, p=2)
+                knn = min(32, n_sp)
+                _, nearest_indices = torch.topk(distances, knn, largest=False, dim=1)
 
-            spacepoints_indices = torch.arange( spacepoints_nodes.size(0) ).repeat_interleave(nnear)
-            opflashsumpe_indices = nearest_indices.flatten()
+                pmt_indices = torch.arange(n_pmt, dtype=torch.long).repeat_interleave(knn)
+                sp_indices = nearest_indices.flatten()
 
-            edges = torch.stack([spacepoints_indices, opflashsumpe_indices], dim=0)
-            data["sp", "knn", "pmt"].edge_index = edges.long()
+                edges = torch.stack([pmt_indices, sp_indices], dim=0)
+            data["pmt", "knn", "sp"].edge_index = edges.long()
 
         # event label
         if self.event_labeller:
