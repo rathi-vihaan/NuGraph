@@ -2,6 +2,7 @@
 import argparse
 import warnings
 
+import torch
 import torch.cuda
 from torch.optim import AdamW
 from torch.optim.lr_scheduler import OneCycleLR
@@ -158,6 +159,14 @@ class NuGraph3(LightningModule):
             total_metrics.update(metrics)
 
         return total_loss, total_metrics
+
+    def step(self, data: Data) -> None:
+        """
+        Allows plotting of events in plot.ipynb.
+        """
+        self.eval()
+        with torch.no_grad():
+            self.forward(data, stage=None)
 
     def training_step(self,
                       batch: Data,
