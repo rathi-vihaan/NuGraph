@@ -275,21 +275,6 @@ class HitGraphProducer(ProcessorBase):
             mask = torch.nonzero(mask)
             edge1 = torch.squeeze(edge1[:,mask])
             data["ophit", "in", "pmt"].edge_index = edge1.long()
-
-            # pmt to pmt edges
-            n_pmt = data["pmt"].pos.size(0)
-            if n_pmt > 1:
-                distances = torch.cdist(data["pmt"].pos, data["pmt"].pos, p=2)
-                distances.fill_diagonal_(float('inf'))
-                knn = min(3, n_pmt - 1)
-                _, neighbor_idx = torch.topk(distances, knn, largest=False, dim=1)
-                source = torch.arange(n_pmt, dtype=torch.long).repeat_interleave(knn)
-                target = neighbor_idx.flatten()
-                edge4 = torch.stack((source, target), dim=0)                
-                edge4 = torch.cat((edge4, edge4.flip(0)), dim=1)
-            else:
-                edge4 = torch.empty((2, 0), dtype=torch.long)
-            data["pmt", "knn", "pmt"].edge_index = edge4
             
             # pmt to flash edges
             edge2 = torch.tensor(sum_pe[["sumpe_id", "flash_id"]].values.transpose())
@@ -301,23 +286,6 @@ class HitGraphProducer(ProcessorBase):
                 torch.zeros(opflash.shape[0], dtype=torch.long)
             ), dim=0)
             data["flash", "in", "evt"].edge_index = edge3
-
-            # pmt to spacepoint edges
-            spacepoints_nodes = torch.tensor(spacepoints[["position_y", "position_z"]].values)
-            n_sp = spacepoints_nodes.size(0)
-            n_pmt = data["pmt"].pos.size(0)
-            if n_sp == 0 or n_pmt == 0:
-                edges = torch.empty((2, 0), dtype=torch.long)
-            else:
-                distances = torch.cdist(data["pmt"].pos, spacepoints_nodes, p=2)
-                knn = min(32, n_sp)
-                _, nearest_indices = torch.topk(distances, knn, largest=False, dim=1)
-
-                pmt_indices = torch.arange(n_pmt, dtype=torch.long).repeat_interleave(knn)
-                sp_indices = nearest_indices.flatten()
-
-                edges = torch.stack([pmt_indices, sp_indices], dim=0)
-            data["pmt", "knn", "sp"].edge_index = edges.long()
 
         # event label
         if self.event_labeller:

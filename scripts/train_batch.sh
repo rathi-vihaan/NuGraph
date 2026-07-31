@@ -8,7 +8,6 @@
 #SBATCH --ntasks-per-node=8
 #SBATCH --gpus-per-task=1
 #SBATCH --gpu-bind=none
-#SBATCH -q normal
 #SBATCH --cpus-per-task=4
 #SBATCH --mem=256G
 
@@ -29,12 +28,45 @@ echo "fd limit set to: $(ulimit -n)"
 
 child_pid=""
 
-# configure these three depending on your particular training run
 export NUGRAPH_LOG="/home/vihaan/NuGraph/logs"
-NAME_NAME="optical-main"
-VERSION_NAME="test-optical-cross"
+TRAIN_NAME="optical-main"
+TRAIN_VERSION="test-optical-simple"
+python_args=()
 
-CKPT_DIR="${NUGRAPH_LOG}/${NAME_NAME}/${VERSION_NAME}/checkpoints"
+while [[ $# -gt 0 ]]; do
+    case "$1" in
+        --name)
+            if [[ $# -lt 2 ]]; then
+                echo "Missing value for --name" >&2
+                exit 2
+            fi
+            TRAIN_NAME="$2"
+            shift 2
+            ;;
+        --name=*)
+            TRAIN_NAME="${1#*=}"
+            shift
+            ;;
+        --version)
+            if [[ $# -lt 2 ]]; then
+                echo "Missing value for --version" >&2
+                exit 2
+            fi
+            TRAIN_VERSION="$2"
+            shift 2
+            ;;
+        --version=*)
+            TRAIN_VERSION="${1#*=}"
+            shift
+            ;;
+        *)
+            python_args+=("$1")
+            shift
+            ;;
+    esac
+done
+
+CKPT_DIR="${NUGRAPH_LOG}/${TRAIN_NAME}/${TRAIN_VERSION}/checkpoints"
 mkdir -p "$CKPT_DIR"
 
 signal_child_group() {
@@ -79,15 +111,15 @@ latest_ckpt=$(ls -1t "$CKPT_DIR"/*.ckpt 2>/dev/null | head -n1 || true)
 
 if [[ -n "${latest_ckpt:-}" ]]; then
     echo "[$(date)] Resuming from checkpoint: $latest_ckpt (restart #${SLURM_RESTART_COUNT:-0})"
-    setsid srun python scripts/train.py \
-        --name "$NAME_NAME" \
-        --version "$VERSION_NAME" \
-        --resume "$latest_ckpt" "$@" &
+    setsid srun --cpu-bind=none python scripts/train.py \
+        --name "$TRAIN_NAME" \
+        --version "$TRAIN_VERSION" \
+        --resume "$latest_ckpt" "${python_args[@]}" &
 else
     echo "[$(date)] Starting fresh training run"
-    setsid srun python scripts/train.py \
-        --name "$NAME_NAME" \
-        --version "$VERSION_NAME" "$@" &
+    setsid srun --cpu-bind=none python scripts/train.py \
+        --name "$TRAIN_NAME" \
+        --version "$TRAIN_VERSION" "${python_args[@]}" &
 fi
 
 child_pid=$!

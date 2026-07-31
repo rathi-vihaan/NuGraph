@@ -100,7 +100,7 @@ def train(args):
         accelerator="gpu",
         devices=8,
         num_nodes=1,
-        strategy=DDPStrategy(find_unused_parameters=True), # prevents crashes from lack of pmt-pmt edges in batch
+        strategy="ddp", # DDPStrategy(find_unused_parameters=True) if edges aren't being formed
         max_epochs=args.epochs,
         limit_train_batches=args.limit_train_batches,
         limit_val_batches=args.limit_val_batches,

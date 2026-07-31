@@ -97,4 +97,72 @@ class Transform(BaseTransform):
                 if data[edge_type].edge_index.dim() == 1:
                     data[edge_type].edge_index = data[edge_type].edge_index.unsqueeze(1)
 
+        # build pmt-pmt and pmt-sp edges
+        if "pmt" in data.node_types:
+            pmt_pos = getattr(data["pmt"], "pos", None)
+            n_pmt = data["pmt"].num_nodes
+
+            # pmt-pmt edges
+            if pmt_pos is not None and n_pmt > 1:
+                distances = torch.cdist(pmt_pos, pmt_pos, p=2)
+                distances.fill_diagonal_(float("inf"))
+                knn = min(5, n_pmt - 1)
+                _, neighbor_idx = torch.topk(distances, knn, largest=False, dim=1)
+                source = torch.arange(n_pmt, device=neighbor_idx.device, dtype=torch.long).repeat_interleave(knn)
+                target = neighbor_idx.reshape(-1)
+                pmt_edge = torch.stack((source, target), dim=0)
+                pmt_edge = torch.cat((pmt_edge, pmt_edge.flip(0)), dim=1)
+            else:
+                device = pmt_pos.device if pmt_pos is not None else None
+                pmt_edge = torch.empty((2, 0), dtype=torch.long, device=device)
+            data["pmt", "knn", "pmt"].edge_index = pmt_edge.long()
+
+            # pmt-sp edges
+            sp_pos = data["sp"].pos if "sp" in data.node_types and hasattr(data["sp"], "pos") else None
+            if pmt_pos is not None and sp_pos is not None and n_pmt > 0 and data["sp"].num_nodes > 0:
+                common_dim = min(pmt_pos.size(-1), sp_pos.size(-1))
+                pmt_metric = pmt_pos[:, -common_dim:]
+                sp_metric = sp_pos[:, -common_dim:]
+                distances = torch.cdist(pmt_metric, sp_metric, p=2)
+                knn = min(16, data["sp"].num_nodes)
+                _, nearest_indices = torch.topk(distances, knn, largest=False, dim=1)
+
+                pmt_indices = torch.arange(n_pmt, device=nearest_indices.device, dtype=torch.long).repeat_interleave(knn)
+                sp_indices = nearest_indices.reshape(-1)
+                pmt_sp_edges = torch.stack((pmt_indices, sp_indices), dim=0)
+            else:
+                device = pmt_pos.device if pmt_pos is not None else None
+                pmt_sp_edges = torch.empty((2, 0), dtype=torch.long, device=device)
+            data["pmt", "knn", "sp"].edge_index = pmt_sp_edges.long()
+
+        # build ophit-ophit edges within same pmt
+        if "ophit" in data.node_types and ("ophit", "in", "pmt") in data.edge_types:
+            ophit_in_pmt = data["ophit", "in", "pmt"].edge_index
+            if ophit_in_pmt.dim() == 1:
+                ophit_in_pmt = ophit_in_pmt.unsqueeze(1)
+
+            if ophit_in_pmt.numel() == 0:
+                ophit_edges = torch.empty((2, 0), dtype=torch.long, device=ophit_in_pmt.device)
+            else:
+                ophit_idx = ophit_in_pmt[0].long()
+                pmt_idx = ophit_in_pmt[1].long()
+
+                edge_blocks = []
+                for pmt in pmt_idx.unique(sorted=True):
+                    members = ophit_idx[pmt_idx == pmt].unique(sorted=True)
+                    count = members.numel()
+                    if count <= 1:
+                        continue
+                    src = members.repeat_interleave(count)
+                    dst = members.repeat(count)
+                    mask = src != dst
+                    edge_blocks.append(torch.stack((src[mask], dst[mask]), dim=0))
+
+                if edge_blocks:
+                    ophit_edges = torch.cat(edge_blocks, dim=1)
+                else:
+                    ophit_edges = torch.empty((2, 0), dtype=torch.long, device=ophit_in_pmt.device)
+
+            data["ophit", "knn", "ophit"].edge_index = ophit_edges.long()
+
         return data

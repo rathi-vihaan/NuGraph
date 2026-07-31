@@ -15,8 +15,7 @@ from torch_geometric.transforms import Compose
 from ..data import NuGraphDataset, BalanceSampler
 from ..util import FeatureExtension
 
-DEFAULT_DATA = ("$NUGRAPH_DATA/uboone-opendata/"
-                "uboone-opendata-19be46d89d0f22f5a78641d724c1fedd.gnn.h5")
+DEFAULT_DATA = ("/net/projects2/fermi2526/data/nugraph3-dsi.optical.fix.renamed.gnn.h5")
 
 class NuGraphDataModule(LightningDataModule):
     """PyTorch Lightning data module for neutrino graph data."""
