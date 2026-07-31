@@ -24,13 +24,15 @@ class NuGraphOptical(torch.nn.Module):
                      ophit_features: int,
                      pmt_features: int,
                      flash_features: int,
-                                 sp_max_degree_init: float = 12.0,
-                                 sp_degree_temperature: float = 0.5,
+                     sp_max_degree_init: float = 12.0,
+                     sp_degree_temperature: float = 0.5,
+                     use_pmt_sp_pruning: bool = True,
                      use_checkpointing: bool = True):
                 super().__init__()
 
                 self.use_checkpointing = use_checkpointing
                 self.sp_degree_temperature = sp_degree_temperature
+                self.use_pmt_sp_pruning = use_pmt_sp_pruning
 
                 # learnable degree bound for spacepoints for pmt-sp edge pruning
                 init = max(sp_max_degree_init - 1.0, 1e-3)
@@ -140,8 +142,11 @@ class NuGraphOptical(torch.nn.Module):
                                 common_dim = min(pmt_pos.size(-1), sp_pos.size(-1))
                                 edge_distance = torch.linalg.norm(
                                         pmt_pos[:, -common_dim:] - sp_pos[:, -common_dim:], dim=1)
-                        pmt_sp_mask = self.pmt_sp_pruning_mask(
-                                data, pmt_sp_edges.edge_index, edge_distance.float())
+                        if self.use_pmt_sp_pruning:
+                                pmt_sp_mask = self.pmt_sp_pruning_mask(
+                                        data, pmt_sp_edges.edge_index, edge_distance.float())
+                        else:
+                                pmt_sp_mask = None
                         data["sp"].x = self.checkpoint(
                         self.pmt_to_nexus, (data["pmt"].x, data["sp"].x),
                         pmt_sp_edges.edge_index, pmt_sp_mask)

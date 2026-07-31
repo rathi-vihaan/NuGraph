@@ -51,7 +51,10 @@ def train(args):
     nudata = Data(args.data_path, batch_size=args.batch_size,
                   model=Model, shuffle=args.shuffle,
                   balance_frac=args.balance_frac, num_workers=args.num_workers,
-                  featext=args.featext)
+                  featext=args.featext,
+                  use_pmt_pmt_edges=args.use_pmt_pmt_edges,
+                  use_pmt_sp_edges=args.use_pmt_sp_edges,
+                  use_ophit_ophit_edges=args.use_ophit_ophit_edges)
 
     if args.resume:
         model = Model.load_from_checkpoint(args.resume)

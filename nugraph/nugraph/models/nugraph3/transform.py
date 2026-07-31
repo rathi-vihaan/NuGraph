@@ -10,9 +10,16 @@ class Transform(BaseTransform):
     Args:
         planes: Tuple of detector plane names
     """
-    def __init__(self, planes: tuple[str]):
+    def __init__(self,
+                 planes: tuple[str],
+                 use_pmt_pmt_edges: bool = True,
+                 use_pmt_sp_edges: bool = True,
+                 use_ophit_ophit_edges: bool = True):
         super().__init__()
         self.planes = planes
+        self.use_pmt_pmt_edges = use_pmt_pmt_edges
+        self.use_pmt_sp_edges = use_pmt_sp_edges
+        self.use_ophit_ophit_edges = use_ophit_ophit_edges
 
     def forward(self, data: NuGraphData) -> NuGraphData:
 
@@ -103,7 +110,7 @@ class Transform(BaseTransform):
             n_pmt = data["pmt"].num_nodes
 
             # pmt-pmt edges
-            if pmt_pos is not None and n_pmt > 1:
+            if self.use_pmt_pmt_edges and pmt_pos is not None and n_pmt > 1:
                 distances = torch.cdist(pmt_pos, pmt_pos, p=2)
                 distances.fill_diagonal_(float("inf"))
                 knn = min(5, n_pmt - 1)
@@ -119,7 +126,7 @@ class Transform(BaseTransform):
 
             # pmt-sp edges and pruning
             sp_pos = data["sp"].pos if "sp" in data.node_types and hasattr(data["sp"], "pos") else None
-            if pmt_pos is not None and sp_pos is not None and n_pmt > 0 and data["sp"].num_nodes > 0:
+            if self.use_pmt_sp_edges and pmt_pos is not None and sp_pos is not None and n_pmt > 0 and data["sp"].num_nodes > 0:
                 common_dim = min(pmt_pos.size(-1), sp_pos.size(-1))
                 pmt_metric = pmt_pos[:, -common_dim:]
                 sp_metric = sp_pos[:, -common_dim:]
@@ -145,7 +152,7 @@ class Transform(BaseTransform):
                 data["sp"].pmt_degree = sp_degree.long()
 
         # build ophit-ophit edges within same pmt
-        if "ophit" in data.node_types and ("ophit", "in", "pmt") in data.edge_types:
+        if self.use_ophit_ophit_edges and "ophit" in data.node_types and ("ophit", "in", "pmt") in data.edge_types:
             ophit_in_pmt = data["ophit", "in", "pmt"].edge_index
             if ophit_in_pmt.dim() == 1:
                 ophit_in_pmt = ophit_in_pmt.unsqueeze(1)
@@ -173,5 +180,7 @@ class Transform(BaseTransform):
                     ophit_edges = torch.empty((2, 0), dtype=torch.long, device=ophit_in_pmt.device)
 
             data["ophit", "knn", "ophit"].edge_index = ophit_edges.long()
+        elif "ophit" in data.node_types:
+            data["ophit", "knn", "ophit"].edge_index = torch.empty((2, 0), dtype=torch.long)
 
         return data

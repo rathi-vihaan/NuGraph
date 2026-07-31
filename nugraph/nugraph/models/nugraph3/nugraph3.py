@@ -68,6 +68,7 @@ class NuGraph3(LightningModule):
                  spacepoint_head: bool = False,
                  particle_loss: bool = False,
                  use_optical: bool = False,
+                 use_pmt_sp_pruning: bool = True,
                  use_checkpointing: bool = False,
                  lr: float = 0.001,
                  no_one_cycle_sched: bool = False):
@@ -102,6 +103,7 @@ class NuGraph3(LightningModule):
                                               ophit_features=ophit_features,
                                               pmt_features=pmt_features,
                                               flash_features=flash_features,
+                                              use_pmt_sp_pruning=use_pmt_sp_pruning,
                                               use_checkpointing=use_checkpointing)
 
         self.decoders = []
@@ -223,14 +225,20 @@ class NuGraph3(LightningModule):
             return [optimizer], {'scheduler': onecycle, 'interval': 'step'}
 
     @staticmethod
-    def transform(planes: tuple[str]) -> Transform:
+    def transform(planes: tuple[str],
+                  use_pmt_pmt_edges: bool = True,
+                  use_pmt_sp_edges: bool = True,
+                  use_ophit_ophit_edges: bool = True) -> Transform:
         """
         Return data transform for NuGraph3 model
         
         Args:
             planes: tuple of detector plane names
         """
-        return Transform(planes)
+        return Transform(planes,
+                 use_pmt_pmt_edges=use_pmt_pmt_edges,
+                 use_pmt_sp_edges=use_pmt_sp_edges,
+                 use_ophit_ophit_edges=use_ophit_ophit_edges)
 
     @staticmethod
     def add_model_args(parser: argparse.ArgumentParser) -> argparse.ArgumentParser:
@@ -275,6 +283,9 @@ class NuGraph3(LightningModule):
                            help="Enable object condensation particle loss term")
         model.add_argument('--optical', action='store_true',
                            help='Enable optical hierarchy')
+        model.add_argument('--no-pmt-sp-pruning', action='store_false',
+                   dest='use_pmt_sp_pruning',
+                   help='Disable learned PMT->SP edge pruning mask')
         model.add_argument('--no-checkpointing', action='store_false',
                            dest="use_checkpointing",
                            help='Disable checkpointing during training')
@@ -324,6 +335,7 @@ class NuGraph3(LightningModule):
             spacepoint_head=args.spacepoint,
             particle_loss=args.particle_loss,
             use_optical=args.optical,
+            use_pmt_sp_pruning=getattr(args, "use_pmt_sp_pruning", True),
             use_checkpointing=args.use_checkpointing,
             lr=args.learning_rate,
             no_one_cycle_sched=args.no_one_cycle_sched)

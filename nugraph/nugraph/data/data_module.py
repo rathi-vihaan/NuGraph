@@ -1,5 +1,6 @@
 """NuGraph data module"""
 from argparse import ArgumentParser
+import inspect
 import warnings
 
 import os
@@ -26,7 +27,10 @@ class NuGraphDataModule(LightningDataModule):
                  num_workers: int = 5,
                  shuffle: str = 'random',
                  balance_frac: float = 0.1,
-                 featext: bool = False):
+                 featext: bool = False,
+                 use_pmt_pmt_edges: bool = True,
+                 use_pmt_sp_edges: bool = True,
+                 use_ophit_ophit_edges: bool = True):
         super().__init__()
 
         # for this HDF5 dataloader, worker processes slow things down
@@ -44,6 +48,9 @@ class NuGraphDataModule(LightningDataModule):
         self.shuffle = shuffle
         self.balance_frac = balance_frac
         self.featext = featext
+        self.use_pmt_pmt_edges = use_pmt_pmt_edges
+        self.use_pmt_sp_edges = use_pmt_sp_edges
+        self.use_ophit_ophit_edges = use_ophit_ophit_edges
 
         with h5py.File(self.filename) as f:
 
@@ -93,10 +100,19 @@ class NuGraphDataModule(LightningDataModule):
 
 
         if model:
+            transform_kwargs = {"planes": self.planes}
+            transform_params = inspect.signature(model.transform).parameters
+            if "use_pmt_pmt_edges" in transform_params:
+                transform_kwargs["use_pmt_pmt_edges"] = self.use_pmt_pmt_edges
+            if "use_pmt_sp_edges" in transform_params:
+                transform_kwargs["use_pmt_sp_edges"] = self.use_pmt_sp_edges
+            if "use_ophit_ophit_edges" in transform_params:
+                transform_kwargs["use_ophit_ophit_edges"] = self.use_ophit_ophit_edges
+
             if self.featext:
-                transform = Compose((model.transform(planes=self.planes),FeatureExtension(self.planes)))
+                transform = Compose((model.transform(**transform_kwargs), FeatureExtension(self.planes)))
             else:
-                transform = model.transform(planes=self.planes)
+                transform = model.transform(**transform_kwargs)
         else:
             None
 
@@ -198,4 +214,13 @@ class NuGraphDataModule(LightningDataModule):
                           help='Fraction of dataset to use for workload balancing')
         data.add_argument('--featext', action='store_true', default=False,
                           help='Enable extended features')
+        data.add_argument('--no-pmt-pmt-edges', action='store_false',
+                  dest='use_pmt_pmt_edges',
+                  help='Disable PMT-PMT edge construction in transform')
+        data.add_argument('--no-pmt-sp-edges', action='store_false',
+                  dest='use_pmt_sp_edges',
+                  help='Disable PMT-SP edge construction in transform')
+        data.add_argument('--no-ophit-ophit-edges', action='store_false',
+                  dest='use_ophit_ophit_edges',
+                  help='Disable OPHIT-OPHIT edge construction in transform')
         return parser
