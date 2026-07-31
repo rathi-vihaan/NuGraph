@@ -117,7 +117,7 @@ class Transform(BaseTransform):
                 pmt_edge = torch.empty((2, 0), dtype=torch.long, device=device)
             data["pmt", "knn", "pmt"].edge_index = pmt_edge.long()
 
-            # pmt-sp edges
+            # pmt-sp edges and pruning
             sp_pos = data["sp"].pos if "sp" in data.node_types and hasattr(data["sp"], "pos") else None
             if pmt_pos is not None and sp_pos is not None and n_pmt > 0 and data["sp"].num_nodes > 0:
                 common_dim = min(pmt_pos.size(-1), sp_pos.size(-1))
@@ -125,15 +125,24 @@ class Transform(BaseTransform):
                 sp_metric = sp_pos[:, -common_dim:]
                 distances = torch.cdist(pmt_metric, sp_metric, p=2)
                 knn = min(16, data["sp"].num_nodes)
-                _, nearest_indices = torch.topk(distances, knn, largest=False, dim=1)
+                nearest_distances, nearest_indices = torch.topk(distances, knn, largest=False, dim=1)
 
                 pmt_indices = torch.arange(n_pmt, device=nearest_indices.device, dtype=torch.long).repeat_interleave(knn)
                 sp_indices = nearest_indices.reshape(-1)
                 pmt_sp_edges = torch.stack((pmt_indices, sp_indices), dim=0)
+                pmt_sp_distances = nearest_distances.reshape(-1)
+
+                sp_degree = torch.bincount(sp_indices, minlength=data["sp"].num_nodes)
             else:
                 device = pmt_pos.device if pmt_pos is not None else None
                 pmt_sp_edges = torch.empty((2, 0), dtype=torch.long, device=device)
+                pmt_sp_distances = torch.empty((0,), dtype=torch.float, device=device)
+                if "sp" in data.node_types:
+                    sp_degree = torch.zeros(data["sp"].num_nodes, dtype=torch.long, device=device)
             data["pmt", "knn", "sp"].edge_index = pmt_sp_edges.long()
+            data["pmt", "knn", "sp"].edge_distance = pmt_sp_distances.float()
+            if "sp" in data.node_types:
+                data["sp"].pmt_degree = sp_degree.long()
 
         # build ophit-ophit edges within same pmt
         if "ophit" in data.node_types and ("ophit", "in", "pmt") in data.edge_types:

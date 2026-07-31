@@ -34,17 +34,18 @@ class NuGraphBlock(MessagePassing): # pylint: disable=abstract-method
             nn.Linear(out_features, out_features),
             nn.Mish())
 
-    def forward(self, x: T, edge_index: T) -> T: # pylint: disable=arguments-differ
+    def forward(self, x: T, edge_index: T, edge_weight: T = None) -> T: # pylint: disable=arguments-differ
         """
         NuGraphBlock forward pass
         
         Args:
             x: Node feature tensor
             edge_index: Edge index tensor
+            edge_weight: Optional scalar weight for each edge
         """
-        return self.propagate(edge_index, x=x)
+        return self.propagate(edge_index, x=x, edge_weight=edge_weight)
 
-    def message(self, x_i: T, x_j: T) -> T: # pylint: disable=arguments-differ
+    def message(self, x_i: T, x_j: T, edge_weight: T = None) -> T: # pylint: disable=arguments-differ
         """
         NuGraphBlock message function
 
@@ -57,7 +58,10 @@ class NuGraphBlock(MessagePassing): # pylint: disable=abstract-method
             x_i: Edge features from target nodes
             x_j: Edge features from source nodes
         """
-        return self.edge_net(torch.cat((x_i, x_j), dim=1).detach()) * x_j
+        msg = self.edge_net(torch.cat((x_i, x_j), dim=1).detach()) * x_j
+        if edge_weight is not None:
+            msg = msg * edge_weight.view(-1, 1)
+        return msg
 
     def update(self, aggr_out: T, x: T) -> T: # pylint: disable=arguments-differ
         """
