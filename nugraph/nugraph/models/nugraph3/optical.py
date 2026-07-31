@@ -73,9 +73,12 @@ class NuGraphOptical(torch.nn.Module):
                         data["ophit", "in", "pmt"].edge_index)
 
                 # message-passing from ophit to ophit within same pmt
-                data["ophit"].x = self.checkpoint(
+                ophit_edges = data["ophit", "knn", "ophit"]
+                # hotfix since some batches don't have these edges - shouldn't be the case
+                if "edge_index" in ophit_edges and ophit_edges.edge_index.numel() > 0:
+                        data["ophit"].x = self.checkpoint(
                         self.ophit_to_ophit, (data["ophit"].x, data["ophit"].x),
-                        data["ophit", "knn", "ophit"].edge_index)
+                        ophit_edges.edge_index)
 
                 # message-passing from PMTs to PMTs
                 pmt_edges = data["pmt", "knn", "pmt"]
@@ -87,11 +90,11 @@ class NuGraphOptical(torch.nn.Module):
 
                 # message-passing from pmt to spacepoint
                 pmt_sp_edges = data["pmt", "knn", "sp"]
-                # hotfix since some batches don't have these edges - shouldn't be the case
+                # same hotfix as above
                 if "edge_index" in pmt_sp_edges and pmt_sp_edges.edge_index.numel() > 0:
                         data["sp"].x = self.checkpoint(
                         self.pmt_to_nexus, (data["pmt"].x, data["sp"].x),
-                        data["pmt", "knn", "sp"].edge_index)
+                        pmt_sp_edges.edge_index)
 
                 # message-passing from pmt to flash
                 data["flash"].x = self.checkpoint(
@@ -114,23 +117,22 @@ class NuGraphOptical(torch.nn.Module):
                         data["pmt", "in", "flash"].edge_index[(1,0), :])
 
                 # message-passing from spacepoint to pmt
-                pmt_sp_edges = data["pmt", "knn", "sp"]
                 if "edge_index" in pmt_sp_edges and pmt_sp_edges.edge_index.numel() > 0:
                         data["pmt"].x = self.checkpoint(
                         self.nexus_to_pmt, (data["sp"].x, data["pmt"].x),
-                        data["pmt", "knn", "sp"].edge_index[(1,0), :])
+                        pmt_sp_edges.edge_index[(1,0), :])
 
-                # message-passing from pmt to pmt
-                pmt_edges = data["pmt", "knn", "pmt"]
+                # reverse message-passing from pmt to pmt
                 if "edge_index" in pmt_edges and pmt_edges.edge_index.numel() > 0:
                         data["pmt"].x = self.checkpoint(
                         self.pmt_to_pmt, (data["pmt"].x, data["pmt"].x),
                         pmt_edges.edge_index[(1,0), :])
 
-                # message-passing from ophit to ophit (same-pmt)
-                data["ophit"].x = self.checkpoint(
+                # reverse message-passing from ophit to ophit within same pmt
+                if "edge_index" in ophit_edges and ophit_edges.edge_index.numel() > 0:
+                        data["ophit"].x = self.checkpoint(
                         self.ophit_to_ophit, (data["ophit"].x, data["ophit"].x),
-                        data["ophit", "knn", "ophit"].edge_index[(1,0), :])
+                        ophit_edges.edge_index[(1,0), :])
 
                 # message-passing from pmt to ophit
                 data["ophit"].x = self.checkpoint(
