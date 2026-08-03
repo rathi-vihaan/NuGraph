@@ -228,7 +228,9 @@ class NuGraph3(LightningModule):
     def transform(planes: tuple[str],
                   use_pmt_pmt_edges: bool = True,
                   use_pmt_sp_edges: bool = True,
-                  use_ophit_ophit_edges: bool = True) -> Transform:
+                  use_ophit_ophit_edges: bool = True,
+                  ophit_pmt_neighbor_radius: float | None = None,
+                  ophit_pmt_neighbor_radius_scale: float = 1.2) -> Transform:
         """
         Return data transform for NuGraph3 model
         
@@ -238,7 +240,9 @@ class NuGraph3(LightningModule):
         return Transform(planes,
                  use_pmt_pmt_edges=use_pmt_pmt_edges,
                  use_pmt_sp_edges=use_pmt_sp_edges,
-                 use_ophit_ophit_edges=use_ophit_ophit_edges)
+                 use_ophit_ophit_edges=use_ophit_ophit_edges,
+                 ophit_pmt_neighbor_radius=ophit_pmt_neighbor_radius,
+                 ophit_pmt_neighbor_radius_scale=ophit_pmt_neighbor_radius_scale)
 
     @staticmethod
     def add_model_args(parser: argparse.ArgumentParser) -> argparse.ArgumentParser:

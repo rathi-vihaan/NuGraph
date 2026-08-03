@@ -14,12 +14,16 @@ class Transform(BaseTransform):
                  planes: tuple[str],
                  use_pmt_pmt_edges: bool = True,
                  use_pmt_sp_edges: bool = True,
-                 use_ophit_ophit_edges: bool = True):
+                 use_ophit_ophit_edges: bool = True,
+                 ophit_pmt_neighbor_radius: float | None = None,
+                 ophit_pmt_neighbor_radius_scale: float = 1.2):
         super().__init__()
         self.planes = planes
         self.use_pmt_pmt_edges = use_pmt_pmt_edges
         self.use_pmt_sp_edges = use_pmt_sp_edges
         self.use_ophit_ophit_edges = use_ophit_ophit_edges
+        self.ophit_pmt_neighbor_radius = ophit_pmt_neighbor_radius
+        self.ophit_pmt_neighbor_radius_scale = ophit_pmt_neighbor_radius_scale
 
     def forward(self, data: NuGraphData) -> NuGraphData:
 
@@ -151,7 +155,7 @@ class Transform(BaseTransform):
             if "sp" in data.node_types:
                 data["sp"].pmt_degree = sp_degree.long()
 
-        # build ophit-ophit edges within same pmt
+        # build ophit-ophit edges using pmt-neighborhood radius
         if self.use_ophit_ophit_edges and "ophit" in data.node_types and ("ophit", "in", "pmt") in data.edge_types:
             ophit_in_pmt = data["ophit", "in", "pmt"].edge_index
             if ophit_in_pmt.dim() == 1:
@@ -163,21 +167,72 @@ class Transform(BaseTransform):
                 ophit_idx = ophit_in_pmt[0].long()
                 pmt_idx = ophit_in_pmt[1].long()
 
-                edge_blocks = []
-                for pmt in pmt_idx.unique(sorted=True):
-                    members = ophit_idx[pmt_idx == pmt].unique(sorted=True)
-                    count = members.numel()
-                    if count <= 1:
-                        continue
-                    src = members.repeat_interleave(count)
-                    dst = members.repeat(count)
-                    mask = src != dst
-                    edge_blocks.append(torch.stack((src[mask], dst[mask]), dim=0))
+                n_pmt = data["pmt"].num_nodes if "pmt" in data.node_types else 0
+                pmt_pos = getattr(data["pmt"], "pos", None) if "pmt" in data.node_types else None
+                if n_pmt > 0 and pmt_pos is not None:
+                    pmt_pos_metric = pmt_pos.float()
+                    pmt_distances = torch.cdist(pmt_pos_metric, pmt_pos_metric, p=2)
 
-                if edge_blocks:
-                    ophit_edges = torch.cat(edge_blocks, dim=1)
+                    if self.ophit_pmt_neighbor_radius is None:
+                        if n_pmt > 1:
+                            pmt_distances_for_nn = pmt_distances.clone()
+                            pmt_distances_for_nn.fill_diagonal_(float("inf"))
+                            nearest = pmt_distances_for_nn.min(dim=1).values
+                            radius = nearest.median() * self.ophit_pmt_neighbor_radius_scale
+                        else:
+                            radius = torch.tensor(0.0, dtype=pmt_distances.dtype, device=pmt_distances.device)
+                    else:
+                        radius = torch.tensor(self.ophit_pmt_neighbor_radius,
+                                              dtype=pmt_distances.dtype,
+                                              device=pmt_distances.device)
+
+                    pmt_neighbors = pmt_distances <= radius
+                    pmt_neighbors.fill_diagonal_(True)
+
+                    data["pmt"].ophit_neighbor_radius = radius.detach().reshape(1)
+                    data["pmt"].ophit_neighbor_pmt_count = (
+                        pmt_neighbors.sum(dim=1) - 1).long()
+
+                    pmt_to_ophits = [torch.empty((0,), dtype=torch.long, device=ophit_idx.device)
+                                     for _ in range(n_pmt)]
+                    for pmt in pmt_idx.unique(sorted=True):
+                        members = ophit_idx[pmt_idx == pmt].unique(sorted=True)
+                        pmt_to_ophits[int(pmt.item())] = members
+
+                    edge_blocks = []
+                    for src_ophit, src_pmt in zip(ophit_idx, pmt_idx):
+                        neighbor_pmts = torch.nonzero(pmt_neighbors[src_pmt], as_tuple=False).squeeze(1)
+                        neighbor_ophits = [pmt_to_ophits[int(p.item())] for p in neighbor_pmts]
+                        neighbor_ophits = [hits for hits in neighbor_ophits if hits.numel() > 0]
+                        if not neighbor_ophits:
+                            continue
+                        dst = torch.cat(neighbor_ophits, dim=0)
+                        src = src_ophit.repeat(dst.numel())
+                        mask = src != dst
+                        if mask.any():
+                            edge_blocks.append(torch.stack((src[mask], dst[mask]), dim=0))
+
+                    if edge_blocks:
+                        ophit_edges = torch.cat(edge_blocks, dim=1)
+                    else:
+                        ophit_edges = torch.empty((2, 0), dtype=torch.long, device=ophit_in_pmt.device)
                 else:
-                    ophit_edges = torch.empty((2, 0), dtype=torch.long, device=ophit_in_pmt.device)
+                    # only same-pmt edges when pmt geometry is missing
+                    edge_blocks = []
+                    for pmt in pmt_idx.unique(sorted=True):
+                        members = ophit_idx[pmt_idx == pmt].unique(sorted=True)
+                        count = members.numel()
+                        if count <= 1:
+                            continue
+                        src = members.repeat_interleave(count)
+                        dst = members.repeat(count)
+                        mask = src != dst
+                        edge_blocks.append(torch.stack((src[mask], dst[mask]), dim=0))
+
+                    if edge_blocks:
+                        ophit_edges = torch.cat(edge_blocks, dim=1)
+                    else:
+                        ophit_edges = torch.empty((2, 0), dtype=torch.long, device=ophit_in_pmt.device)
 
             data["ophit", "knn", "ophit"].edge_index = ophit_edges.long()
         elif "ophit" in data.node_types:

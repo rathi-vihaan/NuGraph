@@ -59,7 +59,7 @@ class NuGraphOptical(torch.nn.Module):
 
         def pmt_sp_pruning_mask(self, data: NuGraphData, edge_index: torch.Tensor,
                                  edge_distance: torch.Tensor) -> torch.Tensor:
-                """Return straight-through hard pruning mask for pmt->sp edges."""
+                """Returns pruning mask for pmt-sp edges."""
                 if edge_index.numel() == 0:
                         return torch.empty((0,), dtype=torch.float, device=edge_index.device)
 

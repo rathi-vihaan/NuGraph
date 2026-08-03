@@ -30,7 +30,9 @@ class NuGraphDataModule(LightningDataModule):
                  featext: bool = False,
                  use_pmt_pmt_edges: bool = True,
                  use_pmt_sp_edges: bool = True,
-                 use_ophit_ophit_edges: bool = True):
+                 use_ophit_ophit_edges: bool = True,
+                 ophit_pmt_neighbor_radius: float | None = None,
+                 ophit_pmt_neighbor_radius_scale: float = 1.2):
         super().__init__()
 
         # for this HDF5 dataloader, worker processes slow things down
@@ -51,6 +53,8 @@ class NuGraphDataModule(LightningDataModule):
         self.use_pmt_pmt_edges = use_pmt_pmt_edges
         self.use_pmt_sp_edges = use_pmt_sp_edges
         self.use_ophit_ophit_edges = use_ophit_ophit_edges
+        self.ophit_pmt_neighbor_radius = ophit_pmt_neighbor_radius
+        self.ophit_pmt_neighbor_radius_scale = ophit_pmt_neighbor_radius_scale
 
         with h5py.File(self.filename) as f:
 
@@ -108,6 +112,10 @@ class NuGraphDataModule(LightningDataModule):
                 transform_kwargs["use_pmt_sp_edges"] = self.use_pmt_sp_edges
             if "use_ophit_ophit_edges" in transform_params:
                 transform_kwargs["use_ophit_ophit_edges"] = self.use_ophit_ophit_edges
+            if "ophit_pmt_neighbor_radius" in transform_params:
+                transform_kwargs["ophit_pmt_neighbor_radius"] = self.ophit_pmt_neighbor_radius
+            if "ophit_pmt_neighbor_radius_scale" in transform_params:
+                transform_kwargs["ophit_pmt_neighbor_radius_scale"] = self.ophit_pmt_neighbor_radius_scale
 
             if self.featext:
                 transform = Compose((model.transform(**transform_kwargs), FeatureExtension(self.planes)))
@@ -216,11 +224,15 @@ class NuGraphDataModule(LightningDataModule):
                           help='Enable extended features')
         data.add_argument('--no-pmt-pmt-edges', action='store_false',
                   dest='use_pmt_pmt_edges',
-                  help='Disable PMT-PMT edge construction in transform')
+                  help='Disable pmt-pmt edge construction in transform')
         data.add_argument('--no-pmt-sp-edges', action='store_false',
                   dest='use_pmt_sp_edges',
-                  help='Disable PMT-SP edge construction in transform')
+                  help='Disable pmt-sp edge construction in transform')
         data.add_argument('--no-ophit-ophit-edges', action='store_false',
                   dest='use_ophit_ophit_edges',
-                  help='Disable OPHIT-OPHIT edge construction in transform')
+                  help='Disable ophit-ophit edge construction in transform')
+        data.add_argument('--ophit-pmt-neighbor-radius', type=float, default=None,
+              help='Absolute pmt-neighborhood radius for ophit-ophit edges')
+        data.add_argument('--ophit-pmt-neighbor-radius-scale', type=float, default=1.2,
+              help='Scale factor for pmt-neighborhood radius for ophit-ophit edges')
         return parser
