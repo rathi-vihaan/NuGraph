@@ -20,6 +20,16 @@ warnings.filterwarnings('ignore', '.*TypedStorage is deprecated.*')
 Data = ng.data.H5DataModule
 Model = ng.models.NuGraph3
 
+def resolve_run_dir(args) -> pathlib.Path:
+    run_dir = os.environ.get("NUGRAPH_RUN_DIR")
+    if run_dir:
+        return pathlib.Path(run_dir)
+
+    log_root = pathlib.Path(os.environ["NUGRAPH_LOG"])
+    if args.name and args.version:
+        return log_root / args.name / str(args.version)
+    return log_root
+
 def configure():
     parser = argparse.ArgumentParser()
     parser.add_argument('--device', type=int, default=None,
@@ -46,6 +56,8 @@ def configure():
 def train(args):
 
     torch.manual_seed(1)
+    run_dir = resolve_run_dir(args)
+    run_dir.mkdir(parents=True, exist_ok=True)
 
     # Load dataset
     nudata = Data(args.data_path, batch_size=args.batch_size,
@@ -103,7 +115,8 @@ def train(args):
         accelerator="gpu",
         devices=8,
         num_nodes=1,
-        strategy="ddp", # DDPStrategy(find_unused_parameters=True) if edges aren't being formed
+        strategy=DDPStrategy(find_unused_parameters=True),
+        default_root_dir=str(run_dir),
         max_epochs=args.epochs,
         limit_train_batches=args.limit_train_batches,
         limit_val_batches=args.limit_val_batches,
