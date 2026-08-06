@@ -13,17 +13,19 @@ class Transform(BaseTransform):
     def __init__(self,
                  planes: tuple[str],
                  use_pmt_pmt_edges: bool = True,
-                 use_pmt_sp_edges: bool = True,
+                 use_legacy_sp_pmt_edges: bool = False,
                  use_ophit_ophit_edges: bool = True,
                  ophit_pmt_neighbor_radius: float | None = None,
-                 ophit_pmt_neighbor_radius_scale: float = 1.2):
+                 ophit_pmt_neighbor_radius_scale: float = 1.2,
+                 pmt_sp_radius_scale: float = 1.2):
         super().__init__()
         self.planes = planes
         self.use_pmt_pmt_edges = use_pmt_pmt_edges
-        self.use_pmt_sp_edges = use_pmt_sp_edges
+        self.use_legacy_sp_pmt_edges = use_legacy_sp_pmt_edges
         self.use_ophit_ophit_edges = use_ophit_ophit_edges
         self.ophit_pmt_neighbor_radius = ophit_pmt_neighbor_radius
         self.ophit_pmt_neighbor_radius_scale = ophit_pmt_neighbor_radius_scale
+        self.pmt_sp_radius_scale = pmt_sp_radius_scale
 
     def forward(self, data: NuGraphData) -> NuGraphData:
 
@@ -113,7 +115,7 @@ class Transform(BaseTransform):
             pmt_pos = getattr(data["pmt"], "pos", None)
             n_pmt = data["pmt"].num_nodes
 
-            # pmt-pmt edges
+            # build pmt-pmt edges with KNN (k=5)
             if self.use_pmt_pmt_edges and pmt_pos is not None and n_pmt > 1:
                 distances = torch.cdist(pmt_pos, pmt_pos, p=2)
                 distances.fill_diagonal_(float("inf"))
@@ -128,22 +130,24 @@ class Transform(BaseTransform):
                 pmt_edge = torch.empty((2, 0), dtype=torch.long, device=device)
             data["pmt", "knn", "pmt"].edge_index = pmt_edge.long()
 
-            # pmt-sp edges and pruning
+            # build pmt-sp edges: per-PMT radius = nearest-SP distance * pmt_sp_radius_scale
             sp_pos = data["sp"].pos if "sp" in data.node_types and hasattr(data["sp"], "pos") else None
-            if self.use_pmt_sp_edges and pmt_pos is not None and sp_pos is not None and n_pmt > 0 and data["sp"].num_nodes > 0:
+            if not self.use_legacy_sp_pmt_edges and pmt_pos is not None and sp_pos is not None and n_pmt > 0 and data["sp"].num_nodes > 0:
                 common_dim = min(pmt_pos.size(-1), sp_pos.size(-1))
                 pmt_metric = pmt_pos[:, -common_dim:]
                 sp_metric = sp_pos[:, -common_dim:]
                 distances = torch.cdist(pmt_metric, sp_metric, p=2)
-                knn = min(16, data["sp"].num_nodes)
-                nearest_distances, nearest_indices = torch.topk(distances, knn, largest=False, dim=1)
 
-                pmt_indices = torch.arange(n_pmt, device=nearest_indices.device, dtype=torch.long).repeat_interleave(knn)
-                sp_indices = nearest_indices.reshape(-1)
+                min_dist = distances.min(dim=1).values  # each PMT's nearest-SP distance
+                radii = min_dist * self.pmt_sp_radius_scale  # [n_pmt], per-PMT threshold
+                data["pmt"].pmt_sp_radius = radii.detach()
+
+                edge_mask = distances <= radii.unsqueeze(1)
+                pmt_indices, sp_indices = edge_mask.nonzero(as_tuple=True)
                 pmt_sp_edges = torch.stack((pmt_indices, sp_indices), dim=0)
-                pmt_sp_distances = nearest_distances.reshape(-1)
+                pmt_sp_distances = distances[pmt_indices, sp_indices]
 
-                sp_degree = torch.bincount(sp_indices, minlength=data["sp"].num_nodes)
+                sp_degree = torch.bincount(sp_indices.long(), minlength=data["sp"].num_nodes)
             else:
                 device = pmt_pos.device if pmt_pos is not None else None
                 pmt_sp_edges = torch.empty((2, 0), dtype=torch.long, device=device)
@@ -155,7 +159,7 @@ class Transform(BaseTransform):
             if "sp" in data.node_types:
                 data["sp"].pmt_degree = sp_degree.long()
 
-        # build ophit-ophit edges using pmt-neighborhood radius
+        # build ophit-ophit edges using radius = adjacent_pmt_distance * ophit_pmt_neighbor_radius_scale
         if self.use_ophit_ophit_edges and "ophit" in data.node_types and ("ophit", "in", "pmt") in data.edge_types:
             ophit_in_pmt = data["ophit", "in", "pmt"].edge_index
             if ophit_in_pmt.dim() == 1:
@@ -178,18 +182,20 @@ class Transform(BaseTransform):
                             pmt_distances_for_nn = pmt_distances.clone()
                             pmt_distances_for_nn.fill_diagonal_(float("inf"))
                             nearest = pmt_distances_for_nn.min(dim=1).values
-                            radius = nearest.median() * self.ophit_pmt_neighbor_radius_scale
+                            # per-PMT radius: each PMT's nearest-neighbor distance * scale
+                            radii = nearest * self.ophit_pmt_neighbor_radius_scale
                         else:
-                            radius = torch.tensor(0.0, dtype=pmt_distances.dtype, device=pmt_distances.device)
+                            radii = torch.zeros(n_pmt, dtype=pmt_distances.dtype, device=pmt_distances.device)
+                        pmt_neighbors = pmt_distances <= radii.unsqueeze(1)
+                        data["pmt"].ophit_neighbor_radius = radii.detach()
                     else:
                         radius = torch.tensor(self.ophit_pmt_neighbor_radius,
                                               dtype=pmt_distances.dtype,
                                               device=pmt_distances.device)
-
-                    pmt_neighbors = pmt_distances <= radius
+                        pmt_neighbors = pmt_distances <= radius
+                        data["pmt"].ophit_neighbor_radius = radius.detach().reshape(1)
                     pmt_neighbors.fill_diagonal_(True)
 
-                    data["pmt"].ophit_neighbor_radius = radius.detach().reshape(1)
                     data["pmt"].ophit_neighbor_pmt_count = (
                         pmt_neighbors.sum(dim=1) - 1).long()
 
@@ -217,7 +223,7 @@ class Transform(BaseTransform):
                     else:
                         ophit_edges = torch.empty((2, 0), dtype=torch.long, device=ophit_in_pmt.device)
                 else:
-                    # only same-pmt edges when pmt geometry is missing
+                    # when pmt geometry is missing, build edges within same pmt only
                     edge_blocks = []
                     for pmt in pmt_idx.unique(sorted=True):
                         members = ophit_idx[pmt_idx == pmt].unique(sorted=True)

@@ -65,7 +65,7 @@ def train(args):
                   balance_frac=args.balance_frac, num_workers=args.num_workers,
                   featext=args.featext,
                   use_pmt_pmt_edges=args.use_pmt_pmt_edges,
-                  use_pmt_sp_edges=args.use_pmt_sp_edges,
+                  use_legacy_sp_pmt_edges=args.use_legacy_sp_pmt_edges,
                   use_ophit_ophit_edges=args.use_ophit_ophit_edges)
 
     if args.resume:

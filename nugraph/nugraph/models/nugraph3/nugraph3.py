@@ -69,6 +69,7 @@ class NuGraph3(LightningModule):
                  particle_loss: bool = False,
                  use_optical: bool = False,
                  use_pmt_sp_pruning: bool = True,
+                 use_legacy_sp_pmt_edges: bool = False,
                  use_checkpointing: bool = False,
                  lr: float = 0.001,
                  no_one_cycle_sched: bool = False):
@@ -104,6 +105,7 @@ class NuGraph3(LightningModule):
                                               pmt_features=pmt_features,
                                               flash_features=flash_features,
                                               use_pmt_sp_pruning=use_pmt_sp_pruning,
+                                              use_legacy_sp_pmt_edges=use_legacy_sp_pmt_edges,
                                               use_checkpointing=use_checkpointing)
 
         self.decoders = []
@@ -227,10 +229,11 @@ class NuGraph3(LightningModule):
     @staticmethod
     def transform(planes: tuple[str],
                   use_pmt_pmt_edges: bool = True,
-                  use_pmt_sp_edges: bool = True,
+                  use_legacy_sp_pmt_edges: bool = False,
                   use_ophit_ophit_edges: bool = True,
                   ophit_pmt_neighbor_radius: float | None = None,
-                  ophit_pmt_neighbor_radius_scale: float = 1.2) -> Transform:
+                  ophit_pmt_neighbor_radius_scale: float = 1.2,
+                  pmt_sp_radius_scale: float = 1.2) -> Transform:
         """
         Return data transform for NuGraph3 model
         
@@ -239,10 +242,11 @@ class NuGraph3(LightningModule):
         """
         return Transform(planes,
                  use_pmt_pmt_edges=use_pmt_pmt_edges,
-                 use_pmt_sp_edges=use_pmt_sp_edges,
+                 use_legacy_sp_pmt_edges=use_legacy_sp_pmt_edges,
                  use_ophit_ophit_edges=use_ophit_ophit_edges,
                  ophit_pmt_neighbor_radius=ophit_pmt_neighbor_radius,
-                 ophit_pmt_neighbor_radius_scale=ophit_pmt_neighbor_radius_scale)
+                 ophit_pmt_neighbor_radius_scale=ophit_pmt_neighbor_radius_scale,
+                 pmt_sp_radius_scale=pmt_sp_radius_scale)
 
     @staticmethod
     def add_model_args(parser: argparse.ArgumentParser) -> argparse.ArgumentParser:
